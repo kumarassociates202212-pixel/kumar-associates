@@ -21,11 +21,12 @@
   <style>
     :root {
       --accent: #0b914f;
+      --accent-2: #0bb07a;
       --bg: #f4f7f6;
       --card: #ffffff;
-      --muted: #58606a;
+      --muted: #55606a;
       --radius: 14px;
-      --max-width: 1000px;
+      --max-width: 1100px;
     }
 
     * {
@@ -40,7 +41,7 @@
       line-height: 1.45;
     }
 
-    .wrap {
+    .container {
       max-width: var(--max-width);
       margin: 28px auto;
       padding: 20px;
@@ -56,7 +57,7 @@
       width: 64px;
       height: 64px;
       border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #0bb07a);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
       display: grid;
       place-items: center;
       color: #fff;
@@ -67,8 +68,12 @@
     nav a {
       margin-left: 16px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--accent);
     }
 
     .hero {
@@ -88,10 +93,10 @@
     }
 
     .btn {
-      padding: 10px 16px;
+      padding: 10px 14px;
       border-radius: 10px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
       display: inline-block;
     }
 
@@ -103,7 +108,6 @@
     .btn-outline {
       border: 2px solid var(--accent);
       color: var(--accent);
-      background: transparent;
     }
 
     .grid {
@@ -135,7 +139,6 @@
     }
 
     @media (max-width: 600px) {
-
       .grid {
         grid-template-columns: 1fr;
       }
@@ -144,7 +147,7 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <div class="container">
 
     <!-- HEADER -->
     <header>
@@ -163,21 +166,24 @@
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero">
       <div>
-        <h2>Local. Trusted. Fast service for your business.</h2>
-        <p class="muted">We provide GST registration, GST filing, ITR, business registration, documentation support, and bank-ready project reports.</p>
+        <h2>Reliable GST, Tax & Business Support</h2>
+        <p class="muted">
+          GST registration, GST filing, ITR filing, business registration, documentation services and bank-ready
+          project reports — fast and professional work.
+        </p>
 
-        <div style="margin-top:14px;display:flex;gap:10px">
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn btn-primary" href="https://wa.me/918069277227" target="_blank">Chat on WhatsApp</a>
           <a class="btn btn-outline" href="#contact">Get Contact Details</a>
         </div>
-
       </div>
 
       <div style="display:flex;justify-content:center;align-items:center">
-        <img src="https://via.placeholder.com/420x260.png?text=Kumar+Associates" style="width:100%;border-radius:12px" />
+        <img src="https://via.placeholder.com/420x260.png?text=Kumar+Associates"
+          style="width:100%;border-radius:12px" />
       </div>
     </section>
 
@@ -186,35 +192,37 @@
     <div class="grid">
       <div class="card">
         <h3>GST & Tax</h3>
-        <p class="muted">GST Registration<br />GSTR-1 / GSTR-3B Filing<br />ITR Filing</p>
+        <p class="muted">GST Registration<br>GSTR-1 / 3B Filing<br>ITR Filing</p>
       </div>
 
       <div class="card">
         <h3>Business Support</h3>
-        <p class="muted">Business Registration<br />Consultation<br />Documentation</p>
+        <p class="muted">Business Registration<br>Consultation<br>Documentation</p>
       </div>
 
       <div class="card">
         <h3>Project Reports</h3>
-        <p class="muted">Bank-ready Projected P&L<br />Balance Sheet<br />CA-level Formatting</p>
+        <p class="muted">Projected P&L<br>Balance Sheet<br>Bank-ready Files</p>
       </div>
     </div>
 
     <!-- ABOUT -->
-    <h2 id="about" style="margin-top:30px;color:var(--accent)">About Us</h2>
+    <h2 id="about" style="margin-top:30px;color:var(--accent)">About Kumar Associates</h2>
     <div class="card">
-      <p class="muted">Kumar Associates is a consultancy based in Ranchi offering GST, taxation, documentation, and business support services. We provide clear guidance, quick service, and friendly support.</p>
+      <p class="muted">
+        We help small businesses in Ranchi with GST, taxation, documentation, and business registration. Fast service,
+        transparent pricing, and friendly support.
+      </p>
     </div>
 
     <!-- CONTACT -->
     <h2 id="contact" style="margin-top:30px;color:var(--accent)">Contact Us</h2>
     <div class="card">
       <p><b>Phone / WhatsApp:</b> <a href="https://wa.me/918069277227">+91 8069277227</a></p>
-      <p><b>Email:</b> kumarassociates202212@gmail.com</p>
+      <p><b>Email:</b> <a href="mailto:kumarassociates202212@gmail.com">kumarassociates202212@gmail.com</a></p>
       <p><b>Facebook:</b> <a href="https://www.facebook.com/profile.php?id=61584646630306" target="_blank">Open Page</a></p>
     </div>
 
-    <!-- FOOTER -->
     <footer style="margin-top:30px;text-align:center;color:var(--muted)">
       © <span id="year"></span> Kumar Associates — Ranchi
     </footer>
@@ -224,6 +232,6 @@
   <script>
     document.getElementById("year").innerText = new Date().getFullYear();
   </script>
-</body>
 
+</body>
 </html>
