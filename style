@@ -1,0 +1,24 @@
+/* HERO STYLES */
+.hero { padding: 40px 10%; background:#f8fbfc; }
+.hero-inner { display:flex; align-items:center; gap:40px; }
+.hero-text { flex:1; }
+.hero-text h1 { font-size:42px; margin:0 0 12px; color:#0f1724; }
+.hero-text p { color:#6b7280; font-size:18px; margin-bottom:18px; }
+.btn-primary {
+  display:inline-block; padding:12px 18px; background:#0b66ff; color:#fff; border-radius:8px; text-decoration:none;
+}
+.hero-cards { display:flex; gap:16px; margin-top:22px; }
+.hero-cards .card {
+  background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(8,15,34,0.04);
+}
+
+/* image box */
+.hero-image { flex:0 0 45%; text-align:right; }
+.hero-image img { width:100%; height:auto; border-radius:12px; object-fit:cover; }
+
+/* responsive */
+@media (max-width:900px) {
+  .hero-inner { flex-direction:column; text-align:left; }
+  .hero-image { width:100%; text-align:center; }
+  .hero-text h1 { font-size:30px; }
+}
