@@ -1,0 +1,16 @@
+<header style="background:linear-gradient(90deg,#0b914f,#00d4a6);padding:18px;color:#fff;display:flex;align-items:center;justify-content:space-between;">
+  <div style="display:flex;align-items:center;gap:14px">
+    <img src="logo.svg" alt="Kumar Associates" style="height:56px;border-radius:8px">
+    <div>
+      <div style="font-weight:800;font-size:20px">Kumar Associates</div>
+      <div style="font-size:12px;opacity:0.95">GST • Tax • Business Support — Ranchi</div>
+    </div>
+  </div>
+
+  <nav style="display:flex;gap:14px">
+    <a href="index.html" style="color:#fff;font-weight:700;text-decoration:none">Home</a>
+    <a href="about.html"  style="color:#fff;font-weight:700;text-decoration:none">About</a>
+    <a href="services.html" style="color:#fff;font-weight:700;text-decoration:none">Services</a>
+    <a href="contact.html" style="color:#fff;font-weight:700;text-decoration:none">Contact</a>
+  </nav>
+</header>
