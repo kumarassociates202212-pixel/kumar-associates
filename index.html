@@ -1,113 +1,163 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Kumar Associates — Home</title>
-<meta name="description" content="Kumar Associates - Tax, GST & Accounting consultant."/>
-<style>
-:root{--accent:#0b63d6;--muted:#6b7280;--bg:#f7f7fb;--card:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:var(--bg);color:#0f1724}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.header{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.05);position:sticky;top:0;z-index:10}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
-.brand{display:flex;gap:12px;align-items:center}
-.brand img{width:48px;height:48px;border-radius:8px;object-fit:cover}
-.brand h1{margin:0;font-size:18px}
-.nav-links a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
-.hero{display:flex;gap:24px;align-items:center;padding:40px;background:linear-gradient(90deg,rgba(11,99,214,0.06),rgba(11,99,214,0.02))}
-.hero .left{flex:1}
-.hero h2{margin:0 0 8px;font-size:28px}
-.lead{color:var(--muted);margin:0 0 12px}
-.btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-.card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.03)}
-.about{display:flex;gap:20px;align-items:center;margin-top:28px}
-.about img{width:360px;height:220px;object-fit:cover;border-radius:10px}
-footer{padding:20px 0;color:var(--muted);font-size:14px;margin-top:28px}
-@media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}.about{flex-direction:column}}
-@media(max-width:600px){.card-grid{grid-template-columns:1fr}.nav-links{display:none}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kumar Associates — Tax & Accounting Services</title>
+  <meta name="description" content="Kumar Associates — Professional Tax Consultant, GST, Accounting and Business Advisory services." />
+  <style>
+    :root{--accent:#0b6efd;--dark:#0b1320;--muted:#6b7280;--card:#ffffff;--bg:#f7f9fc}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--dark);background:var(--bg)}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{background:#fff;box-shadow:0 2px 8px rgba(12,20,30,0.06);}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:18px 28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .brand img{width:56px;height:56px;object-fit:cover;border-radius:6px}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none}
+    .hero{display:flex;gap:28px;background:#fff;margin-top:18px;border-radius:10px;overflow:hidden}
+    .hero .left{flex:1;padding:34px}
+    .hero h1{margin:0 0 10px;font-size:30px}
+    .hero p{color:var(--muted);margin-bottom:18px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block}
+    .hero img{width:420px;height:100%;object-fit:cover}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 1px 6px rgba(12,20,30,0.04)}
+    .card h3{margin:8px 0;color:var(--dark)}
+    section{margin-top:28px}
+    .two-col{display:flex;gap:22px}
+    .two-col > *{flex:1}
+    footer{margin-top:30px;padding:26px;background:#0b1320;color:#fff;border-radius:10px}
+    form label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;background:#fff}
+    textarea{min-height:120px}
+    .small{font-size:13px;color:var(--muted)}
+    @media(max-width:900px){.cards{grid-template-columns:repeat(1,1fr)}.two-col{flex-direction:column}.hero{flex-direction:column}.hero img{width:100%;height:220px}}
+  </style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <div class="brand">
-      <img src="/assets/logo.png" alt="logo" onerror="this.src='https://source.unsplash.com/collection/190727/80x80?business'">
-      <div><h1>Kumar Associates</h1><div style="font-size:13px;color:var(--muted)">Tax & Accounting Consultants</div></div>
-    </div>
-    <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/services.html">Services</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <div class="left">
-      <div style="color:var(--accent);font-weight:700">Trusted tax advisors</div>
-      <h2>Professional Tax, GST & Accounting services</h2>
-      <p class="lead">We provide ITR, GST returns, bookkeeping, audit support and business advisory for SMBs.</p>
-      <div style="display:flex;gap:10px">
-        <a class="btn" href="/contact.html">Book Consultation</a>
-        <a style="padding:10px 16px;border-radius:8px;border:1px solid #e6e9ee;text-decoration:none;color:var(--accent)" href="/services.html">Our Services</a>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <!-- Replace with your own logo file: assets/logo.png -->
+        <img src="assets/logo.png" alt="Kumar Associates logo" />
+        <div>
+          <strong>Kumar Associates</strong>
+          <div class="small">Tax | GST | Accounting | Business Advisory</div>
+        </div>
       </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="right">
-      <img src="https://source.unsplash.com/featured/?accountant,tax" alt="tax" style="border-radius:12px;max-width:420px;width:100%;box-shadow:0 10px 30px rgba(0,0,0,0.06)">
-    </div>
-  </section>
+  </header>
 
-  <section id="services">
-    <h3 style="margin-top:26px">Our Services</h3>
-    <div class="card-grid">
-      <div class="card"><h4>Income Tax (ITR)</h4><p style="color:var(--muted)">Individual & business filing, notices & planning.</p></div>
-      <div class="card"><h4>GST</h4><p style="color:var(--muted)">Registration, returns, reconciliation & advisory.</p></div>
-      <div class="card"><h4>Bookkeeping</h4><p style="color:var(--muted)">Monthly accounting, reports and software setups.</p></div>
-      <div class="card"><h4>Audits</h4><p style="color:var(--muted)">Statutory and internal audit support.</p></div>
-      <div class="card"><h4>Business advisory</h4><p style="color:var(--muted)">Structuring and tax optimization.</p></div>
-      <div class="card"><h4>ROC/Compliance</h4><p style="color:var(--muted)">Company & LLP statutory filings.</p></div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <img src="https://source.unsplash.com/featured/?consultant,meeting" alt="about">
-    <div>
-      <h3>About Kumar Associates</h3>
-      <p style="color:var(--muted)">Experienced tax & accounting professionals based in Ranchi. We deliver clear advice, timely filings and practical solutions for small businesses.</p>
-      <ul style="color:var(--muted)">
-        <li>Personalized tax planning</li>
-        <li>Secure digital handling of documents</li>
-        <li>Timely compliance & follow-up</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="margin-top:20px" id="contact">
-    <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px" class="card">
-        <h4>Contact</h4>
-        <p style="color:var(--muted)">Call/WhatsApp: <strong>8809831444</strong></p>
-        <p style="color:var(--muted)">Or <a href="/contact.html">send a message</a></p>
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Reliable tax consultants for individuals & businesses</h1>
+        <p>We help with Income Tax, GST returns, bookkeeping, company compliance and advisory — practical, clear and timely support so you can focus on growth.</p>
+        <a class="btn" href="#contact">Get a Free Consultation</a>
+        <div class="cards">
+          <div class="card">
+            <strong>GST Registration & Returns</strong>
+            <p class="small">Filing, reconciliations and advisory for businesses of all sizes.</p>
+          </div>
+          <div class="card">
+            <strong>Income Tax & ITR</strong>
+            <p class="small">Individual & corporate tax planning and accurate filing.</p>
+          </div>
+          <div class="card">
+            <strong>Accounting & Bookkeeping</strong>
+            <p class="small">Clean books, bank reconciliations and monthly dashboards.</p>
+          </div>
+        </div>
       </div>
-      <div style="flex:1;min-width:260px" class="card">
-        <h4>Office</h4>
-        <p style="color:var(--muted)">Ranchi, Jharkhand</p>
+      <!-- Replace with hero photo: assets/hero.jpg -->
+      <img src="assets/hero.jpg" alt="Tax consultant at desk" />
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="two-col">
+        <div>
+          <img src="assets/services.jpg" alt="services" style="width:100%;border-radius:10px;object-fit:cover;margin-bottom:12px" />
+        </div>
+        <div>
+          <div class="card">
+            <h3>GST Compliance</h3>
+            <p class="small">Return filing, SKU-level reconciliation, notices & audits support.</p>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <h3>Tax Planning & Filing</h3>
+            <p class="small">Optimise taxes legally and file ITRs for individuals and businesses.</p>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <h3>Company Compliance</h3>
+            <p class="small">ROC filings, statutory & audit coordination with your CA team.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-      <div>&copy; <span id="yr"></span> Kumar Associates</div>
-      <div style="color:var(--muted)">Designed for Tax Consultants</div>
-    </div>
-  </footer>
-</main>
+    <section id="about">
+      <h2>About Kumar Associates</h2>
+      <div class="two-col">
+        <div>
+          <p class="small">We are a team of experienced tax consultants helping clients from startups to established businesses. Our approach is simple — clear advice, practical implementation and timely compliance so you never miss a deadline.</p>
+          <ul class="small">
+            <li>Experienced CA and tax professionals</li>
+            <li>Transparent pricing and step-by-step onboarding</li>
+            <li>Secure handling of your financial data</li>
+          </ul>
+        </div>
+        <div>
+          <!-- Replace with about image: assets/about.jpg -->
+          <img src="assets/about.jpg" alt="About team" style="width:100%;border-radius:10px;object-fit:cover" />
+        </div>
+      </div>
+    </section>
 
-<script>document.getElementById('yr').innerText=new Date().getFullYear();</script>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="two-col">
+        <div>
+          <p class="small">Call us: <strong>+91 88098 31444</strong><br />Email: <strong>info@kumarassociate.in</strong></p>
+          <p class="small">Office: Ranchi, Jharkhand</p>
+          <img src="assets/contact.jpg" alt="contact" style="width:100%;border-radius:10px;object-fit:cover;margin-top:12px" />
+        </div>
+        <div>
+          <form id="contactForm" onsubmit="return false;">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" />
+            <label for="email">Email</label>
+            <input id="email" name="email" placeholder="you@example.com" />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help?"></textarea>
+            <div style="margin-top:10px">
+              <button class="btn" onclick="alert('Thanks! We will contact you soon.')">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <strong>Kumar Associates</strong>
+            <div class="small">Tax & Accounting Consultants</div>
+          </div>
+          <div class="small">© <span id="year"></span> Kumar Associates — All rights reserved</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
