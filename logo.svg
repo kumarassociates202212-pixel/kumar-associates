@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#00D4A6"/>
+      <stop offset="1" stop-color="#0B914F"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#FF6B8A"/>
+    </linearGradient>
+  </defs>
+
+  <rect rx="28" ry="28" width="200" height="200" fill="url(#g1)"/>
+  <g transform="translate(25,25)" fill="white" opacity="0.98">
+    <rect x="0" y="0" width="150" height="40" rx="8" fill="url(#g2)"/>
+    <rect x="0" y="50" width="150" height="40" rx="8" />
+    <rect x="0" y="100" width="150" height="40" rx="8" fill="rgba(255,255,255,0.06)"/>
+  </g>
+
+  <text x="50%" y="175" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle">Kumar Associates</text>
+</svg>
