@@ -1,18 +1,6 @@
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"Kumar Associates",
-  "url":"https://kumarassociate.in",
-  "logo":"https://kumarassociate.in/assets/logo.png",
-  "telephone":"+918809831444",
-  "email":"kumarassociates202212@gmail.com",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Ranchi",
-    "addressRegion":"Jharkhand",
-    "addressCountry":"IN"
-  },
-  "description":"GST registration, Income tax filing, bookkeeping and business advisory services."
-}
-</script>
+<meta name="description" content="Kumar Associates — GST, Income Tax, bookkeeping & business advisory in Ranchi." />
+<meta property="og:title" content="Kumar Associates — Tax & Accounting Services" />
+<meta property="og:description" content="GST, ITR filing, bookkeeping and compliance support. Contact +91 88098 31444" />
+<meta property="og:image" content="https://kumarassociate.in/assets/hero.jpg" />
+<meta property="og:url" content="https://kumarassociate.in" />
+<meta name="twitter:card" content="summary_large_image" />
