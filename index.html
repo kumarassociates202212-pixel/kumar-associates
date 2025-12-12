@@ -29,7 +29,7 @@
     }
 
     .container{
-      max-width:1200px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.94),rgba(250,250,255,0.88));
+      max-width:1200px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(250,250,255,0.92));
       border-radius:20px;padding:28px;box-shadow:0 24px 60px rgba(12,24,50,0.09);
       position:relative;overflow:visible;border:6px solid rgba(255,255,255,0.6);
     }
@@ -39,6 +39,7 @@
       z-index:0;pointer-events:none;
     }
 
+    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:1;margin-bottom:20px}
     .brand{display:flex;gap:14px;align-items:center;text-decoration:none;color:#052231}
     .logo{
@@ -46,11 +47,11 @@
       background:linear-gradient(135deg,#ffd7e0,#d9f2ff);box-shadow:0 12px 30px rgba(12,24,40,0.06);
       font-weight:900;color:#082034;font-size:22px
     }
-
     nav{display:flex;gap:18px;align-items:center}
     nav a{text-decoration:none;color:#083047;padding:8px 10px;border-radius:8px;font-weight:700}
     nav a:hover{background:rgba(6,48,72,0.04)}
 
+    /* Hero */
     .hero{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;z-index:1;position:relative}
     .hero-left{flex:1;min-width:320px}
     .hero h1{margin:0;font-size:36px;line-height:1.03;color:#032433}
@@ -69,24 +70,33 @@
     .stat strong{display:block;font-size:22px;color:#062033}
     .stat small{display:block;color:#3a5666;margin-top:6px}
 
-    .section-title{font-size:24px;color:#05314a;margin:28px 0 14px 0;font-weight:900}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:8px}
-    .card{
-      background:white;padding:18px;border-radius:14px;border:1px solid rgba(6,10,20,0.04);
-      box-shadow:0 12px 30px rgba(12,18,30,0.04);transition:transform .18s,box-shadow .18s,border-color .18s;
+    /* Services - new colorful gallery style */
+    .section-title{font-size:24px;color:#05314a;margin:28px 0 14px 0;font-weight:900;display:flex;align-items:center;gap:12px}
+    .services-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+    .main-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .service-card{
+      display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#ffffff,#fbfdff);
+      padding:14px;border-radius:14px;border:1px solid rgba(6,10,20,0.04);
+      box-shadow:0 12px 30px rgba(12,18,30,0.04);transition:transform .18s,box-shadow .18s;
     }
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 26px 56px rgba(12,18,30,0.12);
-      border-color: rgba(10,140,255,0.18);
-    }
-    .card h3{margin:0 0 10px;font-size:17px;color:#062033;display:flex;align-items:center;gap:12px}
-    .card p{margin:0;color:#3a5666;font-size:14px}
+    .service-card:hover{transform:translateY(-8px);box-shadow:0 26px 56px rgba(12,18,30,0.12)}
+    .service-photo{width:110px;height:86px;border-radius:10px;overflow:hidden;flex:0 0 110px;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02)}
+    .service-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .service-content h3{margin:0;font-size:16px;color:#062033}
+    .service-content p{margin:6px 0 0 0;color:#3a5666;font-size:14px}
 
-    .icon{width:44px;height:44px;flex:0 0 44px;border-radius:10px;background:linear-gradient(135deg,#f6fbff,#fff6f6);display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(8,16,30,0.04)}
+    /* right column - featured / CTA */
+    .featured{background:linear-gradient(90deg,#fff7fb,#f0fff9);padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.03);box-shadow:0 10px 28px rgba(10,20,30,0.04)}
+    .featured h4{margin:0 0 10px 0;color:#072033}
+    .featured .mini{display:flex;gap:10px;align-items:center;margin-top:8px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:linear-gradient(90deg,#ffb3c6,#ffd7a8);font-weight:800;color:#082034}
 
-    .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
-    /* FORM: supports both Netlify & FormSubmit */
+    /* gallery strip */
+    .gallery{display:flex;gap:10px;overflow:hidden;margin-top:12px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:10px;border:1px solid rgba(6,10,20,0.03)}
+
+    /* contact & form */
+    .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;margin-top:18px}
     form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:12px;border:1px solid rgba(8,16,28,0.03)}
     input,textarea,button{font-family:inherit}
     input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(8,16,28,0.08);margin-bottom:8px;background:white}
@@ -103,41 +113,17 @@
     }
     .whatsapp-fab:hover{transform:translateY(-6px);box-shadow:0 28px 48px rgba(18,140,126,0.28)}
     .whatsapp-fab svg{width:28px;height:28px}
+    .whatsapp-fab .badge{position:absolute;right:6px;top:6px;width:14px;height:14px;border-radius:50%;background:#ff4d4f;border:2px solid white;animation:badgePulse 1.8s ease-in-out infinite}
+    @keyframes badgePulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}100%{transform:scale(1);opacity:1}}
+    .whatsapp-fab::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at center, rgba(37,211,102,0.16), rgba(18,140,126,0.04) 40%, transparent 60%);filter:blur(6px);z-index:-1;animation:fabPulse 3.4s ease-in-out infinite}
+    @keyframes fabPulse{0%{transform:translate(-50%,-50%) scale(1);opacity:0.9}50%{transform:translate(-50%,-50%) scale(1.06);opacity:0.6}100%{transform:translate(-50%,-50%) scale(1);opacity:0.9}}
 
-    /* pulsing badge in top-right of the fab */
-    .whatsapp-fab .badge{
-      position:absolute;right:6px;top:6px;width:14px;height:14px;border-radius:50%;background:#ff4d4f;border:2px solid white;
-      box-shadow:0 6px 18px rgba(255,77,79,0.22);
-      animation:badgePulse 1.8s ease-in-out infinite;
-    }
-    @keyframes badgePulse{
-      0%{transform:scale(1);opacity:1;box-shadow:0 6px 18px rgba(255,77,79,0.22)}
-      50%{transform:scale(1.5);opacity:.6;box-shadow:0 18px 36px rgba(255,77,79,0.12)}
-      100%{transform:scale(1);opacity:1;box-shadow:0 6px 18px rgba(255,77,79,0.22)}
-    }
-
-    /* subtle pulse behind whole fab (outer glow) */
-    .whatsapp-fab::before{
-      content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:50%;
-      background:radial-gradient(circle at center, rgba(37,211,102,0.16), rgba(18,140,126,0.04) 40%, transparent 60%);
-      filter:blur(6px);z-index:-1;animation:fabPulse 3.4s ease-in-out infinite;
-    }
-    @keyframes fabPulse{
-      0%{transform:translate(-50%,-50%) scale(1);opacity:0.9}
-      50%{transform:translate(-50%,-50%) scale(1.06);opacity:0.6}
-      100%{transform:translate(-50%,-50%) scale(1);opacity:0.9}
-    }
-
-    @media (max-width:960px){
+    /* responsive */
+    @media (max-width:980px){
+      .services-grid{grid-template-columns:1fr;gap:12px}
       .hero{flex-direction:column-reverse}
       .hero-illu{max-width:100%}
       .hero-right{width:100%}
-      .logo{width:64px;height:64px}
-    }
-    @media (max-width:560px){
-      body{padding:14px}
-      .hero h1{font-size:22px}
-      .logo{width:58px;height:58px}
     }
   </style>
 </head>
@@ -160,15 +146,16 @@
       </nav>
     </header>
 
+    <!-- HERO (same as before) -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-left" aria-hidden="false">
+      <div class="hero-left">
         <h1 id="hero-heading">Professional tax consultancy — आपकी चिंता हमारी ज़िम्मेदारी</h1>
         <p>Income Tax filing, GST, company registrations aur accounting — expert guidance aur timely support. Ranchi based consultants.</p>
         <a class="cta" href="#contact">Free Consultation</a>
       </div>
 
       <div class="hero-illu" aria-hidden="true">
-        <!-- same SVG illustration as before -->
+        <!-- SVG illustration kept for reliability -->
         <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax illustration">
           <defs>
             <linearGradient id="g1" x1="0" x2="1">
@@ -180,8 +167,8 @@
               <stop offset="1" stop-color="#fff8d6"/>
             </linearGradient>
           </defs>
-
           <rect x="0" y="0" width="800" height="520" rx="18" fill="url(#g2)" opacity="0.95"/>
+          <!-- building -->
           <g transform="translate(70,70)">
             <rect x="0" y="40" width="240" height="220" rx="12" fill="#fff" stroke="#dbeefe" stroke-width="2"/>
             <path d="M0 40 L120 0 L240 40" fill="url(#g1)" stroke="#e6f2ff" stroke-width="2"/>
@@ -190,7 +177,7 @@
             <rect x="140" y="80" width="40" height="40" rx="6" fill="#f7fbff" stroke="#e6f2ff"/>
             <text x="14" y="200" fill="#083048" font-size="20" font-weight="700">Tax Office</text>
           </g>
-
+          <!-- chart & coins -->
           <g transform="translate(360,120)">
             <rect x="0" y="40" width="300" height="160" rx="12" fill="#fff" stroke="#f0f7ff"/>
             <rect x="22" y="100" width="36" height="60" rx="4" fill="#0b6bff"/>
@@ -200,100 +187,109 @@
             <circle cx="250" cy="36" r="18" fill="#ffd7e0" stroke="#ffb3b3"/>
             <text x="18" y="32" fill="#062033" font-size="18" font-weight="700">Reports</text>
           </g>
-
-          <g transform="translate(120,320)">
-            <circle cx="32" cy="32" r="28" fill="#fff" stroke="#e6f2ff"/>
-            <rect x="70" y="6" width="68" height="48" rx="6" fill="#fff" stroke="#f0f7ff"/>
-            <path d="M80 18h44M80 32h44" stroke="#c6dff3" stroke-width="2" stroke-linecap="round"/>
-            <text x="0" y="80" fill="#083048" font-size="14">Client support</text>
-          </g>
         </svg>
       </div>
-
-      <aside class="hero-right" aria-labelledby="stats-heading">
-        <h4 id="stats-heading">हमारे प्रमुख अनुभव</h4>
-
-        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
-          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#fff7f0,#f0fbff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(8,16,30,0.04)">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 11L12 3L21 11V20H3V11Z" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M7 21V11" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M17 21V11" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <div style="font-weight:800;color:#072033">Tax & Business Support</div>
-            <div style="font-size:13px;color:#3a5666">Reliable guidance for filings & registration</div>
-          </div>
-        </div>
-
-        <div class="stats">
-          <div class="stat"><strong>4+</strong><small>साल अनुभव</small></div>
-          <div class="stat"><strong>500+</strong><small>खुश क्लाइंट</small></div>
-          <div class="stat" style="grid-column:1 / -1"><strong>99%</strong><small>समय पर सर्विस</small></div>
-        </div>
-      </aside>
     </section>
 
+    <!-- SERVICES: colorful redesign with photos -->
     <section aria-labelledby="services">
-      <div class="section-title">हमारी सेवाएँ</div>
+      <div class="section-title" id="services">
+        हमारी सेवाएँ
+        <span style="margin-left:auto;font-size:13px;color:#3a5666">Explore — Quick, Reliable, Transparent</span>
+      </div>
 
-      <div class="cards">
-        <article class="card" aria-labelledby="s1">
-          <h3 id="s1">
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="18" rx="3" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 8H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M7 12H17" stroke="#0b3a4a" stroke-width="1.2"/><path d="M10 16H14" stroke="#0b3a4a" stroke-width="1.2"/></svg>
-            </span>
-            Income Tax Filing
-          </h3>
-          <p>Individual, HUF, Business — ITR preparation aur filing with expert review.</p>
-        </article>
+      <div class="services-grid">
+        <!-- left: service cards with photos -->
+        <div>
+          <div class="main-cards">
+            <!-- Service 1 -->
+            <article class="service-card">
+              <div class="service-photo">
+                <!-- dynamic Unsplash image (tax docs) -->
+                <img alt="Tax documents" src="https://source.unsplash.com/400x280/?tax,documents">
+              </div>
+              <div class="service-content">
+                <h3>Income Tax Filing</h3>
+                <p>Individual, HUF, Business — ITR preparation, audit-ready returns aur timely filing. (Form 16 / Form 26AS check included)</p>
+              </div>
+            </article>
 
-        <article class="card" aria-labelledby="s2">
-          <h3 id="s2">
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3V21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M20 7L12 3 4 7" stroke="#0b3a4a" stroke-width="1.2"/></svg>
-            </span>
-            GST Registration & Filing
-          </h3>
-          <p>GST registration, return filing (GSTR-1,3B etc.), reconciliation aur advisory.</p>
-        </article>
+            <!-- Service 2 -->
+            <article class="service-card">
+              <div class="service-photo">
+                <!-- dynamic Unsplash image (accountant desk) -->
+                <img alt="Accountant desk" src="https://source.unsplash.com/400x280/?accountant,desk,calculator">
+              </div>
+              <div class="service-content">
+                <h3>GST Registration & Filing</h3>
+                <p>GST registration, GSTR-1/GSTR-3B filing aur reconciliation — quarterly/annual advisory bhi provide karte hain.</p>
+              </div>
+            </article>
 
-        <article class="card" aria-labelledby="s3">
-          <h3 id="s3">
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21H21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M6 8V21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M18 8V21" stroke="#0b3a4a" stroke-width="1.2"/></svg>
-            </span>
-            Company / LLP Registration
-          </h3>
-          <p>Private Limited, LLP aur proprietorship registration se sambandhit kaam.</p>
-        </article>
+            <!-- Service 3 -->
+            <article class="service-card">
+              <div class="service-photo">
+                <!-- dynamic Unsplash image (company paperwork) -->
+                <img alt="Company registration" src="https://source.unsplash.com/400x280/?company,business,registration">
+              </div>
+              <div class="service-content">
+                <h3>Company / LLP Registration</h3>
+                <p>Private Limited, LLP, proprietorship — registration + compliance + DIN / DSC guidance.</p>
+              </div>
+            </article>
 
-        <article class="card" aria-labelledby="s4">
-          <h3 id="s4">
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 12H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 18H20" stroke="#0b3a4a" stroke-width="1.2"/></svg>
-            </span>
-            Accounting & Bookkeeping
-          </h3>
-          <p>Day-to-day accounting, Tally / Excel based books aur monthly reconciliation.</p>
-        </article>
+            <!-- Service 4 -->
+            <article class="service-card">
+              <div class="service-photo">
+                <!-- dynamic Unsplash image (bookkeeping) -->
+                <img alt="Bookkeeping" src="https://source.unsplash.com/400x280/?bookkeeping,accounts,ledgers">
+              </div>
+              <div class="service-content">
+                <h3>Accounting & Bookkeeping</h3>
+                <p>Daily bookkeeping, monthly reconciliation, Tally / Excel based reports and MIS for owners.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- small gallery strip for more visuals -->
+          <div class="gallery" style="margin-top:14px">
+            <img alt="tax forms" src="https://source.unsplash.com/300x200/?tax,forms">
+            <img alt="calculator" src="https://source.unsplash.com/300x200/?calculator,finance">
+            <img alt="filing" src="https://source.unsplash.com/300x200/?filing,documents">
+          </div>
+        </div>
+
+        <!-- right: featured box -->
+        <aside class="featured" aria-labelledby="featured-services">
+          <h4 id="featured-services">Featured Service</h4>
+          <p style="margin:6px 0 10px 0;color:#264">Startup Package — Company registration + GST registration + 3 months basic accounting at a bundled price.</p>
+
+          <div class="mini">
+            <div class="badge">Fast Turnaround</div>
+            <div style="font-size:13px;color:#3a5666">90% clients onboarded in 48–72 hours</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong style="display:block;margin-bottom:8px">Why choose us?</strong>
+            <ul style="margin:0 0 0 18px;color:#3a5666">
+              <li>Clear pricing — no hidden charges</li>
+              <li>Verified & timely filings</li>
+              <li>Free initial consultation</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:12px">
+            <a href="#contact" class="cta" style="display:inline-block;padding:10px 12px;font-size:14px">Book Startup Package</a>
+          </div>
+        </aside>
       </div>
     </section>
 
+    <!-- Contact (FormSubmit + Netlify integration as before) -->
     <section style="margin-top:6px" aria-labelledby="contact">
       <h2 id="contact" class="section-title">Contact / Request</h2>
 
-      <!--
-        Form supports:
-         - Netlify Forms: if you host on Netlify, it will capture submissions automatically.
-         - FormSubmit (fast): action sends directly to email via formsubmit.co (no server). First-time requires verifying your email in their confirmation mail.
-         - The form currently uses FormSubmit endpoint; to use Netlify only, remove action and keep data-netlify attributes.
-      -->
       <div class="contact">
-        <!-- MAIN FORM: FormSubmit endpoint (sends email to KA2023@KUMARASSOCIATE.IN).
-             If you prefer Netlify-only, remove the action attribute and keep data-netlify="true".
-        -->
         <form id="contact-form"
               name="contact"
               method="POST"
@@ -301,21 +297,17 @@
               data-netlify="true"
               netlify-honeypot="bot-field"
               data-netlify-recaptcha="false">
-          <!-- Netlify hidden inputs -->
           <input type="hidden" name="form-name" value="contact">
           <input type="hidden" name="_subject" value="New contact from website">
-          <!-- Prevent spam -->
           <p style="display:none">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
           </p>
-
-          <label style="display:none">source <input type="text" name="source" value="website" /></label>
 
           <input type="text" name="name" placeholder="नाम" required>
           <input type="email" name="email" placeholder="Email (optional)">
           <textarea name="message" placeholder="संदेश लिखें..." required></textarea>
 
-          <!-- optional redirect after success for FormSubmit -->
+          <!-- redirect after success (FormSubmit) -->
           <input type="hidden" name="_next" value="https://kumarassociate.in/thank-you.html">
 
           <button type="submit">Send Message</button>
@@ -334,7 +326,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer style="margin-top:22px">
       <small>&copy; <span id="year"></span> Kumar Associates — All rights reserved</small>
       <div>
         <a href="privacy.html" style="text-decoration:none;color:#234;margin-right:10px">Privacy</a>
@@ -353,24 +345,15 @@
   </a>
 
   <script>
-    // set copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Enhance form UX: intercept submit to show friendly message (works with FormSubmit)
+    // small UX: show immediate status when user submits (native submit still proceeds)
     (function(){
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
-
       form.addEventListener('submit', function(e){
-        // Allow normal submit to proceed (to FormSubmit/Netlify).
-        // But show temporary message right away so user knows it's sent.
         status.style.display = 'block';
-        status.style.color = '#064';
         status.textContent = 'Message भेजा जा रहा है — धन्यवाद!';
-
-        // If you want to prevent default and send via fetch to FormSubmit's API,
-        // we can implement that — but FormSubmit's simple POST is fine.
-        // Keep native submit so Netlify or FormSubmit picks it up.
       });
     })();
   </script>
