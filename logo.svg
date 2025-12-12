@@ -1,21 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-  <defs>
-    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#00D4A6"/>
-      <stop offset="1" stop-color="#0B914F"/>
-    </linearGradient>
-    <linearGradient id="g2" x1="0" x2="1">
-      <stop offset="0" stop-color="#FFB86B"/>
-      <stop offset="1" stop-color="#FF6B8A"/>
-    </linearGradient>
-  </defs>
+<!-- Inline SVG logo: paste this inside your header where logo should appear -->
+<a class="brand" href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+  <!-- SVG is crisp on all screens -->
+  <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="flex:0 0 72px;border-radius:12px;">
+    <defs>
+      <linearGradient id="logoGrad" x1="0" x2="1">
+        <stop offset="0" stop-color="#ffd7e0"/>
+        <stop offset="1" stop-color="#d9f2ff"/>
+      </linearGradient>
+    </defs>
+    <rect width="72" height="72" rx="12" fill="url(#logoGrad)"/>
+    <text x="50%" y="52%" text-anchor="middle" font-family="Inter, Arial, sans-serif"
+          font-weight="800" font-size="28" fill="#062033">KA</text>
+  </svg>
 
-  <rect rx="28" ry="28" width="200" height="200" fill="url(#g1)"/>
-  <g transform="translate(25,25)" fill="white" opacity="0.98">
-    <rect x="0" y="0" width="150" height="40" rx="8" fill="url(#g2)"/>
-    <rect x="0" y="50" width="150" height="40" rx="8" />
-    <rect x="0" y="100" width="150" height="40" rx="8" fill="rgba(255,255,255,0.06)"/>
-  </g>
-
-  <text x="50%" y="175" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle">Kumar Associates</text>
-</svg>
+  <div>
+    <div style="font-weight:900;color:#072033">Kumar Associates</div>
+    <div style="font-size:13px;color:#0b7a66">Tax | Accounts | Consultancy</div>
+  </div>
+</a>
