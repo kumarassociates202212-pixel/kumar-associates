@@ -8,202 +8,172 @@
   <style>
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-      color:#052231;background:linear-gradient(120deg,#fff6fb,#f0fff7,#fff8f0);
-      padding:20px;
-    }
-    .container{
-      max-width:1200px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,255,255,0.96));
-      border-radius:18px;padding:22px;box-shadow:0 18px 48px rgba(6,20,40,0.06);position:relative;
-    }
-    .container::after{
-      content:"";position:absolute;inset:-8px;border-radius:22px;background:linear-gradient(90deg, rgba(255,200,220,0.04), rgba(160,210,255,0.03));z-index:0;pointer-events:none;
-    }
-
-    /* HEADER */
-    header{display:flex;align-items:center;gap:14px;justify-content:space-between;margin-bottom:18px;position:relative;z-index:2}
-    .brand-row{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
-    .brand-text{line-height:1}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:#052231;background:linear-gradient(120deg,#fff6fb,#f0fff7,#fff8f0);padding:20px}
+    .container{max-width:1200px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,255,255,0.96));border-radius:18px;padding:22px;box-shadow:0 18px 48px rgba(6,20,40,0.06);position:relative}
+    .container::after{content:"";position:absolute;inset:-8px;border-radius:22px;background:linear-gradient(90deg, rgba(255,200,220,0.04), rgba(160,210,255,0.03));z-index:0;pointer-events:none}
+    header{display:flex;align-items:center;gap:14px;justify-content:space-between;margin-bottom:18px;z-index:2}
+    .logo-svg{display:block;flex:0 0 72px;width:72px;height:72px;border-radius:14px}
     .brand-title{font-weight:900;font-size:18px;color:#082034;margin:0}
     .brand-sub{font-size:13px;color:#0b7a66;margin:0}
     nav{display:flex;gap:16px;align-items:center}
     nav a{text-decoration:none;color:#083047;padding:8px 12px;border-radius:10px;font-weight:700}
-    nav a.active{background:rgba(6,48,72,0.06)}
-
-    /* ensure svg never gets cut */
-    .logo-svg{display:block;flex:0 0 72px;width:72px;height:72px;border-radius:14px;overflow:visible}
-    .logo-wrapper{display:flex;align-items:center;gap:12px;min-width:0}
-
-    /* HERO */
-    .hero{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;z-index:1}
+    .hero{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
     .hero-left{flex:1;min-width:260px}
     .hero h1{margin:0;font-size:34px;color:#062033}
-    .hero p{margin:12px 0 18px;color:#2e4b56;font-size:16px}
-    .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,#22c1c3,#2a6cff);color:white;text-decoration:none;font-weight:800;box-shadow:0 12px 30px rgba(42,108,255,0.14)}
-
-    .hero-illu{flex:0 0 420px;max-width:420px;border-radius:14px;padding:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 16px 36px rgba(8,18,30,0.06)}
-    .hero-illu svg{width:100%;height:auto;display:block}
-
-    .hero-right{min-width:300px;max-width:360px;background:linear-gradient(180deg,#fff,#f6fffb);border-radius:12px;padding:16px;box-shadow:0 10px 26px rgba(6,12,20,0.05)}
-    .hero-right h4{margin:0 0 10px 0;color:#042f33;font-weight:800}
-    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .stat{background:rgba(255,255,255,0.98);padding:12px;border-radius:12px;text-align:center;border:1px solid rgba(6,10,20,0.03)}
-    .stat strong{display:block;font-size:20px;color:#062033}
-    .stat small{display:block;color:#3a5666;margin-top:6px}
-
-    /* SERVICES */
-    .section-title{font-size:24px;color:#05314a;margin:20px 0 14px 0;font-weight:900;display:flex;align-items:center;gap:12px}
-    .services-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+    .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,#22c1c3,#2a6cff);color:white;font-weight:800}
+    .services-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start;margin-top:20px}
     .main-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .service-card{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(6,10,20,0.04);box-shadow:0 10px 26px rgba(12,18,30,0.04);transition:transform .16s}
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(12,18,30,0.12)}
+    .service-card{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(6,10,20,0.04);box-shadow:0 10px 26px rgba(12,18,30,0.04)}
     .service-photo{width:110px;height:86px;border-radius:10px;overflow:hidden;flex:0 0 110px;background:white;display:flex;align-items:center;justify-content:center;padding:6px}
-    /* use contain so images don't get cropped; change to cover later if you prefer */
+    /* contain so image won't crop; if you prefer full-bleed use cover */
     .service-photo img{width:100%;height:100%;object-fit:contain;display:block}
-
     .service-content h3{margin:0;font-size:16px;color:#062033}
     .service-content p{margin:6px 0 0 0;color:#3a5666;font-size:14px}
-
-    .featured{background:linear-gradient(90deg,#fffbfb,#f3fff7);padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.03);box-shadow:0 10px 28px rgba(10,20,30,0.04)}
-    .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:linear-gradient(90deg,#ffd1e0,#ffe7b2);font-weight:800;color:#082034}
-
-    .gallery{display:flex;gap:10px;overflow:hidden;margin-top:12px}
-    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:10px;border:1px solid rgba(6,10,20,0.03)}
-
-    /* CONTACT */
+    .featured{background:linear-gradient(90deg,#fffbfb,#f3fff7);padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.03)}
+    .gallery{display:flex;gap:10px;overflow:hidden;margin-top:14px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:10px}
     .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;margin-top:18px}
     form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:12px;border:1px solid rgba(8,16,28,0.03)}
     input,textarea,button{font-family:inherit}
     input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(8,16,28,0.08);margin-bottom:8px;background:white}
     textarea{min-height:110px;resize:vertical}
     button{display:inline-block;padding:10px 14px;border-radius:10px;border:0;background:#0b72ff;color:white;font-weight:800;cursor:pointer}
-
-    footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
-
-    /* WhatsApp */
     .whatsapp-fab{position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;box-shadow:0 18px 36px rgba(18,140,126,0.22);z-index:9999;text-decoration:none;color:white}
-    .whatsapp-fab .badge{position:absolute;right:6px;top:6px;width:14px;height:14px;border-radius:50%;background:#ff4d4f;border:2px solid white;box-shadow:0 6px 18px rgba(255,77,79,0.22);animation:badgePulse 1.8s ease-in-out infinite}
+    .whatsapp-fab .badge{position:absolute;right:6px;top:6px;width:14px;height:14px;border-radius:50%;background:#ff4d4f;border:2px solid white;animation:badgePulse 1.8s ease-in-out infinite}
     @keyframes badgePulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}100%{transform:scale(1);opacity:1}}
-
     @media (max-width:980px){.services-grid{grid-template-columns:1fr}.hero{flex-direction:column-reverse}}
-    @media (max-width:560px){body{padding:12px}.hero h1{font-size:22px}}
   </style>
 </head>
 <body>
   <div class="container" role="main">
-
     <!-- HEADER -->
     <header>
-      <div class="logo-wrapper" aria-hidden="true">
-        <!-- Inline SVG logo: preserveAspectRatio to avoid cut -->
+      <div style="display:flex;align-items:center;gap:12px;min-width:0">
         <svg class="logo-svg" viewBox="0 0 72 72" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kumar Associates logo">
-          <defs>
-            <linearGradient id="logoGradA" x1="0" x2="1">
-              <stop offset="0" stop-color="#ffd7e0"/>
-              <stop offset="1" stop-color="#d9f2ff"/>
-            </linearGradient>
-          </defs>
+          <defs><linearGradient id="logoGradA" x1="0" x2="1"><stop offset="0" stop-color="#ffd7e0"/><stop offset="1" stop-color="#d9f2ff"/></linearGradient></defs>
           <rect width="72" height="72" rx="14" fill="url(#logoGradA)"/>
           <text x="50%" y="52%" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900" fill="#082034">KA</text>
         </svg>
-      </div>
-
-      <div class="brand-row" style="align-items:center;justify-content:space-between;min-width:0">
         <div style="min-width:0">
           <p class="brand-title">Kumar Associates</p>
           <p class="brand-sub">Tax | Accounts | Consultancy</p>
         </div>
-
-        <nav aria-label="Main navigation" style="margin-left:auto">
-          <a href="index.html">Home</a>
-          <a href="services.html" class="active">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
       </div>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-left">
         <h1 id="hero-heading">हमारी सेवाएँ — Professional, Fast, Transparent</h1>
-        <p>हम Startup से लेकर established business तक सबके लिए tax, GST, accounting, finance aur advisory services देते हैं। नीचे पूरी सूची देखें।</p>
-        <a class="cta" href="#contact">Get a Quote</a>
+        <p>Income Tax filing, GST, company registrations aur accounting — expert guidance aur timely support.</p>
+        <a class="cta" href="#contact">Free Consultation</a>
       </div>
 
-      <div class="hero-illu" aria-hidden="true">
-        <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax illustration">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffd7e3"/><stop offset="1" stop-color="#d9f2ff"/></linearGradient>
-            <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#c6fff0"/><stop offset="1" stop-color="#fff8d6"/></linearGradient>
-          </defs>
-          <rect width="800" height="520" rx="18" fill="url(#g2)" opacity="0.95"/>
-        </svg>
-      </div>
+      <aside class="hero-right" style="min-width:280px;max-width:360px;background:linear-gradient(180deg,#fff,#f6fffb);padding:14px;border-radius:12px">
+        <h4 style="margin:0 0 10px 0;color:#042f33">Contact</h4>
+        <div style="margin-bottom:8px"><strong>Main Office</strong><div>Prabhavathi Comfort Apts,<br/>Begur Road, Bangalore, Karnataka 560068</div></div>
+        <div style="margin-bottom:8px"><strong>Branch (Ranchi)</strong><div>Khelgaon Housing Complex,<br/>Ranchi, Jharkhand 8352117</div></div>
 
-      <aside class="hero-right" aria-labelledby="stats-heading">
-        <h4 id="stats-heading">हमारे प्रमुख अनुभव</h4>
-        <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
-          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#fff7f0,#f0fbff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(8,16,30,0.04)">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L12 3L21 11V20H3V11Z" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div><div style="font-weight:800;color:#072033">Tax & Business Support</div><div style="font-size:13px;color:#3a5666">Reliable guidance for filings & registration</div></div>
-        </div>
-
-        <div class="stats">
-          <div class="stat"><strong>4+</strong><small>साल अनुभव</small></div>
-          <div class="stat"><strong>500+</strong><small>खुश क्लाइंट</small></div>
-          <div class="stat" style="grid-column:1 / -1"><strong>99%</strong><small>समय पर सर्विस</small></div>
-        </div>
+        <!-- both numbers shown -->
+        <div style="margin-top:8px"><strong>Phone (Landline):</strong> <a href="tel:+918069277227">08069277227</a></div>
+        <div style="margin-top:6px"><strong>Mobile / WhatsApp:</strong> <a href="tel:+919334965179">9334965179</a></div>
+        <div style="margin-top:8px"><strong>Email:</strong> <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></div>
       </aside>
     </section>
 
     <!-- SERVICES -->
     <section aria-labelledby="services" style="margin-top:20px">
-      <div class="section-title" id="services">हमारी सेवाएँ <span style="margin-left:auto;font-size:13px;color:#3a5666">Quick • Reliable • Transparent</span></div>
+      <h2 class="section-title" id="services">हमारी सेवाएँ</h2>
 
       <div class="services-grid">
         <div>
           <div class="main-cards">
-            <!-- existing + new service cards (images = local paths) -->
-            <article class="service-card"><div class="service-photo"><img src="images/tax-documents.jpg" alt="Tax documents"></div><div class="service-content"><h3>Income Tax Filing</h3><p>Individual, HUF, Business — ITR preparation, audit-ready returns aur timely filing.</p></div></article>
+            <!-- Example service card — all images use same onerror fallback -->
+            <article class="service-card">
+              <div class="service-photo"><img src="images/tax-documents.jpg" alt="Tax documents"></div>
+              <div class="service-content"><h3>Income Tax Filing</h3><p>Individual, HUF, Business — ITR preparation, audit-ready returns aur timely filing.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/accountant-desk.jpg" alt="Accountant desk"></div><div class="service-content"><h3>GST Registration & Filing</h3><p>GST registration, return filing (GSTR-1,3B etc.), reconciliation aur advisory.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/accountant-desk.jpg" alt="GST and accountant"></div>
+              <div class="service-content"><h3>GST Registration & Filing</h3><p>GST registration, return filing (GSTR-1,3B etc.), reconciliation aur advisory.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/company-registration.jpg" alt="Company registration"></div><div class="service-content"><h3>Company / LLP Registration</h3><p>Private Limited, LLP aur proprietorship registration se sambandhit kaam.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/company-registration.jpg" alt="Company registration"></div>
+              <div class="service-content"><h3>Company / LLP Registration</h3><p>Private Limited, LLP aur proprietorship registration se sambandhit kaam.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/partnership-registration.jpg" alt="Partnership registration"></div><div class="service-content"><h3>Partnership Registration</h3><p>Partnership deed drafting, registration aur related compliance assistance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/partnership-registration.jpg" alt="Partnership registration"></div>
+              <div class="service-content"><h3>Partnership Registration</h3><p>Partnership deed drafting, registration aur related compliance assistance.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/bookkeeping.jpg" alt="Bookkeeping"></div><div class="service-content"><h3>Accounting & Bookkeeping</h3><p>Day-to-day accounting, Tally / Excel based books aur monthly reconciliation.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/bookkeeping.jpg" alt="Bookkeeping"></div>
+              <div class="service-content"><h3>Accounting & Bookkeeping</h3><p>Day-to-day accounting, Tally / Excel based books aur monthly reconciliation.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/pan-card.jpg" alt="PAN card"></div><div class="service-content"><h3>PAN Card — Apply / Update</h3><p>Online PAN enrollment, correction aur e-PAN delivery assistance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/pan-card.jpg" alt="PAN card"></div>
+              <div class="service-content"><h3>PAN Card — Apply / Update</h3><p>Online PAN enrollment, correction aur e-PAN delivery assistance.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/digital-signature.jpg" alt="Digital signature"></div><div class="service-content"><h3>Digital Signature (DSC)</h3><p>Class 2 / Class 3 DSC issuance, renewal aur setup guidance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/digital-signature.jpg" alt="Digital signature"></div>
+              <div class="service-content"><h3>Digital Signature (DSC)</h3><p>Class 2 / Class 3 DSC issuance, renewal aur setup guidance.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/bank-loan.jpg" alt="Bank loan"></div><div class="service-content"><h3>Bank Loan Assistance</h3><p>Loan documentation, bank shortlisting, application support aur follow-up.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/bank-loan.jpg" alt="Bank loan"></div>
+              <div class="service-content"><h3>Bank Loan Assistance</h3><p>Loan documentation, bank shortlisting, application support aur follow-up.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/project-report.jpg" alt="Project report"></div><div class="service-content"><h3>Project Report & CMA Data</h3><p>Bank-ready project reports, projections and CMA packs for loan approvals.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/project-report.jpg" alt="Project report"></div>
+              <div class="service-content"><h3>Project Report & CMA Data</h3><p>Bank-ready project reports, projections and CMA packs for loan approvals.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/cma-data.jpg" alt="CMA data"></div><div class="service-content"><h3>CMA Data Preparation</h3><p>Accurate CMA schedules compatible with bank/NBFC formats.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/cma-data.jpg" alt="CMA data"></div>
+              <div class="service-content"><h3>CMA Data Preparation</h3><p>Accurate CMA schedules compatible with bank/NBFC formats.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/investment-mf-sip.jpg" alt="Investment"></div><div class="service-content"><h3>Investment Advisory — MF / SIP</h3><p>Goal-based SIP planning, mutual fund portfolio & tax-saving ELSS guidance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/investment-mf-sip.jpg" alt="Investment"></div>
+              <div class="service-content"><h3>Investment Advisory — MF / SIP</h3><p>Goal-based SIP planning, mutual fund portfolio & tax-saving ELSS guidance.</p></div>
+            </article>
 
-            <article class="service-card"><div class="service-photo"><img src="images/insurance-policies.jpg" alt="Insurance"></div><div class="service-content"><h3>Insurance Policies</h3><p>Life, health & business insurance selection and claim guidance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/insurance-policies.jpg" alt="Insurance"></div>
+              <div class="service-content"><h3>Insurance Policies</h3><p>Life, health & business insurance selection and claim guidance.</p></div>
+            </article>
 
-            <!-- NGO / Trust registration -->
-            <article class="service-card"><div class="service-photo"><img src="images/ngo-trust.jpg" alt="NGO Trust Registration"></div><div class="service-content"><h3>NGO / Trust Registration</h3><p>Trust / Society / Section 8 registration services — drafting trust deed, registration formalities aur compliance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/ngo-trust.jpg" alt="NGO Trust"></div>
+              <div class="service-content"><h3>NGO / Trust Registration</h3><p>Trust / Society / Section 8 registration, deed drafting and compliance support.</p></div>
+            </article>
 
-            <!-- 12A / 80G -->
-            <article class="service-card"><div class="service-photo"><img src="images/registration-12a-80g.jpg" alt="12A 80G registration"></div><div class="service-content"><h3>12A / 80G Registration</h3><p>Approval guidance for tax exemption / donation eligible certificates (12A, 80G) for NGOs & Charities.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/registration-12a-80g.jpg" alt="12A 80G"></div>
+              <div class="service-content"><h3>12A / 80G Registration</h3><p>Approval guidance for tax exemption / donation certificates for NGOs & Charities.</p></div>
+            </article>
 
-            <!-- CSR registration / advisory -->
-            <article class="service-card"><div class="service-photo"><img src="images/csr-registration.jpg" alt="CSR registration"></div><div class="service-content"><h3>CSR Registration & Advisory</h3><p>CSR project structuring, registration, project selection aur compliance reporting assistance.</p></div></article>
+            <article class="service-card">
+              <div class="service-photo"><img src="images/csr-registration.jpg" alt="CSR registration"></div>
+              <div class="service-content"><h3>CSR Registration & Advisory</h3><p>CSR project structuring, registration and compliance reporting assistance.</p></div>
+            </article>
 
           </div>
 
-          <div class="gallery" style="margin-top:14px">
+          <div class="gallery">
             <img src="images/gallery1.jpg" alt="tax forms">
             <img src="images/gallery2.jpg" alt="calculator">
             <img src="images/gallery3.jpg" alt="filing">
@@ -213,42 +183,28 @@
         <aside class="featured" aria-labelledby="featured-services">
           <h4 id="featured-services">Featured: Startup Package</h4>
           <p style="margin:6px 0 10px 0;color:#264">Company registration + GST registration + 3 months basic accounting at a bundled price.</p>
-          <div style="display:flex;gap:10px;align-items:center"><div class="badge">Bundle Offer</div><div style="font-size:13px;color:#3a5666">Fast onboarding — 48–72 hours</div></div>
-
-          <div style="margin-top:12px">
-            <strong>What’s included</strong>
-            <ul style="margin:8px 0 0 18px;color:#3a5666">
-              <li>Company/LLP registration (MCA filings)</li>
-              <li>GST registration & first 3 returns</li>
-              <li>Basic bookkeeping + monthly MIS</li>
-              <li>Assistance with PAN / DSC if required</li>
-            </ul>
-          </div>
-
-          <div style="margin-top:12px"><a href="#contact" class="cta" style="font-size:14px;padding:10px 12px">Book Startup Package</a></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="padding:6px 10px;border-radius:10px;background:linear-gradient(90deg,#ffd1e0,#ffe7b2);font-weight:800;color:#082034">Bundle Offer</div><div style="font-size:13px;color:#3a5666">Fast onboarding — 48–72 hours</div></div>
 
           <div style="margin-top:12px">
             <strong>Contact</strong>
-            <p style="margin:6px 0 0 0">Phone: <a href="tel:+918069277227">08069277227</a></p>
+            <p style="margin:6px 0 0 0">Landline: <a href="tel:+918069277227">08069277227</a></p>
+            <p style="margin:6px 0 0 0">Mobile: <a href="tel:+919334965179">9334965179</a></p>
             <p style="margin:6px 0 0 0">Email: <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" style="margin-top:22px">
-      <h2 class="section-title">Contact / Request</h2>
-      <div class="contact">
-        <form id="contact-form" name="contact" method="POST" action="https://formsubmit.co/KA2023@KUMARASSOCIATE.IN" data-netlify="true" netlify-honeypot="bot-field">
+    <!-- CONTACT FORM -->
+    <section id="contact">
+      <div class="contact" style="margin-top:18px">
+        <form id="contact-form" name="contact" method="POST" action="https://formsubmit.co/KA2023@KUMARASSOCIATE.IN">
           <input type="hidden" name="form-name" value="contact">
           <input type="hidden" name="_subject" value="New contact from website">
           <p style="display:none"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-
           <input type="text" name="name" placeholder="नाम" required>
           <input type="email" name="email" placeholder="Email (optional)">
           <textarea name="message" placeholder="संदेश लिखें..." required></textarea>
-
           <input type="hidden" name="_next" value="https://kumarassociate.in/thank-you.html">
           <button type="submit">Send Message</button>
           <div id="form-status" aria-live="polite" style="margin-top:10px;color:#064;display:none"></div>
@@ -258,33 +214,56 @@
           <div style="background:linear-gradient(90deg,#fff,#f8fbff);padding:14px;border-radius:12px;border:1px solid rgba(8,16,28,0.03)">
             <strong>Main Office</strong>
             <p style="margin:6px 0 0 0">Prabhavathi Comfort Apts,<br/>Begur Road, Bangalore, Karnataka 560068</p>
-
             <strong style="display:block;margin-top:10px">Branch (Ranchi)</strong>
             <p style="margin:6px 0 0 0">Khelgaon Housing Complex,<br/>Ranchi, Jharkhand 8352117</p>
-
-            <p style="margin:8px 0 0 0">Phone: <a href="tel:+918069277227">08069277227</a></p>
+            <p style="margin:8px 0 0 0">Landline: <a href="tel:+918069277227">08069277227</a></p>
+            <p style="margin:6px 0 0 0">Mobile: <a href="tel:+919334965179">9334965179</a></p>
             <p style="margin:6px 0 0 0">Email: <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
-            <p style="margin:8px 0 0 0"><small>Working hours: Mon–Sat, 9:30–6:00</small></p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer style="margin-top:26px">
+    <footer style="margin-top:22px">
       <small>&copy; <span id="year"></span> Kumar Associates — All rights reserved</small>
-      <div style="margin-top:8px"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
     </footer>
   </div>
 
-  <!-- WhatsApp floating button -->
+  <!-- WhatsApp floating button (kept original number) -->
   <a class="whatsapp-fab" href="https://wa.me/918069277227" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.37 0 .09 5.28.09 11.91c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.66A11.84 11.84 0 0 0 12 23.82C18.63 23.82 23.91 18.54 23.91 11.91c0-2.98-1.16-5.76-3.39-7.93z" fill="#fff" opacity=".06"/><path d="M17.472 14.382c-.297-.149-1.757-.867-2.03-.967-.273-.099-.472-.149-.672.149-.197.297-.767.967-.94 1.167-.173.197-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.298-.018-.459.13-.608.134-.133.298-.347.447-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.52-.074-.148-.672-1.612-.92-2.206-.242-.579-.487-.501-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.017-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487 0 0 .191.08.344.08.149 0 .486 0 .739-.085.253-.086 1.757-.72 2.006-1.418.248-.697.248-1.295.173-1.418-.074-.124-.273-.198-.571-.347z" fill="#fff"/></svg>
-    <span class="badge" aria-hidden="true"></span>
   </a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){ const f=document.getElementById('contact-form'), s=document.getElementById('form-status'); if(!f) return; f.addEventListener('submit', function(){ s.style.display='block'; s.textContent='Message भेजा जा रहा है — धन्यवाद!'; }); })();
+
+    // show form status text
+    (function(){
+      const f=document.getElementById('contact-form'), s=document.getElementById('form-status');
+      if(!f) return;
+      f.addEventListener('submit', function(){ s.style.display='block'; s.textContent='Message भेजा जा रहा है — धन्यवाद!'; });
+    })();
+
+    // universal image error fallback: replace broken images with an inline SVG data-uri placeholder
+    (function(){
+      const imgs = document.querySelectorAll('.service-photo img, .gallery img');
+      imgs.forEach(img=>{
+        img.addEventListener('error', function onErr(){
+          // avoid infinite loop
+          img.removeEventListener('error', onErr);
+          const svg = encodeURIComponent(
+            `<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'>
+              <rect width='100%' height='100%' fill='#f3f7fb'/>
+              <g fill='#9aa8b3' font-family='Arial, sans-serif'>
+                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='18'>Image unavailable</text>
+              </g>
+            </svg>`
+          );
+          img.src = 'data:image/svg+xml;utf8,' + svg;
+          img.style.objectFit = 'contain';
+        });
+      });
+    })();
   </script>
 </body>
 </html>
