@@ -1,155 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kumar Associates – Tax Consultant</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kumar Associates - Tax Consultant</title>
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(120deg,#a8e0ff,#f6d3ff,#ffd6d6);
-  background-size:300% 300%;
-  animation:move 12s infinite alternate;
-}
-@keyframes move{
-  0%{background-position:0% 50%}
-  100%{background-position:100% 50%}
-}
-.container{max-width:1100px;margin:0 auto;padding:20px}
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-/* HEADER */
-header{
-  background:white;
-  border-bottom:3px solid #007bff;
-  padding:15px;
-  text-align:center;
-  font-size:26px;
-  font-weight:bold;
-  color:#003f88;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
+  <style>
+    /* Reset & base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      color:#111;
+      /* Animated colorful gradient background */
+      background: linear-gradient(120deg,#a8e0ff,#ffd3ff,#ffd6a5,#c7ffd8);
+      background-size: 300% 300%;
+      animation: bgShift 16s ease infinite;
+      padding:40px 16px;
+    }
 
-/* HERO */
-.hero{
-  background:white;
-  margin-top:20px;
-  padding:25px;
-  border-radius:20px;
-  border:3px solid #79bbff;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
-  text-align:center;
-}
-.hero h1{
-  font-size:32px;
-  color:#003f88;
-}
-.hero p{
-  font-size:18px;
-  color:#444;
-}
-.hero img{
-  margin-top:20px;
-  width:100%;
-  border-radius:20px;
-  border:3px solid #007bff;
-}
+    @keyframes bgShift{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
 
-/* SECTIONS */
-.section-title{
-  text-align:center;
-  margin-top:40px;
-  font-size:26px;
-  color:#003f88;
-  font-weight:bold;
-}
-.boxes{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  margin-top:20px;
-}
-.box{
-  background:white;
-  width:300px;
-  padding:20px;
-  border-radius:20px;
-  border:3px solid #ff9ede;
-  text-align:center;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
-.box h3{
-  color:#d6006f;
-  margin:0 0 10px;
-}
+    /* Center container with border and subtle glass look */
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      background: rgba(255,255,255,0.85);
+      border-radius:16px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(16,24,40,0.12);
+      border: 6px solid rgba(255,255,255,0.6); /* inner white border */
+      position:relative;
+      overflow:hidden;
+    }
 
-/* CONTACT */
-.contact{
-  background:white;
-  border-radius:20px;
-  padding:20px;
-  border:3px solid #ffcc70;
-  margin-top:40px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
-.contact h2{
-  color:#b56b00;
-}
+    /* Decorative colored border outline */
+    .container::before{
+      content:"";
+      position:absolute;
+      inset:-4px;
+      border-radius:18px;
+      padding:4px;
+      background: linear-gradient(90deg, rgba(255,120,120,0.35), rgba(120,180,255,0.35), rgba(160,255,180,0.35));
+      -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events:none;
+      z-index:0;
+    }
 
-/* FOOTER */
-footer{
-  margin-top:40px;
-  padding:15px;
-  text-align:center;
-  background:white;
-  border-top:3px solid #007bff;
-}
-</style>
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      position:relative;
+      z-index:1;
+      margin-bottom:18px;
+    }
 
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:#0b1220;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+      box-shadow:0 6px 18px rgba(16,24,40,0.08);
+      font-weight:700;color:#111;
+      font-size:18px;
+    }
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{
+      text-decoration:none;color:#222;padding:8px 12px;border-radius:8px;font-weight:600;
+    }
+    nav a:hover{background:rgba(0,0,0,0.06)}
+
+    /* Hero */
+    .hero{
+      display:flex;gap:20px;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;
+      margin:10px 0 22px 0;
+      position:relative; z-index:1;
+    }
+    .hero-left{flex:1;min-width:260px}
+    .hero h1{margin:0;font-size:28px;line-height:1.08;color:#07203a}
+    .hero p{margin:12px 0 18px;color:#25404f}
+    .cta{
+      display:inline-block;padding:10px 16px;border-radius:10px;
+      background:linear-gradient(90deg,#00c6ff,#0072ff);
+      color:white;text-decoration:none;font-weight:700;
+      box-shadow:0 8px 20px rgba(0,114,255,0.18);
+    }
+
+    .hero-right{
+      min-width:260px;max-width:360px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(250,250,255,0.7));
+      border-radius:12px;padding:14px;box-shadow:0 8px 24px rgba(2,6,23,0.06);
+    }
+    .stats{display:flex;gap:10px;flex-wrap:wrap}
+    .stat{flex:1;min-width:110px;padding:10px;border-radius:10px;background:rgba(255,255,255,0.6);text-align:center}
+    .stat strong{display:block;font-size:18px}
+
+    /* Services grid */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:6px 0 20px}
+    .card{
+      background:white;padding:14px;border-radius:12px;border:1px solid rgba(12,18,30,0.04);
+      box-shadow:0 8px 18px rgba(12,18,30,0.04);
+    }
+    .card h3{margin:0 0 8px;font-size:16px;color:#063048}
+    .card p{margin:0;color:#3a5666;font-size:14px}
+
+    /* Contact */
+    .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+    .contact form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:10px;border:1px solid rgba(10,18,30,0.03)}
+    .form-row{display:flex;gap:8px}
+    input,textarea,button{font-family:inherit}
+    input[type="text"],input[type="email"],textarea{
+      width:100%;padding:10px;border-radius:8px;border:1px solid rgba(8,16,28,0.08);
+      margin-bottom:8px;outline:none;background:white;
+    }
+    textarea{min-height:100px;resize:vertical}
+    button{
+      display:inline-block;padding:10px 14px;border-radius:8px;border:0;background:#0b72ff;color:white;font-weight:700;
+      cursor:pointer;
+    }
+
+    /* Footer */
+    footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    small{color:#234}
+
+    /* Responsiveness tweaks */
+    @media (max-width:720px){
+      .hero h1{font-size:22px}
+      .logo{width:48px;height:48px;font-size:16px}
+      body{padding:18px}
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">KA</div>
+        <div>
+          <div style="font-weight:700">Kumar Associates</div>
+          <div style="font-size:12px;color:#285">Tax | Accounts | Consultancy</div>
+        </div>
+      </a>
 
-<header>Kumar Associates</header>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-<div class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h1 id="hero-heading">Professional tax consultancy — आपकी चिंता हमारी ज़िम्मेदारी</h1>
+        <p>Income Tax filing, GST, company registrations aur accounting — expert guidance aur timely support. Ranchi based consultants.</p>
+        <a class="cta" href="contact.html">Free Consultation</a>
+      </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Trusted Tax Consultant for GST & Income Tax</h1>
-    <p>We provide complete GST, ITR, Accounting & Business Registration Services.</p>
-    <img src="images/hero.jpg" alt="Tax consultant">
-  </section>
+      <aside class="hero-right" aria-hidden="false">
+        <div style="font-size:13px;color:#0b2a3a;font-weight:700;margin-bottom:8px">हमारे प्रमुख अनुभव</div>
+        <div class="stats">
+          <div class="stat"><strong>10+</strong><span style="font-size:13px;color:#2d4856">साल अनुभव</span></div>
+          <div class="stat"><strong>500+</strong><span style="font-size:13px;color:#2d4856">खुश क्लाइंट</span></div>
+          <div class="stat"><strong>99%</strong><span style="font-size:13px;color:#2d4856">समय पर सर्विस</span></div>
+        </div>
+      </aside>
+    </section>
 
-  <!-- SERVICES -->
-  <h2 class="section-title">Our Services</h2>
-  <div class="boxes">
-    <div class="box">
-      <h3>GST Registration</h3>
-      <p>Fast online GST registration + monthly filing</p>
-    </div>
-    <div class="box">
-      <h3>ITR Filing</h3>
-      <p>Accurate income tax return filing</p>
-    </div>
-    <div class="box">
-      <h3>Accounting</h3>
-      <p>Professional bookkeeping & financial statements</p>
-    </div>
+    <section aria-labelledby="services">
+      <h2 id="services" style="margin:0 0 12px 0;color:#0a3b4f">हमारी सेवाएँ</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Income Tax Filing</h3>
+          <p>Individual, HUF, Business — ITR preparation aur filing with expert review.</p>
+        </article>
+
+        <article class="card">
+          <h3>GST Registration & Filing</h3>
+          <p>GST registration, return filing (GSTR-1,3B etc.), reconciliation aur advisory.</p>
+        </article>
+
+        <article class="card">
+          <h3>Company / LLP Registration</h3>
+          <p>Private Limited, LLP aur proprietorship registration se sambandhit kaam.</p>
+        </article>
+
+        <article class="card">
+          <h3>Accounting & Bookkeeping</h3>
+          <p>Day-to-day accounting, Tally / Excel based books aur monthly reconciliation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:6px" aria-labelledby="contact">
+      <h2 id="contact" style="margin:0 0 12px 0;color:#0a3b4f">Contact / Request</h2>
+      <div class="contact">
+        <form onsubmit="event.preventDefault(); alert('Form submitted! (demo)');">
+          <input type="text" placeholder="नाम" required>
+          <input type="email" placeholder="Email (optional)">
+          <textarea placeholder="संदेश लिखें..."></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div style="min-width:220px">
+          <div style="background:linear-gradient(90deg,#fff,#f8fbff);padding:12px;border-radius:10px;border:1px solid rgba(8,16,28,0.03)">
+            <strong>Office</strong>
+            <p style="margin:6px 0 0 0">Kumar Associates<br/>Main Road, Ranchi</p>
+            <p style="margin:8px 0 0 0">Phone: <a href="tel:8809831444">8809831444</a></p>
+            <p style="margin:6px 0 0 0"><small>Working hours: Mon–Sat, 9:30–6:00</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>&copy; <span id="year"></span> Kumar Associates — All rights reserved</small>
+      <div>
+        <a href="privacy.html" style="text-decoration:none;color:#234;margin-right:10px">Privacy</a>
+        <a href="terms.html" style="text-decoration:none;color:#234">Terms</a>
+      </div>
+    </footer>
   </div>
 
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><b>Phone:</b> +91 88098 31444</p>
-    <p><b>Email:</b> info@kumarassociate.in</p>
-    <p><b>Address:</b> Ranchi, Jharkhand</p>
-  </section>
-
-</div>
-
-<footer>© 2025 Kumar Associates</footer>
-
+  <script>
+    // small helper: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
