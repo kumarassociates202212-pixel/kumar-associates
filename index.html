@@ -46,9 +46,6 @@
       background:linear-gradient(135deg,#ffd7e0,#d9f2ff);box-shadow:0 12px 30px rgba(12,24,40,0.06);
       font-weight:900;color:#082034;font-size:22px
     }
-    /* If you have your own logo image, replace inner div with:
-       <img id="brand-logo" src="path/to/logo.png" alt="Kumar Associates" style="width:72px;height:72px;border-radius:12px;object-fit:cover" />
-    */
 
     nav{display:flex;gap:18px;align-items:center}
     nav a{text-decoration:none;color:#083047;padding:8px 10px;border-radius:8px;font-weight:700}
@@ -61,11 +58,9 @@
     .cta{display:inline-block;padding:13px 20px;border-radius:14px;background:linear-gradient(90deg,#1ec8ff,#0b6bff);color:white;text-decoration:none;font-weight:800;box-shadow:0 14px 36px rgba(11,107,255,0.16);transition:transform .14s}
     .cta:hover{transform:translateY(-4px)}
 
-    /* Hero illustration */
     .hero-illu{flex:0 0 420px;max-width:420px;border-radius:14px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,255,255,0.95));box-shadow:0 20px 36px rgba(8,18,30,0.06)}
     .hero-illu svg{width:100%;height:auto;display:block}
 
-    /* stats box */
     .hero-right{min-width:300px;max-width:360px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,250,255,0.95));
                 border-radius:14px;padding:18px;box-shadow:0 12px 34px rgba(6,12,20,0.06)}
     .hero-right h4{margin:0 0 10px 0;color:#053041;font-weight:800}
@@ -74,7 +69,6 @@
     .stat strong{display:block;font-size:22px;color:#062033}
     .stat small{display:block;color:#3a5666;margin-top:6px}
 
-    /* services grid */
     .section-title{font-size:24px;color:#05314a;margin:28px 0 14px 0;font-weight:900}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:8px}
     .card{
@@ -91,7 +85,6 @@
 
     .icon{width:44px;height:44px;flex:0 0 44px;border-radius:10px;background:linear-gradient(135deg,#f6fbff,#fff6f6);display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(8,16,30,0.04)}
 
-    /* contact layout */
     .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
     form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:12px;border:1px solid rgba(8,16,28,0.03)}
     input,textarea,button{font-family:inherit}
@@ -101,7 +94,6 @@
 
     footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
 
-    /* WhatsApp floating button */
     .whatsapp-fab{
       position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,#25d366,#128c7e);
       display:flex;align-items:center;justify-content:center;box-shadow:0 18px 36px rgba(18,140,126,0.22);z-index:9999;
@@ -149,9 +141,7 @@
         <a class="cta" href="contact.html">Free Consultation</a>
       </div>
 
-      <!-- Large SVG illustration (tax / finance) so images always visible -->
       <div class="hero-illu" aria-hidden="true">
-        <!-- Simple but informative vector illustration -->
         <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax illustration">
           <defs>
             <linearGradient id="g1" x1="0" x2="1">
@@ -165,7 +155,6 @@
           </defs>
 
           <rect x="0" y="0" width="800" height="520" rx="18" fill="url(#g2)" opacity="0.95"/>
-          <!-- building -->
           <g transform="translate(70,70)">
             <rect x="0" y="40" width="240" height="220" rx="12" fill="#fff" stroke="#dbeefe" stroke-width="2"/>
             <path d="M0 40 L120 0 L240 40" fill="url(#g1)" stroke="#e6f2ff" stroke-width="2"/>
@@ -175,10 +164,8 @@
             <text x="14" y="200" fill="#083048" font-size="20" font-weight="700">Tax Office</text>
           </g>
 
-          <!-- chart & coins -->
           <g transform="translate(360,120)">
             <rect x="0" y="40" width="300" height="160" rx="12" fill="#fff" stroke="#f0f7ff"/>
-            <!-- bars -->
             <rect x="22" y="100" width="36" height="60" rx="4" fill="#0b6bff"/>
             <rect x="78" y="70" width="36" height="90" rx="4" fill="#1ec8ff"/>
             <rect x="134" y="46" width="36" height="114" rx="4" fill="#10a37f"/>
@@ -187,7 +174,6 @@
             <text x="18" y="32" fill="#062033" font-size="18" font-weight="700">Reports</text>
           </g>
 
-          <!-- small person with document -->
           <g transform="translate(120,320)">
             <circle cx="32" cy="32" r="28" fill="#fff" stroke="#e6f2ff"/>
             <rect x="70" y="6" width="68" height="48" rx="6" fill="#fff" stroke="#f0f7ff"/>
@@ -202,7 +188,6 @@
 
         <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
           <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#fff7f0,#f0fbff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(8,16,30,0.04)">
-            <!-- bank/tax svg -->
             <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 11L12 3L21 11V20H3V11Z" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M7 21V11" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -230,7 +215,6 @@
         <article class="card" aria-labelledby="s1">
           <h3 id="s1">
             <span class="icon" aria-hidden="true">
-              <!-- income tax svg -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="18" rx="3" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 8H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M7 12H17" stroke="#0b3a4a" stroke-width="1.2"/><path d="M10 16H14" stroke="#0b3a4a" stroke-width="1.2"/></svg>
             </span>
             Income Tax Filing
@@ -241,7 +225,6 @@
         <article class="card" aria-labelledby="s2">
           <h3 id="s2">
             <span class="icon" aria-hidden="true">
-              <!-- gst svg -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3V21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M20 7L12 3 4 7" stroke="#0b3a4a" stroke-width="1.2"/></svg>
             </span>
             GST Registration & Filing
@@ -252,7 +235,6 @@
         <article class="card" aria-labelledby="s3">
           <h3 id="s3">
             <span class="icon" aria-hidden="true">
-              <!-- company svg -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21H21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M6 8V21" stroke="#0b3a4a" stroke-width="1.2"/><path d="M18 8V21" stroke="#0b3a4a" stroke-width="1.2"/></svg>
             </span>
             Company / LLP Registration
@@ -263,7 +245,6 @@
         <article class="card" aria-labelledby="s4">
           <h3 id="s4">
             <span class="icon" aria-hidden="true">
-              <!-- accounting svg -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 12H20" stroke="#0b3a4a" stroke-width="1.2"/><path d="M4 18H20" stroke="#0b3a4a" stroke-width="1.2"/></svg>
             </span>
             Accounting & Bookkeeping
@@ -287,7 +268,8 @@
           <div style="background:linear-gradient(90deg,#fff,#f8fbff);padding:14px;border-radius:12px;border:1px solid rgba(8,16,28,0.03)">
             <strong>Office</strong>
             <p style="margin:6px 0 0 0">Kumar Associates<br/>Main Road, Ranchi</p>
-            <p style="margin:8px 0 0 0">Phone: <a href="tel:8809831444">8809831444</a></p>
+            <p style="margin:8px 0 0 0">Phone: <a href="tel:+918069277227">08069277227</a></p>
+            <p style="margin:8px 0 0 0">Email: <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
             <p style="margin:6px 0 0 0"><small>Working hours: Mon–Sat, 9:30–6:00</small></p>
           </div>
         </div>
@@ -303,14 +285,16 @@
     </footer>
   </div>
 
-  <!-- WhatsApp floating button (replace phone if needed) -->
-  <a class="whatsapp-fab" href="https://wa.me/918809831444" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <!-- WhatsApp floating button (updated number) -->
+  <a class="whatsapp-fab" href="https://wa.me/918069277227" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.37 0 .09 5.28.09 11.91c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.66A11.84 11.84 0 0 0 12 23.82C18.63 23.82 23.91 18.54 23.91 11.91c0-2.98-1.16-5.76-3.39-7.93z" fill="#fff" opacity=".06"/>
       <path d="M17.472 14.382c-.297-.149-1.757-.867-2.03-.967-.273-.099-.472-.149-.672.149-.197.297-.767.967-.94 1.167-.173.197-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.298-.018-.459.13-.608.134-.133.298-.347.447-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.52-.074-.148-.672-1.612-.92-2.206-.242-.579-.487-.501-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.017-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487 0 0 .191.08.344.08.149 0 .486 0 .739-.085.253-.086 1.757-.72 2.006-1.418.248-.697.248-1.295.173-1.418-.074-.124-.273-.198-.571-.347z" fill="#fff"/>
     </svg>
   </a>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
