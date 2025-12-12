@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kumar Associates - Tax Consultant</title>
 
-  <!-- Google font (optional) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset & base */
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -18,138 +16,81 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
-      color:#111;
-      /* Animated colorful gradient background */
-      background: linear-gradient(120deg,#a8e0ff,#ffd3ff,#ffd6a5,#c7ffd8);
-      background-size: 300% 300%;
-      animation: bgShift 16s ease infinite;
-      padding:40px 16px;
+      color:#0d2230;
+      padding:36px 20px;
+      /* more vivid animated gradient */
+      background: linear-gradient(120deg,#ffe6f0,#e6f7ff,#eaffec,#fff7e6);
+      background-size: 400% 400%;
+      animation: bgShift 14s ease infinite;
     }
-
     @keyframes bgShift{
       0%{background-position:0% 50%}
+      25%{background-position:50% 30%}
       50%{background-position:100% 50%}
+      75%{background-position:50% 70%}
       100%{background-position:0% 50%}
     }
 
-    /* Center container with border and subtle glass look */
     .container{
-      max-width:1100px;
-      margin:0 auto;
-      background: rgba(255,255,255,0.85);
-      border-radius:16px;
-      padding:28px;
-      box-shadow: 0 10px 30px rgba(16,24,40,0.12);
-      border: 6px solid rgba(255,255,255,0.6); /* inner white border */
-      position:relative;
-      overflow:hidden;
+      max-width:1200px;margin:0 auto;background:rgba(255,255,255,0.92);
+      border-radius:18px;padding:30px;box-shadow:0 18px 40px rgba(20,30,50,0.08);
+      border:6px solid rgba(255,255,255,0.6);position:relative;overflow:visible;
     }
 
-    /* Decorative colored border outline */
-    .container::before{
+    /* decorative rounded outline (soft rainbow) */
+    .container::after{
       content:"";
-      position:absolute;
-      inset:-4px;
-      border-radius:18px;
-      padding:4px;
-      background: linear-gradient(90deg, rgba(255,120,120,0.35), rgba(120,180,255,0.35), rgba(160,255,180,0.35));
-      -webkit-mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events:none;
-      z-index:0;
+      position:absolute;inset: -6px;border-radius:22px;
+      background: linear-gradient(90deg, rgba(255,120,180,0.12), rgba(120,180,255,0.12), rgba(120,255,180,0.12));
+      z-index:0;pointer-events:none;
     }
 
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      position:relative;
-      z-index:1;
-      margin-bottom:18px;
-    }
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:1;margin-bottom:18px}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:#07203a}
+    .logo{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+          background:linear-gradient(135deg,#ffb3c6,#ffd7a8);box-shadow:0 10px 30px rgba(16,24,40,0.06);font-weight:800;color:#081426;font-size:20px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{text-decoration:none;color:#063048;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{background:rgba(6,48,72,0.04)}
 
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      text-decoration:none;
-      color:#0b1220;
-    }
-    .logo{
-      width:56px;height:56px;border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-      box-shadow:0 6px 18px rgba(16,24,40,0.08);
-      font-weight:700;color:#111;
-      font-size:18px;
-    }
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{
-      text-decoration:none;color:#222;padding:8px 12px;border-radius:8px;font-weight:600;
-    }
-    nav a:hover{background:rgba(0,0,0,0.06)}
-
-    /* Hero */
-    .hero{
-      display:flex;gap:20px;align-items:center;justify-content:space-between;
-      flex-wrap:wrap;
-      margin:10px 0 22px 0;
-      position:relative; z-index:1;
-    }
+    .hero{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;z-index:1;position:relative}
     .hero-left{flex:1;min-width:260px}
-    .hero h1{margin:0;font-size:28px;line-height:1.08;color:#07203a}
-    .hero p{margin:12px 0 18px;color:#25404f}
-    .cta{
-      display:inline-block;padding:10px 16px;border-radius:10px;
-      background:linear-gradient(90deg,#00c6ff,#0072ff);
-      color:white;text-decoration:none;font-weight:700;
-      box-shadow:0 8px 20px rgba(0,114,255,0.18);
-    }
+    .hero h1{margin:0;font-size:34px;line-height:1.04;color:#062033}
+    .hero p{margin:12px 0 18px;color:#2e4b56;font-size:16px}
+    .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,#00c6ff,#0072ff);color:white;text-decoration:none;font-weight:800;box-shadow:0 10px 30px rgba(3,102,255,0.18)}
 
-    .hero-right{
-      min-width:260px;max-width:360px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(250,250,255,0.7));
-      border-radius:12px;padding:14px;box-shadow:0 8px 24px rgba(2,6,23,0.06);
-    }
-    .stats{display:flex;gap:10px;flex-wrap:wrap}
-    .stat{flex:1;min-width:110px;padding:10px;border-radius:10px;background:rgba(255,255,255,0.6);text-align:center}
-    .stat strong{display:block;font-size:18px}
+    .hero-right{min-width:260px;max-width:360px;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,250,255,0.9));
+                border-radius:14px;padding:18px;box-shadow:0 12px 30px rgba(6,10,20,0.06)}
+    .hero-right h4{margin:0 0 10px 0;color:#0b3040;font-weight:700}
 
-    /* Services grid */
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:6px 0 20px}
-    .card{
-      background:white;padding:14px;border-radius:12px;border:1px solid rgba(12,18,30,0.04);
-      box-shadow:0 8px 18px rgba(12,18,30,0.04);
-    }
-    .card h3{margin:0 0 8px;font-size:16px;color:#063048}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .stat{background:rgba(255,255,255,0.9);padding:14px;border-radius:12px;text-align:center;box-shadow:0 8px 22px rgba(12,18,30,0.03)}
+    .stat strong{display:block;font-size:22px;color:#072033}
+    .stat small{display:block;color:#3a5666;margin-top:6px}
+
+    /* services */
+    .section-title{font-size:24px;color:#08324a;margin:22px 0 12px 0;font-weight:800}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:8px}
+    .card{background:white;padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.04);box-shadow:0 8px 22px rgba(10,20,30,0.03)}
+    .card h3{margin:0 0 8px;font-size:16px;color:#063048;display:flex;align-items:center;gap:10px}
     .card p{margin:0;color:#3a5666;font-size:14px}
 
-    /* Contact */
+    /* inline svg icon style */
+    .icon{width:34px;height:34px;flex:0 0 34px;border-radius:8px;background:linear-gradient(135deg,#f0f7ff,#fff5f0);display:inline-flex;align-items:center;justify-content:center}
+
+    /* contact */
     .contact{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
-    .contact form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:10px;border:1px solid rgba(10,18,30,0.03)}
-    .form-row{display:flex;gap:8px}
+    form{flex:1;min-width:260px;background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:10px;border:1px solid rgba(8,16,28,0.03)}
     input,textarea,button{font-family:inherit}
-    input[type="text"],input[type="email"],textarea{
-      width:100%;padding:10px;border-radius:8px;border:1px solid rgba(8,16,28,0.08);
-      margin-bottom:8px;outline:none;background:white;
-    }
+    input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(8,16,28,0.08);margin-bottom:8px;background:white}
     textarea{min-height:100px;resize:vertical}
-    button{
-      display:inline-block;padding:10px 14px;border-radius:8px;border:0;background:#0b72ff;color:white;font-weight:700;
-      cursor:pointer;
-    }
+    button{display:inline-block;padding:10px 14px;border-radius:8px;border:0;background:#0b72ff;color:white;font-weight:700;cursor:pointer}
 
-    /* Footer */
-    footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    small{color:#234}
+    footer{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
 
-    /* Responsiveness tweaks */
-    @media (max-width:720px){
+    @media (max-width:760px){
       .hero h1{font-size:22px}
-      .logo{width:48px;height:48px;font-size:16px}
+      .logo{width:54px;height:54px;font-size:16px}
       body{padding:18px}
     }
   </style>
@@ -160,8 +101,8 @@
       <a class="brand" href="#">
         <div class="logo">KA</div>
         <div>
-          <div style="font-weight:700">Kumar Associates</div>
-          <div style="font-size:12px;color:#285">Tax | Accounts | Consultancy</div>
+          <div style="font-weight:800">Kumar Associates</div>
+          <div style="font-size:13px;color:#0b7a66">Tax | Accounts | Consultancy</div>
         </div>
       </a>
 
@@ -180,74 +121,58 @@
         <a class="cta" href="contact.html">Free Consultation</a>
       </div>
 
-      <aside class="hero-right" aria-hidden="false">
-        <div style="font-size:13px;color:#0b2a3a;font-weight:700;margin-bottom:8px">हमारे प्रमुख अनुभव</div>
+      <aside class="hero-right" aria-labelledby="stats-heading">
+        <h4 id="stats-heading">हमारे प्रमुख अनुभव</h4>
+
+        <!-- small bank/tax SVG to ensure image shows -->
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+          <!-- inline tax/building svg -->
+          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#fff7f0,#f0fbff);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(10,20,40,0.04)">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 11L12 3L21 11V20H3V11Z" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 21V11" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 21V11" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-weight:700;color:#072033">Tax & Business Support</div>
+            <div style="font-size:13px;color:#3a5666">Reliable guidance for filings & registration</div>
+          </div>
+        </div>
+
         <div class="stats">
-          <div class="stat"><strong>10+</strong><span style="font-size:13px;color:#2d4856">साल अनुभव</span></div>
-          <div class="stat"><strong>500+</strong><span style="font-size:13px;color:#2d4856">खुश क्लाइंट</span></div>
-          <div class="stat"><strong>99%</strong><span style="font-size:13px;color:#2d4856">समय पर सर्विस</span></div>
+          <div class="stat"><strong>4+</strong><small>साल अनुभव</small></div>
+          <div class="stat"><strong>500+</strong><small>खुश क्लाइंट</small></div>
+          <div class="stat" style="grid-column:1 / -1"><strong>99%</strong><small>समय पर सर्विस</small></div>
         </div>
       </aside>
     </section>
 
     <section aria-labelledby="services">
-      <h2 id="services" style="margin:0 0 12px 0;color:#0a3b4f">हमारी सेवाएँ</h2>
+      <div class="section-title">हमारी सेवाएँ</div>
       <div class="cards">
+
         <article class="card">
-          <h3>Income Tax Filing</h3>
+          <h3>
+            <span class="icon" aria-hidden="true">
+              <!-- income tax svg -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 7H20" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" />
+                <path d="M7 11H17" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" />
+                <path d="M10 15H14" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" />
+                <rect x="2" y="3" width="20" height="18" rx="3" stroke="#0b3a4a" stroke-width="1.2"/>
+              </svg>
+            </span>
+            Income Tax Filing
+          </h3>
           <p>Individual, HUF, Business — ITR preparation aur filing with expert review.</p>
         </article>
 
         <article class="card">
-          <h3>GST Registration & Filing</h3>
-          <p>GST registration, return filing (GSTR-1,3B etc.), reconciliation aur advisory.</p>
-        </article>
-
-        <article class="card">
-          <h3>Company / LLP Registration</h3>
-          <p>Private Limited, LLP aur proprietorship registration se sambandhit kaam.</p>
-        </article>
-
-        <article class="card">
-          <h3>Accounting & Bookkeeping</h3>
-          <p>Day-to-day accounting, Tally / Excel based books aur monthly reconciliation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section style="margin-top:6px" aria-labelledby="contact">
-      <h2 id="contact" style="margin:0 0 12px 0;color:#0a3b4f">Contact / Request</h2>
-      <div class="contact">
-        <form onsubmit="event.preventDefault(); alert('Form submitted! (demo)');">
-          <input type="text" placeholder="नाम" required>
-          <input type="email" placeholder="Email (optional)">
-          <textarea placeholder="संदेश लिखें..."></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-
-        <div style="min-width:220px">
-          <div style="background:linear-gradient(90deg,#fff,#f8fbff);padding:12px;border-radius:10px;border:1px solid rgba(8,16,28,0.03)">
-            <strong>Office</strong>
-            <p style="margin:6px 0 0 0">Kumar Associates<br/>Main Road, Ranchi</p>
-            <p style="margin:8px 0 0 0">Phone: <a href="tel:8809831444">8809831444</a></p>
-            <p style="margin:6px 0 0 0"><small>Working hours: Mon–Sat, 9:30–6:00</small></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <small>&copy; <span id="year"></span> Kumar Associates — All rights reserved</small>
-      <div>
-        <a href="privacy.html" style="text-decoration:none;color:#234;margin-right:10px">Privacy</a>
-        <a href="terms.html" style="text-decoration:none;color:#234">Terms</a>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // small helper: current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+          <h3>
+            <span class="icon" aria-hidden="true">
+              <!-- gst svg -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3V21" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M20 7L12 3 4 7" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M20 17L12 21 4 17" s
