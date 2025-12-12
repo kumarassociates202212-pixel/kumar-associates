@@ -1,24 +1,77 @@
-/* HERO STYLES */
-.hero { padding: 40px 10%; background:#f8fbfc; }
-.hero-inner { display:flex; align-items:center; gap:40px; }
-.hero-text { flex:1; }
-.hero-text h1 { font-size:42px; margin:0 0 12px; color:#0f1724; }
-.hero-text p { color:#6b7280; font-size:18px; margin-bottom:18px; }
-.btn-primary {
-  display:inline-block; padding:12px 18px; background:#0b66ff; color:#fff; border-radius:8px; text-decoration:none;
-}
-.hero-cards { display:flex; gap:16px; margin-top:22px; }
-.hero-cards .card {
-  background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(8,15,34,0.04);
+:root{
+  --maxw:1150px;
+  --accent: #0b77ff;
+  --bg:#f7fafc;
+  --muted:#6b7280;
+  --dark:#0f1724;
+  --radius:12px;
+  --container-pad:20px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* image box */
-.hero-image { flex:0 0 45%; text-align:right; }
-.hero-image img { width:100%; height:auto; border-radius:12px; object-fit:cover; }
+/* general container */
+.container{max-width:var(--maxw);margin:0 auto;padding:0 var(--container-pad);}
 
-/* responsive */
-@media (max-width:900px) {
-  .hero-inner { flex-direction:column; text-align:left; }
-  .hero-image { width:100%; text-align:center; }
-  .hero-text h1 { font-size:30px; }
+/* body */
+body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid rgba(12,20,40,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;color:inherit}
+.brand img{width:56px;height:56px;object-fit:contain}
+.brand-text strong{display:block;font-size:18px}
+.brand-text .sub{display:block;font-size:12px;color:var(--muted)}
+.top-nav a{margin-left:18px;font-weight:600;color:#334155}
+
+/* HERO / SERVICES */
+.services-section{padding:48px 0;background:transparent}
+.services-hero{display:flex;gap:32px;align-items:center;justify-content:space-between}
+.hero-text{flex:1;min-width:0}
+.hero-image{flex:0 0 480px;display:flex;justify-content:center;align-items:center}
+.hero-image img{width:100%;height:auto;border-radius:var(--radius);box-shadow:0 10px 30px rgba(12,20,40,0.08)}
+
+h1{font-size:44px;line-height:1.02;margin:0 0 16px}
+.lead{font-size:18px;color:var(--muted);margin-bottom:18px}
+
+/* button */
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(11,119,255,0.12)}
+
+/* service cards */
+.service-cards{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}
+.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.04);flex:1;min-width:220px}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#f1f7ff;font-size:20px}
+.card h3{margin:0;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+/* trust */
+.trust{padding:18px 0}
+.trust-grid{display:flex;gap:18px;color:var(--dark);font-weight:600}
+.trust-grid div{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 16px rgba(12,20,40,0.04);flex:1}
+
+/* about/contact */
+.about-section, .contact-section{padding:28px 0;background:transparent}
+.about-section h2, .contact-section h2{margin:0 0 12px}
+.contact-grid{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+.contact-card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.04);flex:1;min-width:220px}
+
+/* footer */
+.site-footer{background:#fff;border-top:1px solid rgba(12,20,40,0.04);padding:18px 0;margin-top:28px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center}
+.footer-left{color:var(--muted)}
+
+/* small screens */
+@media(max-width:900px){
+  .services-hero{flex-direction:column-reverse;gap:18px}
+  h1{font-size:30px}
+  .hero-image{width:100%}
+  .service-cards{flex-direction:column}
+  .trust-grid{flex-direction:column}
+  .contact-grid{flex-direction:column}
 }
+
+/* small visual hover */
+.card:hover{transform:translateY(-6px);transition:transform .25s ease;box-shadow:0 20px 40px rgba(12,20,40,0.08)}
