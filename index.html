@@ -1,330 +1,250 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kumar Associates – Tax | GST | Accounting | Consultancy</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kumar Associates — Tax | Accounts | Consultancy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --text:#062231; --muted:#46626b; --accent1:#22c1c3; --accent2:#2a6cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#fffafc,#f3fff7,#fff8f8);color:var(--text);-webkit-font-smoothing:antialiased}
+  .page{max-width:1250px;margin:20px auto;padding:22px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.98));box-shadow:0 20px 60px rgba(10,20,30,0.06);position:relative;overflow:hidden}
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet"/>
+  /* subtle decorative corner gradient */
+  .page:before{content:"";position:absolute;left:-120px;top:-120px;width:380px;height:380px;background:radial-gradient(circle at 30% 30%, rgba(255,215,230,0.45), transparent 40%);border-radius:50%;pointer-events:none}
+  .page:after{content:"";position:absolute;right:-140px;bottom:-140px;width:480px;height:480px;background:radial-gradient(circle at 70% 70%, rgba(220,245,240,0.5), transparent 40%);border-radius:50%;pointer-events:none}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: linear-gradient(120deg, #fff7fb, #f3fff5, #fff9f0);
-      color: #062031;
-    }
-    a { text-decoration: none; color: inherit; }
-    .container {
-      max-width: 1250px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 18px;
-      box-shadow: 0 20px 55px rgba(8, 20, 40, 0.08);
-    }
+  header{display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative;z-index:2}
+  .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+  .brand .name{font-weight:900;font-size:18px}
+  .brand .tag{color:#0b7a66;font-size:13px}
+  nav{display:flex;gap:12px}
+  nav a{font-weight:700;padding:8px 12px;border-radius:10px;color:var(--text)}
+  nav a.active, nav a:hover{background:rgba(10,40,60,0.06)}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 22px;
-    }
-    nav a {
-      margin-left: 16px;
-      font-weight: 700;
-      padding: 6px 10px;
-      border-radius: 8px;
-    }
-    nav a:hover,
-    nav a.active {
-      background: rgba(5, 20, 40, 0.12);
-    }
+  /* hero */
+  .hero{display:flex;gap:24px;align-items:flex-start;margin-top:12px;z-index:2}
+  .hero-left{flex:1;min-width:260px}
+  .hero h1{margin:0;font-size:34px;line-height:1.03;color:#042634}
+  .hero p{margin:12px 0;color:var(--muted);font-size:16px}
+  .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;font-weight:800;box-shadow:0 12px 28px rgba(42,108,255,0.12)}
 
-    .section-title {
-      font-size: 36px;
-      font-weight: 900;
-      margin-bottom: 6px;
-      color: #072033;
-    }
+  .hero-right{width:320px;min-width:260px;background:linear-gradient(180deg,#fff,#f7fffb);padding:14px;border-radius:14px;border:1px solid rgba(8,20,30,0.03);box-shadow:0 12px 36px rgba(8,20,30,0.06)}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+  .stat{background:#fff;border-radius:10px;padding:10px;text-align:center;border:1px solid rgba(0,0,0,0.04)}
+  .stat strong{display:block;font-size:20px;color:#072033}
 
-    .service-card {
-      display: flex;
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 14px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.08);
-      transition: 0.2s;
-      gap: 14px;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 38px rgba(0,0,0,0.12);
-    }
+  /* services grid */
+  .section-title{font-size:28px;margin-top:26px;color:#072033;font-weight:900}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px}
+  .card{display:flex;gap:14px;background:linear-gradient(90deg,#ffffff,#fbffff);border-radius:12px;padding:12px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 12px 30px rgba(8,20,30,0.04);transition:transform .15s}
+  .card:hover{transform:translateY(-6px)}
+  .thumb{width:110px;height:80px;border-radius:10px;overflow:hidden;background:#f4f8fb;flex-shrink:0;display:block}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .card h3{margin:0;font-size:16px;color:#072033}
+  .card p{margin:6px 0 0;color:var(--muted)}
 
-    .service-photo {
-      width: 110px;
-      height: 85px;
-      border-radius: 12px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .service-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  /* contact / aside */
+  .aside{background:linear-gradient(90deg,#fff8fb,#f2fff6);padding:16px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 12px 30px rgba(8,20,30,0.04)}
+  .aside h3{margin-top:0}
+  .aside .badge{display:inline-block;padding:8px 12px;border-radius:12px;background:linear-gradient(90deg,#ffdce8,#ffe6b2);font-weight:800;margin-top:8px}
 
-    /* Contact box */
-    .contact-box {
-      background: linear-gradient(120deg, #f8fffa, #fafdff);
-      padding: 18px;
-      border-radius: 14px;
-      margin-top: 28px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-    }
+  /* contact form area */
+  .contact-area{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:20px}
+  form{background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:12px;border:1px solid rgba(6,10,20,0.03)}
+  input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(6,10,20,0.06);margin-bottom:8px;font-family:inherit}
+  button{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:10px 12px;border-radius:10px;border:0;font-weight:800;cursor:pointer}
 
-    /* WhatsApp floating button */
-    .whatsapp-fab {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: linear-gradient(#25d366,#128c7e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 22px 40px rgba(18,140,118,0.35);
-      z-index: 999;
-    }
-    .whatsapp-fab svg {
-      fill: white;
-      width: 36px;
-      height: 36px;
-    }
-  </style>
+  footer{margin-top:24px;padding-top:12px;border-top:1px dashed rgba(6,10,20,0.04);text-align:center;color:var(--muted)}
+
+  /* WhatsApp FAB */
+  .fab{position:fixed;right:18px;bottom:18px;width:68px;height:68px;border-radius:50%;background:linear-gradient(180deg,#33d576,#128c7e);display:flex;align-items:center;justify-content:center;box-shadow:0 24px 54px rgba(18,140,118,0.28);z-index:9999}
+  .fab svg{width:36px;height:36px;fill:white}
+  .fab .dot{position:absolute;right:8px;top:8px;width:14px;height:14px;border-radius:50%;background:#ff5f6d;border:2px solid white;box-shadow:0 8px 20px rgba(255,95,109,0.22);animation:ping 1.8s infinite}
+  @keyframes ping{0%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.6}100%{transform:scale(1);opacity:1}}
+
+  @media(max-width:980px){.contact-area{grid-template-columns:1fr}.hero{flex-direction:column}.hero-right{width:100%}}
+</style>
 </head>
-
 <body>
+  <main class="page" role="main">
 
-<div class="container">
+    <!-- HEADER (inline SVG logo) -->
+    <header>
+      <a class="brand" href="index.html" aria-label="Kumar Associates">
+        <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+          <title id="logoTitle">Kumar Associates</title>
+          <defs><linearGradient id="gA" x1="0" x2="1"><stop offset="0" stop-color="#ffd7e0"/><stop offset="1" stop-color="#d9f2ff"/></linearGradient></defs>
+          <rect width="72" height="72" rx="14" fill="url(#gA)"/>
+          <text x="50%" y="52%" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900" fill="#082034">KA</text>
+        </svg>
+        <div>
+          <div class="name" style="font-weight:900">Kumar Associates</div>
+          <div class="tag">Tax | Accounts | Consultancy</div>
+        </div>
+      </a>
 
-  <!-- HEADER -->
-  <header>
-    <a href="index.html" style="display:flex;align-items:center;gap:12px;">
-      <!-- INLINE SVG LOGO -->
-      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="KA_LOGO" x1="0" x2="1">
-            <stop offset="0" stop-color="#ffd7e0"/>
-            <stop offset="1" stop-color="#d9f2ff"/>
-          </linearGradient>
-        </defs>
-        <rect width="72" height="72" rx="14" fill="url(#KA_LOGO)"/>
-        <text x="50%" y="52%" text-anchor="middle" font-size="26" font-weight="900" fill="#082034">KA</text>
-      </svg>
+      <nav aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-left">
+        <h1 id="heroTitle">हमारी सेवाएँ — Professional, Fast, Transparent</h1>
+        <p>Income Tax, GST, company registrations, accounting aur advisory — Ranchi, Bangalore & Jamui-Bihar में सेवाएँ।</p>
+        <a class="cta" href="#contact">Free Consultation</a>
+      </div>
+
+      <aside class="hero-right" aria-labelledby="statsLabel">
+        <h4 id="statsLabel">हमारे प्रमुख अनुभव</h4>
+        <div style="margin-top:10px">
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#fff7f4,#f5fbff);display:flex;align-items:center;justify-content:center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 11L12 3L21 11V20H3V11Z" stroke="#0b3a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:800">Tax & Business Support</div>
+              <div style="font-size:13px;color:var(--muted)">Reliable guidance for filings & registration</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats" style="margin-top:12px">
+          <div class="stat"><strong>4+</strong><small>साल अनुभव</small></div>
+          <div class="stat"><strong>500+</strong><small>खुश क्लाइंट</small></div>
+          <div style="grid-column:1 / -1;text-align:center;margin-top:6px;color:var(--muted)"><strong>99%</strong> समय पर सर्विस</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <h2 class="section-title" id="services">हमारी सेवाएँ</h2>
+
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start">
       <div>
-        <div style="font-weight:900;font-size:20px;color:#072033">Kumar Associates</div>
-        <div style="font-size:13px;color:#0a7a62">Tax | Accounts | Consultancy</div>
+        <div class="grid" aria-live="polite">
+          <!-- Cards (CDN images from Unsplash) -->
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1581091012184-5c52b4a370f3?w=900&q=80" alt="Income Tax Filing"></div><div><h3>Income Tax Filing</h3><p>ITR filing, audit support & tax planning.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1554224155-169641356f9b?w=900&q=80" alt="GST Registration"></div><div><h3>GST Registration & Filing</h3><p>GSTR-1, GSTR-3B filing & reconciliation services.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=900&q=80" alt="Company Registration"></div><div><h3>Company / LLP Registration</h3><p>Private Limited, LLP, proprietorship registrations & MCA support.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?w=900&q=80" alt="Partnership Registration"></div><div><h3>Partnership Registration</h3><p>Partnership deed drafting & registration compliance assistance.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&q=80" alt="Accounting"></div><div><h3>Accounting & Bookkeeping</h3><p>Day-to-day books, Excel/Tally reconciliation & monthly MIS.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=900&q=80" alt="PAN Card"></div><div><h3>PAN Card — Apply / Update</h3><p>Online PAN enrollment, correction & e-PAN assistance.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1607083206623-eef5d50803b5?w=900&q=80" alt="Digital Signature"></div><div><h3>Digital Signature (DSC)</h3><p>Class 2 / Class 3 DSC issuance & renewal.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1aa?w=900&q=80" alt="Bank Loan"></div><div><h3>Bank Loan Assistance</h3><p>Loan documentation, bank shortlisting & application support.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=80" alt="Project Report"></div><div><h3>Project Report & CMA</h3><p>Bank-ready DPR, projections & CMA data for approvals.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1569025708573-588d43bfee7d?w=900&q=80" alt="Investment"></div><div><h3>Mutual Fund / SIP</h3><p>Goal-based SIP planning & tax-saving ELSS advice.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&q=80" alt="Insurance"></div><div><h3>Insurance Policies</h3><p>Life, health & business insurance advisory.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1596568358603-5e3aa11f9394?w=900&q=80" alt="NGO Trust"></div><div><h3>NGO / Trust Registration</h3><p>Trust/Society/Section 8 registration + compliance.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1581091012184-5c52b4a370f3?w=900&q=80" alt="12A 80G"></div><div><h3>12A / 80G Registration</h3><p>NGO tax exemption — applications & documentation.</p></div></article>
+
+          <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=900&q=80" alt="CSR"></div><div><h3>CSR Registration & Advisory</h3><p>CSR project documentation, policy drafting & reporting.</p></div></article>
+        </div>
       </div>
-    </a>
 
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+      <aside class="aside" aria-labelledby="featuredLabel">
+        <h3 id="featuredLabel">Featured: Startup Package</h3>
+        <p>Company registration + GST registration + 3 months basic accounting at a bundled price.</p>
+        <div style="margin-top:10px"><span class="badge">Bundle Offer</span> <small style="color:var(--muted);margin-left:8px">Fast onboarding — 48–72 hours</small></div>
 
+        <div style="margin-top:14px">
+          <h4>Contact</h4>
+          <p style="margin:6px 0"><strong>Head Office (Bangalore)</strong><br>Prabhavathi Comfort Apts, Begur Road, Bangalore — 560068</p>
+          <p style="margin:6px 0"><strong>Branch (Ranchi)</strong><br>Khelgaon Housing Complex, Ranchi — 8352117</p>
+          <p style="margin:6px 0"><strong>Branch (Sikandra, Jamui)</strong><br>Sikandra, Jamui, Bihar — 811301</p>
 
-  <!-- HERO SECTION -->
-  <h1 class="section-title">हमारी सेवाएँ — Professional, Fast, Transparent</h1>
-  <p>हम Startup से लेकर established business तक सबको tax, GST, accounting और advisory services देते हैं। नीचे पूरी सूची देखें।</p>
+          <p style="margin:8px 0"><strong>Landline:</strong> <a href="tel:+918069277227">08069277227</a></p>
+          <p style="margin:6px 0"><strong>Mobile / WhatsApp:</strong> <a href="tel:+919334965179">9334965179</a></p>
+          <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
+        </div>
 
-
-  <!-- SERVICES GRID -->
-  <div class="services-grid">
-
-    <!-- 1 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1581091012184-5c52b4a370f3?w=800" alt="">
-      </div>
-      <div>
-        <h3>Income Tax Filing</h3>
-        <p>ITR filing, audit support & tax planning.</p>
-      </div>
+        <a href="contact.html" style="display:inline-block;margin-top:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:10px 14px;border-radius:10px;font-weight:800">Book Startup Package</a>
+      </aside>
     </div>
 
-    <!-- 2 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1554224155-169641356f9b?w=800" alt="">
-      </div>
-      <div>
-        <h3>GST Registration & Filing</h3>
-        <p>GSTR-1, 3B filing & reconciliation.</p>
-      </div>
-    </div>
+    <!-- CONTACT FORM -->
+    <section id="contact" class="contact-area" aria-label="Contact">
+      <form method="POST" action="https://formsubmit.co/KA2023@KUMARASSOCIATE.IN" style="min-height:160px">
+        <input type="hidden" name="_subject" value="New enquiry from site">
+        <input type="text" name="name" placeholder="नाम" required />
+        <input type="email" name="email" placeholder="Email (optional)" />
+        <textarea name="message" placeholder="आपका संदेश..." required></textarea>
+        <input type="hidden" name="_next" value="https://kumarassociate.in/thank-you.html" />
+        <button type="submit">Send Message</button>
+      </form>
 
-    <!-- 3 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800" alt="">
-      </div>
-      <div>
-        <h3>Company / LLP Registration</h3>
-        <p>MCA filings, incorporation & compliance.</p>
-      </div>
-    </div>
+      <aside class="aside" style="min-height:160px">
+        <h3 style="margin-top:0">Offices & Contact</h3>
+        <p style="margin:6px 0"><strong>Head Office:</strong><br>Prabhavathi Comfort Apts, Begur Road, Bangalore — 560068</p>
 
-    <!-- 4 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?w=800" alt="">
-      </div>
-      <div>
-        <h3>Partnership Registration</h3>
-        <p>Deed drafting & registration services.</p>
-      </div>
-    </div>
+        <p style="margin:6px 0"><strong>Branch (Ranchi):</strong><br>Khelgaon Housing Complex, Ranchi — 8352117</p>
 
-    <!-- 5 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=800" alt="">
-      </div>
-      <div>
-        <h3>Accounting & Bookkeeping</h3>
-        <p>Monthly accounts, Tally & MIS reports.</p>
-      </div>
-    </div>
+        <p style="margin:6px 0"><strong>Branch (Sikandra, Jamui):</strong><br>Sikandra, Jamui, Bihar — 811301</p>
 
-    <!-- 6 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800" alt="">
-      </div>
-      <div>
-        <h3>PAN Card — Apply / Update</h3>
-        <p>PAN application, correction & support.</p>
-      </div>
-    </div>
+        <p style="margin-top:8px"><strong>Landline:</strong> <a href="tel:+918069277227">08069277227</a></p>
+        <p><strong>Mobile / WhatsApp:</strong> <a href="tel:+919334965179">9334965179</a></p>
+        <p><strong>Email:</strong> <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
+      </aside>
+    </section>
 
-    <!-- 7 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1607083206623-eef5d50803b5?w=800" alt="">
-      </div>
-      <div>
-        <h3>Digital Signature (DSC)</h3>
-        <p>Class 2 / Class 3 DSC issuance.</p>
-      </div>
-    </div>
+    <footer>
+      <small>&copy; <span id="yr"></span> Kumar Associates — All rights reserved</small>
+    </footer>
+  </main>
 
-    <!-- 8 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1aa?w=800" alt="">
-      </div>
-      <div>
-        <h3>Bank Loan Assistance</h3>
-        <p>Loan documentation & processing.</p>
-      </div>
-    </div>
+  <!-- Floating WhatsApp -->
+  <a class="fab" href="https://wa.me/919334965179" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.86 11.86 0 0 0 12 0C5.37 0 .09 5.28.09 11.91c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.66A11.84 11.84 0 0 0 12 23.82C18.63 23.82 23.91 18.54 23.91 11.91c0-2.98-1.16-5.76-3.39-7.93z"/></svg>
+    <span class="dot" aria-hidden="true"></span>
+  </a>
 
-    <!-- 9 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800" alt="">
-      </div>
-      <div>
-        <h3>Project Report & CMA</h3>
-        <p>Bank-ready DPR & CMA data.</p>
-      </div>
-    </div>
+  <script>
+    // year
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-    <!-- 10 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1569025708573-588d43bfee7d?w=800" alt="">
-      </div>
-      <div>
-        <h3>Mutual Fund / SIP</h3>
-        <p>Investment planning.</p>
-      </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800" alt="">
-      </div>
-      <div>
-        <h3>Insurance Policies</h3>
-        <p>Life, health & business insurance.</p>
-      </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="service-card">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1596568358603-5e3aa11f9394?w=800" alt="">
-      </div>
-      <div>
-        <h3>NGO / Trust Registration</h3>
-        <p>Trust | Society | Section 8.</p>
-      </div>
-    </div>
-
-  </div>
-
-
-  <!-- CONTACT BOX -->
-  <div class="contact-box">
-    <h2>Featured: Startup Package</h2>
-    <p>Company registration + GST registration + <strong>3 months basic accounting</strong> at a bundled price.</p>
-
-    <h3>Contact</h3>
-    <p><strong>Head Office (Bangalore)</strong><br>
-       Prabhavathi Comfort Apts, Begur Road, Bangalore – 560068
-    </p>
-
-    <p><strong>Branch (Ranchi)</strong><br>
-       Khelgaon Housing Complex, Ranchi – 8352117
-    </p>
-
-    <p><strong>Landline:</strong> <a href="tel:+918069277227">08069277227</a></p>
-    <p><strong>Mobile / WhatsApp:</strong> <a href="tel:+919334965179">9334965179</a></p>
-    <p><strong>Email:</strong> <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
-
-    <a href="contact.html" style="display:inline-block;margin-top:12px;font-weight:800;background:#2a6cff;color:white;padding:12px 18px;border-radius:10px;">
-      Get a Quote
-    </a>
-  </div>
-
-</div>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<a class="whatsapp-fab" href="https://wa.me/919334965179" target="_blank">
-  <svg viewBox="0 0 32 32">
-    <path d="M20.5 3.5A11.86 11.86 0 0 0 12 0C5.37 0 .09 5.28.09 11.91c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.66A11.84 11.84 0 0 0 12 23.82C18.63 23.82 23.91 18.54 23.91 11.91c0-2.98-1.16-5.76-3.39-7.93z"/>
-  </svg>
-</a>
+    // image fallback: replace broken images with inline SVG placeholder
+    function placeholderDataURI(label){
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='480' height='300'><rect width='100%' height='100%' fill='#f3f7fb'/><g fill='#9aa8b3' font-family='Inter, Arial, sans-serif'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='18'>${label || 'Image unavailable'}</text></g></svg>`;
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('img').forEach(img=>{
+        function setFallback(){
+          const alt = img.getAttribute('alt') || img.getAttribute('data-alt') || 'Image';
+          img.src = placeholderDataURI(alt);
+          img.style.objectFit = 'contain';
+        }
+        if(!img.complete || img.naturalWidth === 0){
+          setFallback();
+        }
+        img.addEventListener('error', function onErr(){
+          img.removeEventListener('error', onErr);
+          setFallback();
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
