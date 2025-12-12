@@ -1,36 +1,173 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Services — Kumar Associates</title>
-<style>/* reuse small style */:root{--accent:#0b63d6;--muted:#6b7280;--bg:#f7f7fb;--card:#fff}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:var(--bg);color:#0f1724}.container{max-width:1100px;margin:0 auto;padding:20px}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}.card{background:#fff;padding:18px;border-radius:10px;margin-top:18px;box-shadow:0 6px 18px rgba(0,0,0,0.03)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}footer{padding:20px 0;color:var(--muted);font-size:14px;margin-top:20px}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — Kumar Associates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      color:#052231;
+      background: linear-gradient(120deg,#fff0f6,#e8fbff,#f0fff0,#fff8e6);
+      padding:28px;
+    }
+    .wrap{max-width:1200px;margin:0 auto;background:rgba(255,255,255,0.95);border-radius:18px;padding:28px;box-shadow:0 24px 60px rgba(12,24,50,0.09);border:6px solid rgba(255,255,255,0.6)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:26px}
+    .brand{display:flex;gap:14px;align-items:center;text-decoration:none;color:#052231}
+    .logo{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ffd7e0,#d9f2ff);font-weight:900;color:#082034}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{text-decoration:none;color:#083047;padding:8px 10px;border-radius:8px;font-weight:700}
+    nav a.active{background:rgba(6,48,72,0.06)}
+
+    .hero{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+    .hero h1{margin:0;font-size:28px;color:#032433}
+    .hero p{margin:8px 0 0 0;color:#2f5160}
+
+    .services-grid{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,#fff,#fbfdff);border-radius:14px;padding:14px;border:1px solid rgba(6,10,20,0.04);box-shadow:0 12px 30px rgba(12,18,30,0.04);display:flex;gap:12px;align-items:flex-start;transition:transform .14s}
+    .card:hover{transform:translateY(-8px)}
+    .thumb{width:110px;height:86px;border-radius:10px;overflow:hidden;flex:0 0 110px}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta h3{margin:0 0 8px 0;font-size:17px;color:#062033}
+    .meta p{margin:0;color:#3a5666;font-size:14px}
+
+    /* featured column */
+    .featured{background:linear-gradient(90deg,#fff7fb,#f0fff9);padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.03);box-shadow:0 10px 28px rgba(10,20,30,0.04)}
+    .featured h3{margin:0 0 8px 0;color:#072033}
+    .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:linear-gradient(90deg,#ffb3c6,#ffd7a8);font-weight:800;color:#082034;margin-bottom:10px}
+
+    .gallery{display:flex;gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:90px;object-fit:cover;border-radius:8px;border:1px solid rgba(6,10,20,0.03)}
+
+    .contact-brief{margin-top:14px}
+    .cta{display:inline-block;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#1ec8ff,#0b6bff);color:white;text-decoration:none;font-weight:700}
+
+    footer{margin-top:26px;padding-top:16px;border-top:1px dashed rgba(6,10,20,0.04);display:flex;justify-content:space-between;flex-wrap:wrap}
+    @media (max-width:980px){ .services-grid{grid-template-columns:1fr} .hero h1{font-size:22px} }
+  </style>
 </head>
 <body>
-<div class="container nav">
-  <div style="display:flex;gap:12px;align-items:center">
-    <img src="/assets/logo.png" alt="logo" style="width:44px;height:44px;border-radius:8px" onerror="this.src='https://source.unsplash.com/collection/190727/80x80?business'">
-    <strong>Kumar Associates</strong>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo">KA</div>
+        <div>
+          <div style="font-weight:900">Kumar Associates</div>
+          <div style="font-size:13px;color:#0b7a66">Tax | Accounts | Consultancy</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>हमारी सेवाएँ — Professional, Fast, Transparent</h1>
+        <p>हम Startup से लेकर established business तक सबके लिए tax, GST aur accounting services देते हैं। नीचे हमारी प्रमुख packages और details देखें।</p>
+      </div>
+      <div style="text-align:right">
+        <a class="cta" href="#contact">Get a Quote</a>
+      </div>
+    </section>
+
+    <section class="services-grid">
+      <div>
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="card" id="s-tax">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1554224155-1207d2a1c6a6?auto=format&fit=crop&w=800&q=70" alt="Tax documents">
+            </div>
+            <div class="meta">
+              <h3>Income Tax Filing</h3>
+              <p>Individual, HUF, Business — ITR preparation, assessment support aur audit-ready returns. (Form16/Form26AS check included)</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" id="s-gst">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=70" alt="GST and accountant">
+            </div>
+            <div class="meta">
+              <h3>GST Registration & Filing</h3>
+              <p>GST registration, monthly/quarterly returns (GSTR-1,3B) reconciliation aur advisory services.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" id="s-company">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=70" alt="Company registration">
+            </div>
+            <div class="meta">
+              <h3>Company / LLP Registration</h3>
+              <p>Private Limited, LLP, proprietorship registration + DIN/DSC guidance + MCA filing support.</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" id="s-accounting">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=70" alt="Bookkeeping">
+            </div>
+            <div class="meta">
+              <h3>Accounting & Bookkeeping</h3>
+              <p>Daily bookkeeping, monthly reconciliation, MIS & reports — Tally/Excel based or cloud accounting.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- gallery strip -->
+        <div class="gallery" aria-hidden="false">
+          <img src="https://images.unsplash.com/photo-1563986768609-9b0f6b7a2f7b?auto=format&fit=crop&w=800&q=70" alt="tax forms">
+          <img src="https://images.unsplash.com/photo-1526378721140-16a5f5e6b9d0?auto=format&fit=crop&w=800&q=70" alt="calculator">
+          <img src="https://images.unsplash.com/photo-1532634896-26909d0d1b85?auto=format&fit=crop&w=800&q=70" alt="filing">
+        </div>
+      </div>
+
+      <aside class="featured">
+        <h3>Featured: Startup Package</h3>
+        <div class="badge">Bundle Offer</div>
+        <p style="margin:8px 0 10px 0;color:#264">Company registration + GST registration + 3 months basic accounting at a single bundled price. Suitable for new small businesses.</p>
+
+        <strong>What’s included</strong>
+        <ul style="margin:8px 0 0 18px;color:#3a5666">
+          <li>Company/LLP registration (MCA filings)</li>
+          <li>GST registration & first 3 returns</li>
+          <li>Basic bookkeeping + monthly MIS</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <a class="cta" href="contact.html">Book Startup Package</a>
+        </div>
+
+        <div class="contact-brief" style="margin-top:14px">
+          <strong>Contact</strong>
+          <p style="margin:6px 0 0 0">Phone: <a href="tel:+918069277227">08069277227</a></p>
+          <p style="margin:6px 0 0 0">Email: <a href="mailto:KA2023@KUMARASSOCIATE.IN">KA2023@KUMARASSOCIATE.IN</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <small>&copy; <span id="year"></span> Kumar Associates — All rights reserved</small>
+      <div style="margin-top:8px">
+        <a href="index.html">Home</a> · <a href="contact.html">Contact</a>
+      </div>
+    </footer>
   </div>
-  <div><a href="/index.html" style="color:var(--muted);text-decoration:none">Home</a></div>
-</div>
 
-<main class="container">
-  <div class="card">
-    <h2>Our Services</h2>
-    <p style="color:var(--muted)">Comprehensive tax and accounting services tailored for your business.</p>
-
-    <div class="grid">
-      <div class="card"><h3>Income Tax</h3><p style="color:var(--muted)">Filing ITR, assessment, rectification and notices.</p></div>
-      <div class="card"><h3>GST</h3><p style="color:var(--muted)">GST registration, monthly returns, GSTR reconciliation.</p></div>
-      <div class="card"><h3>Bookkeeping</h3><p style="color:var(--muted)">Data entry, ledgers, monthly P&L and balance sheets.</p></div>
-      <div class="card"><h3>Audit Support</h3><p style="color:var(--muted)">Statutory audit assistance and schedules.</p></div>
-    </div>
-  </div>
-
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center"><div>&copy; <span id="yr"></span> Kumar Associates</div><div style="color:var(--muted)"></div></div>
-  </footer>
-</main>
-<script>document.getElementById('yr').innerText=new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
