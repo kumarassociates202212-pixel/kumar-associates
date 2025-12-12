@@ -27,8 +27,9 @@
     .hero h1{margin:0;font-size:28px;color:#032433}
     .hero p{margin:8px 0 0 0;color:#2f5160}
 
-    .services-grid{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+    .services-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+
     .card{background:linear-gradient(180deg,#fff,#fbfdff);border-radius:14px;padding:14px;border:1px solid rgba(6,10,20,0.04);box-shadow:0 12px 30px rgba(12,18,30,0.04);display:flex;gap:12px;align-items:flex-start;transition:transform .14s}
     .card:hover{transform:translateY(-8px)}
     .thumb{width:110px;height:86px;border-radius:10px;overflow:hidden;flex:0 0 110px}
@@ -36,10 +37,13 @@
     .meta h3{margin:0 0 8px 0;font-size:17px;color:#062033}
     .meta p{margin:0;color:#3a5666;font-size:14px}
 
+    .small-note{font-size:13px;color:#4a5b63;margin-top:6px}
+
     /* featured column */
     .featured{background:linear-gradient(90deg,#fff7fb,#f0fff9);padding:16px;border-radius:12px;border:1px solid rgba(6,10,20,0.03);box-shadow:0 10px 28px rgba(10,20,30,0.04)}
     .featured h3{margin:0 0 8px 0;color:#072033}
     .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:linear-gradient(90deg,#ffb3c6,#ffd7a8);font-weight:800;color:#082034;margin-bottom:10px}
+    .featured ul{margin:8px 0 0 18px;color:#3a5666}
 
     .gallery{display:flex;gap:10px;margin-top:12px}
     .gallery img{width:100%;height:90px;object-fit:cover;border-radius:8px;border:1px solid rgba(6,10,20,0.03)}
@@ -73,7 +77,7 @@
     <section class="hero">
       <div>
         <h1>हमारी सेवाएँ — Professional, Fast, Transparent</h1>
-        <p>हम Startup से लेकर established business तक सबके लिए tax, GST aur accounting services देते हैं। नीचे हमारी प्रमुख packages और details देखें।</p>
+        <p>हम Startup से लेकर established business तक सबके लिए tax, GST, accounting, finance aur advisory services देते हैं। नीचे पूरी सूची देखें।</p>
       </div>
       <div style="text-align:right">
         <a class="cta" href="#contact">Get a Quote</a>
@@ -83,53 +87,112 @@
     <section class="services-grid">
       <div>
         <div class="cards">
-          <!-- Card 1 -->
+
+          <!-- existing services -->
           <article class="card" id="s-tax">
-            <div class="thumb">
-              <img src="images/tax-documents.jpg" alt="Tax documents">
-            </div>
+            <div class="thumb"><img src="images/tax-documents.jpg" alt="Tax documents"></div>
             <div class="meta">
               <h3>Income Tax Filing</h3>
               <p>Individual, HUF, Business — ITR preparation, assessment support aur audit-ready returns. (Form16/Form26AS check included)</p>
+              <div class="small-note">Free initial review of Form16 available.</div>
             </div>
           </article>
 
-          <!-- Card 2 -->
           <article class="card" id="s-gst">
-            <div class="thumb">
-              <img src="images/accountant-desk.jpg" alt="GST and accountant">
-            </div>
+            <div class="thumb"><img src="images/accountant-desk.jpg" alt="GST and accountant"></div>
             <div class="meta">
               <h3>GST Registration & Filing</h3>
               <p>GST registration, monthly/quarterly returns (GSTR-1,3B) reconciliation aur advisory services.</p>
             </div>
           </article>
 
-          <!-- Card 3 -->
           <article class="card" id="s-company">
-            <div class="thumb">
-              <img src="images/company-registration.jpg" alt="Company registration">
-            </div>
+            <div class="thumb"><img src="images/company-registration.jpg" alt="Company registration"></div>
             <div class="meta">
               <h3>Company / LLP Registration</h3>
               <p>Private Limited, LLP, proprietorship registration + DIN/DSC guidance + MCA filing support.</p>
             </div>
           </article>
 
-          <!-- Card 4 -->
           <article class="card" id="s-accounting">
-            <div class="thumb">
-              <img src="images/bookkeeping.jpg" alt="Bookkeeping">
-            </div>
+            <div class="thumb"><img src="images/bookkeeping.jpg" alt="Bookkeeping"></div>
             <div class="meta">
               <h3>Accounting & Bookkeeping</h3>
               <p>Daily bookkeeping, monthly reconciliation, MIS & reports — Tally/Excel based or cloud accounting.</p>
             </div>
           </article>
+
+          <!-- NEW SERVICES START -->
+
+          <article class="card" id="s-pan">
+            <div class="thumb"><img src="images/pan-card.jpg" alt="PAN card apply"></div>
+            <div class="meta">
+              <h3>PAN Card — Apply / Update (Digital)</h3>
+              <p>New PAN enrollment, PAN correction, e-PAN delivery and document guidance. We assist with online PAN application & follow-up.</p>
+              <div class="small-note">Aadhar linking / e-KYC support available.</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-dsc">
+            <div class="thumb"><img src="images/digital-signature.jpg" alt="Digital Signature Certificate"></div>
+            <div class="meta">
+              <h3>Digital Signature (DSC)</h3>
+              <p>Class 2 / Class 3 digital signatures for directors & authorised signatories — DSC issuance, renewal aur technical setup.</p>
+              <div class="small-note">PAN & address docs required for DSC issuance.</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-loan">
+            <div class="thumb"><img src="images/bank-loan.jpg" alt="Bank loan assistance"></div>
+            <div class="meta">
+              <h3>Bank Loan Assistance</h3>
+              <p>Loan advisory & documentation for business loans, SME loans, working capital, term loans — bank shortlisting and application support.</p>
+              <div class="small-note">We prepare/check documents to improve approval chances.</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-project">
+            <div class="thumb"><img src="images/project-report.jpg" alt="Project report & CMA data"></div>
+            <div class="meta">
+              <h3>Project Report & CMA Data</h3>
+              <p>Professional project reports, financial projections, CMA data packs for bank sanctions and loan processing.</p>
+              <div class="small-note">Custom reports for NBFC / bank submissions — with assumptions and cashflow schedules.</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-cma">
+            <div class="thumb"><img src="images/cma-data.jpg" alt="CMA data"></div>
+            <div class="meta">
+              <h3>CMA Data Preparation</h3>
+              <p>Accurate CMA schedules (balance sheet, P&L, cash flows) for credit appraisal and bank compliance.</p>
+              <div class="small-note">Format compatible with major banks and NBFCs.</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-invest">
+            <div class="thumb"><img src="images/investment-mf-sip.jpg" alt="Mutual funds and SIP"></div>
+            <div class="meta">
+              <h3>Investment Advisory — Mutual Funds / SIP</h3>
+              <p>Goal-based investment planning, SIP recommendations, mutual fund portfolio construction and review (risk profiling included).</p>
+              <div class="small-note">Long-term & tax-efficient planning (ELSS, retirement goals).</div>
+            </div>
+          </article>
+
+          <article class="card" id="s-insurance">
+            <div class="thumb"><img src="images/insurance-policies.jpg" alt="Insurance policies"></div>
+            <div class="meta">
+              <h3>Insurance Policies — Life & General</h3>
+              <p>Life insurance, term plans, health insurance, and business insurance advisory — compare plans and claim support guidance.</p>
+              <div class="small-note">Policy selection based on family needs and financial goals.</div>
+            </div>
+          </article>
+
+          <!-- NEW SERVICES END -->
+
         </div>
 
         <!-- gallery strip -->
-        <div class="gallery" aria-hidden="false">
+        <div class="gallery" aria-hidden="false" style="margin-top:14px">
           <img src="images/gallery1.jpg" alt="tax forms">
           <img src="images/gallery2.jpg" alt="calculator">
           <img src="images/gallery3.jpg" alt="filing">
@@ -142,10 +205,11 @@
         <p style="margin:8px 0 10px 0;color:#264">Company registration + GST registration + 3 months basic accounting at a single bundled price. Suitable for new small businesses.</p>
 
         <strong>What’s included</strong>
-        <ul style="margin:8px 0 0 18px;color:#3a5666">
+        <ul>
           <li>Company/LLP registration (MCA filings)</li>
           <li>GST registration & first 3 returns</li>
           <li>Basic bookkeeping + monthly MIS</li>
+          <li>Assistance with PAN / DSC if required</li>
         </ul>
 
         <div style="margin-top:12px">
