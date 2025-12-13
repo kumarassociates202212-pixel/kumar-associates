@@ -1,191 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About Us — Kumar Associates</title>
-<meta name="description" content="Kumar Associates is a trusted tax, accounting and compliance consultancy offering Income Tax filing, GST services, company registration, PAN, DSC, project reports and CMA data. Offices in Bangalore, Ranchi & Jamui (Bihar).">
+<meta name="description" content="Kumar Associates is a professional consultancy offering tax filing, GST, accounting, company registration, project reports, PAN, DSC & financial advisory services.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     font-family:Inter,Arial;
-    background:linear-gradient(135deg,#e8f3ff,#fde8f3);
+    background:linear-gradient(135deg,#e3f2ff,#f4e0ff,#ffe8ef);
 }
+
 .wrap{
     max-width:1200px;
-    margin:35px auto;
+    margin:30px auto;
     padding:20px;
 }
 
-/* HEADER */
-header{
+/* NAV */
+nav{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    margin-bottom:30px;
-}
-nav a{
-    margin-left:15px;
-    font-weight:700;
-    text-decoration:none;
-    color:#00354d;
-}
-nav a:hover{
-    color:#0077ff;
+    align-items:center;
+    padding:15px 5px;
 }
 
-.logo-box{
+.logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:#002b3c;
+    gap:10px;
 }
-.logo-svg{width:72px;height:72px;}
-.logo-title{font-size:22px;font-weight:900;}
-.logo-sub{font-size:13px;color:#2a7065;}
 
-/* Content */
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+}
+
+nav a{
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;
+    color:#083255;
+}
+
+nav a:hover{
+    color:#005ad6;
+}
+
 h1{
-    font-size:38px;
-    font-weight:900;
-    color:#002b3c;
-    margin-bottom:15px;
+    font-size:42px;
+    color:#083255;
+    font-weight:800;
 }
-h2{
-    font-size:28px;
-    color:#00354d;
-    margin-top:35px;
-}
+
 p{
+    color:#062b48;
     font-size:17px;
-    color:#333;
     line-height:1.6;
 }
 
-/* Branch Box */
-.branch-box{
-    background:white;
-    padding:22px;
-    border-radius:16px;
-    margin-bottom:20px;
-    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+.section{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    margin-top:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
 }
+
+.branch-box{
+    margin-top:20px;
+    padding:18px;
+    background:#ffffffdd;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
 .branch-title{
     font-size:20px;
-    font-weight:800;
-    color:#002b3c;
-}
-.branch-txt{
-    font-size:16px;
-    color:#444;
+    font-weight:700;
+    color:#083255;
+    margin-bottom:8px;
 }
 
-/* WhatsApp */
+/* WhatsApp floating */
 .whatsapp{
     position:fixed;
-    right:22px;
-    bottom:22px;
-    width:70px;
-    height:70px;
-    border-radius:50%;
+    bottom:25px;
+    right:25px;
     background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
-.whatsapp img{width:38px;}
+.whatsapp img{
+    width:35px;
+}
 </style>
-</head>
 
+</head>
 <body>
+
 <div class="wrap">
 
-<!-- HEADER -->
-<header>
-  <a class="logo-box" href="index.html">
-    <svg class="logo-svg" viewBox="0 0 72 72">
-      <defs>
-        <linearGradient id="grad3" x1="0" x2="1">
-          <stop offset="0" stop-color="#ffe1ea"/>
-          <stop offset="1" stop-color="#d9f1ff"/>
-        </linearGradient>
-      </defs>
-      <rect width="72" height="72" rx="16" fill="url(#grad3)"/>
-      <text x="50%" y="54%" text-anchor="middle"
-        font-family="Inter" font-size="27" font-weight="900" fill="#082032">KA</text>
-    </svg>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            <img src="https://i.ibb.co/Y3f5TGh/ka-logo.png">
+            <div>
+                <strong style="font-size:20px;">Kumar Associates</strong><br>
+                <span style="font-size:13px;color:#005ad6;">Tax | Accounts | Consultancy</span>
+            </div>
+        </div>
 
-    <div>
-      <div class="logo-title">Kumar Associates</div>
-      <div class="logo-sub">Tax | Accounts | Consultancy</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html" style="color:#005ad6;">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <h1>About Us</h1>
+
+    <div class="section">
+        <p>
+            Kumar Associates is a professional consultancy firm providing Tax Filing, GST Registration, Accounting, 
+            Company Incorporation, Project Report & CMA Data, PAN, DSC and Financial Advisory services.  
+        </p>
+
+        <p>
+            We combine experience, accuracy and timely support to deliver reliable compliance and financial solutions 
+            to Individuals, Startups, MSMEs and Established Businesses across India.
+        </p>
+
+        <p>
+            With a multi-state presence and an expert team, we help clients stay compliant, improve financial planning 
+            and grow their business with confidence.
+        </p>
     </div>
-  </a>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html" style="color:#0077ff;">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <!-- BRANCHES -->
+    <h2 style="margin-top:40px;color:#083255;font-size:30px;">Our Offices</h2>
 
-<!-- ABOUT CONTENT -->
-<h1>About Kumar Associates</h1>
+    <div class="branch-box">
+        <div class="branch-title">Head Office — Bengaluru</div>
+        Prabhavathi Comfort Apts, Begur Road,<br>
+        Bengaluru, Karnataka — 560068
+    </div>
 
-<p>
-Kumar Associates is a professional tax, accounting and compliance consultancy serving individuals, freelancers, startups and businesses across India.  
-We specialise in Income Tax filing, GST services, Company/LLP registration, PAN, DSC, accounting, project reports and CMA data.  
-Our goal is to provide reliable, transparent and fast services with complete customer satisfaction.
-</p>
+    <div class="branch-box">
+        <div class="branch-title">Branch Office — Ranchi</div>
+        Khelgaon Housing Complex,<br>
+        Ranchi, Jharkhand — 835217
+    </div>
 
-<p>
-With years of experience in taxation and compliance, our team ensures accurate documentation, timely filings and expert advisory to keep your business compliant and running smoothly.
-</p>
+    <div class="branch-box">
+        <div class="branch-title">Branch Office — Bihar</div>
+        Sikandra, Jamui,<br>
+        Bihar — 811301
+    </div>
 
-<h2>Why Choose Us?</h2>
+</div><!-- wrap end -->
 
-<p>✔ 10+ years experience in tax & compliance</p>
-<p>✔ Fast processing & transparent service</p>
-<p>✔ Expert support for individuals & businesses</p>
-<p>✔ MCA, GST, Income Tax, PAN, DSC, Loans & more</p>
-<p>✔ Audit-ready filings & documentation</p>
-
-<h2>Our Offices</h2>
-
-<div class="branch-box">
-  <div class="branch-title">Head Office — Bangalore</div>
-  <div class="branch-txt">
-    Prabhavathi Comfort Apts,<br>
-    Begur Road, Bangalore, Karnataka — 560068
-  </div>
-</div>
-
-<div class="branch-box">
-  <div class="branch-title">Branch — Ranchi</div>
-  <div class="branch-txt">
-    Khelgaon Housing Complex,<br>
-    Ranchi, Jharkhand — 835217
-  </div>
-</div>
-
-<div class="branch-box">
-  <div class="branch-title">Branch — Bihar</div>
-  <div class="branch-txt">
-    Sikandra, Jamui, Bihar — 811301
-  </div>
-</div>
-
-</div>
-
-<!-- WhatsApp Floating -->
-<a class="whatsapp" href="https://wa.me/9334965179" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/9334965179" class="whatsapp">
+    <img src="https://i.ibb.co/8z4vPbm/whatsapp.png">
 </a>
 
 </body>
