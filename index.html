@@ -3,250 +3,161 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <title>Kumar Associates — Tax, GST, Accounting & Compliance</title>
-<meta name="description" content="Kumar Associates provides Income Tax filing, GST registration, Accounting, PAN, DSC, Project Report, CMA Data & Compliance services. Contact: 9334965179 / 08069277227">
+<meta name="description" content="Kumar Associates provides Income Tax filing, GST registration, accounting, PAN, DSC, project report & CMA data services for Individuals, Startups & Businesses.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     font-family:Inter,Arial;
-    background:linear-gradient(135deg,#e8f3ff,#fde8f3);
+    background:linear-gradient(135deg,#e3f2ff,#f4e0ff,#ffe8ef);
 }
 
-/* Main wrapper */
+/* container */
 .wrap{
     max-width:1200px;
-    margin:40px auto;
+    margin:30px auto;
     padding:20px;
 }
 
-/* Header */
-header{
+/* nav */
+nav{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    margin-bottom:30px;
-}
-nav a{
-    margin-left:18px;
-    font-weight:700;
-    text-decoration:none;
-    color:#003247;
-}
-nav a:hover{
-    color:#0077ff;
+    align-items:center;
+    padding:15px 5px;
 }
 
-/* Logo */
-.logo-box{
+.logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:#00242f;
-}
-.logo-svg{
-    width:72px;
-    height:72px;
-}
-.logo-title{
-    font-size:22px;
-    font-weight:900;
-}
-.logo-sub{
-    font-size:13px;
-    color:#227066;
+    gap:10px;
 }
 
-/* Headline */
-h1{
-    font-size:42px;
-    font-weight:900;
-    color:#002b40;
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+}
+
+nav a{
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;
+    color:#083255;
+}
+
+nav a:hover{
+    color:#005ad6;
+}
+
+/* hero */
+.hero h1{
+    font-size:45px;
+    font-weight:800;
+    color:#083255;
     margin-bottom:10px;
 }
-h2{
-    font-size:30px;
-    font-weight:900;
-    margin-top:40px;
-    color:#00354a;
-}
-p{
-    font-size:17px;
-    color:#444;
+
+.hero p{
+    font-size:18px;
+    color:#083255;
     line-height:1.6;
 }
 
-/* Card Grid */
+/* cards grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:22px;
-    margin-top:25px;
+    gap:25px;
+    margin-top:30px;
 }
+
 .card{
-    background:white;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+    background:#fff;
+    border-radius:18px;
+    padding:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.2s;
 }
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
 .card img{
     width:100%;
-    height:170px;
+    height:180px;
     object-fit:cover;
     border-radius:12px;
-    margin-bottom:12px;
 }
-.card-title{
+
+.card h3{
+    margin:12px 0 8px 0;
     font-size:20px;
-    font-weight:800;
-    color:#002c40;
-    margin-bottom:6px;
+    color:#083255;
 }
-.card-text{
+
+.card p{
+    color:#062b48;
     font-size:15px;
     line-height:1.5;
 }
 
-/* Contact Section */
+/* contact box */
 .contact-box{
-    background:white;
-    padding:22px;
-    border-radius:16px;
-    margin-top:32px;
-    box-shadow:0 4px 18px rgba(0,0,0,0.08);
-}
-.contact-line{
-    font-size:17px;
-    margin-bottom:10px;
+    margin-top:40px;
+    background:#ffffffaa;
+    padding:20px;
+    border-radius:15px;
 }
 
-/* WhatsApp */
+/* footer */
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    font-size:14px;
+    color:#062b48;
+}
+
 .whatsapp{
     position:fixed;
-    right:22px;
-    bottom:22px;
-    width:70px;
-    height:70px;
-    border-radius:50%;
+    bottom:25px;
+    right:25px;
     background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
-.whatsapp img{width:38px;}
+.whatsapp img{
+    width:35px;
+}
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
-
-<!-- HEADER -->
-<header>
-    <a class="logo-box" href="index.html">
-        <svg class="logo-svg" viewBox="0 0 72 72">
-            <defs>
-                <linearGradient id="grad1" x1="0" x2="1">
-                    <stop offset="0" stop-color="#ffe1ea"/>
-                    <stop offset="1" stop-color="#d9f1ff"/>
-                </linearGradient>
-            </defs>
-            <rect width="72" height="72" rx="16" fill="url(#grad1)"/>
-            <text x="50%" y="54%" text-anchor="middle"
-                  font-family="Inter" font-size="27" font-weight="900" fill="#082032">KA</text>
-        </svg>
-        <div>
-            <div class="logo-title">Kumar Associates</div>
-            <div class="logo-sub">Tax | Accounts | Consultancy</div>
-        </div>
-    </a>
-
+    <!-- NAV -->
     <nav>
-        <a href="index.html" style="color:#0077ff;">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <div class="logo">
+            <img src="https://i.ibb.co/Y3f5TGh/ka-logo.png" />
+            <div>
+                <strong style="font-size:20px;">Kumar Associates</strong><br>
+                <span style="font-size:13px;color:#005ad6;">Tax | Accounts | Consultancy</span>
+            </div>
+        </div>
 
-<!-- HERO TEXT -->
-<h1>Professional Tax Consultancy — Fast, Transparent & Reliable</h1>
-<p>
-We provide expert support for Income Tax filing, GST registration, company compliance, PAN, DSC, accounting, project reports & CMA data.  
-Reliable services for Individuals, Startups & Businesses.
-</p>
-
-<!-- SERVICES GRID -->
-<h2>Our Services</h2>
-<div class="grid">
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800" />
-        <div class="card-title">Income Tax Filing</div>
-        <div class="card-text">ITR filing, audit support & tax planning for Individuals, HUF & Businesses.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800" />
-        <div class="card-title">GST Registration & Filing</div>
-        <div class="card-text">GST registration, return filing, reconciliation & monthly advisory.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b1248f6?q=80&w=900" />
-        <div class="card-title">Company / LLP Registration</div>
-        <div class="card-text">Private Limited, LLP & Proprietorship setup with MCA compliance.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091012184-5c06f3d2ab65?q=80&w=900" />
-        <div class="card-title">Accounting & Bookkeeping</div>
-        <div class="card-text">Monthly accounts, Tally/Excel bookkeeping & MIS reports.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1599058917381-21a6aa24f5c6?q=80&w=900" />
-        <div class="card-title">PAN Card — Apply / Update</div>
-        <div class="card-text">Online PAN application, correction & e-PAN support.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1532619187603-fb5e0f0c2be3?q=80&w=900" />
-        <div class="card-title">Digital Signature (DSC)</div>
-        <div class="card-text">Class 2 / Class 3 DSC issuance, renewal & setup assistance.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=900" />
-        <div class="card-title">Bank Loan Assistance</div>
-        <div class="card-text">Loan documentation, bank follow-up & application support.</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1581092335289-62d8ac43f41b?q=80&w=900" />
-        <div class="card-title">Project Report / CMA Data</div>
-        <div class="card-text">Bank-ready DPR & CMA data for loan approvals.</div>
-    </div>
-
-</div>
-
-<!-- CONTACT BOX -->
-<div class="contact-box">
-    <div class="contact-line"><b>Landline:</b> 08069277227</div>
-    <div class="contact-line"><b>Mobile / WhatsApp:</b> 9334965179</div>
-    <div class="contact-line"><b>Email:</b> KA2023@KUMARASSOCIATE.IN</div>
-</div>
-
-</div>
-
-<!-- WHATSAPP FLOAT -->
-<a class="whatsapp" href="https://wa.me/9334965179" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-</body>
-</html>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
