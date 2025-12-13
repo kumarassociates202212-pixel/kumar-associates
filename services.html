@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Our Services — Kumar Associates</title>
-<meta name="description" content="Income Tax, GST, Accounting, PAN, DSC, Loan Assistance, Project Report, CMA Data, Mutual Fund SIP Advisory & Insurance services. Locations: Bangalore, Ranchi, Jamui. Contact: 9334965179">
+<title>Services — Kumar Associates</title>
+<meta name="description" content="Kumar Associates provides Income Tax, GST, Accounting, PAN, DSC, Project Report, CMA Data, Loan Assistance, Mutual Fund, Insurance and NGO/Trust Registration services.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 body{
   margin:0;
   font-family:Inter,Arial;
-  background:linear-gradient(135deg,#e8faff,#fde7ef);
+  background:linear-gradient(135deg,#e8f3ff,#fde8f3);
 }
 .wrap{
   max-width:1200px;
@@ -26,83 +26,83 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 nav a{
   margin-left:15px;
   font-weight:700;
   text-decoration:none;
-  color:#003c5a;
+  color:#00354d;
 }
 nav a:hover{
-  color:#0077ff;
+  color:#007bff;
 }
 .logo-box{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
   text-decoration:none;
-  color:#001e2b;
+  color:#002839;
 }
-.logo-svg{
-  width:70px;
-  height:70px;
-}
-.logo-text-big{font-size:22px;font-weight:900;}
-.logo-text-small{font-size:13px;color:#0a6655;}
+.logo-svg{width:70px;height:70px;}
+.logo-title{font-size:22px;font-weight:900;}
+.logo-sub{font-size:13px;color:#2a6f66;}
 
+/* Heading */
 h1{
-  font-size:34px;
+  font-size:35px;
   font-weight:900;
   color:#002b40;
+  margin-bottom:10px;
 }
-.sub{
+p{
   font-size:17px;
-  color:#003344;
-  margin-bottom:25px;
+  color:#333;
 }
 
-/* Cards */
-.services{
+/* SERVICES GRID */
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:22px;
+  margin-top:25px;
 }
 .card{
   background:white;
-  border-radius:18px;
   padding:18px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.09);
+  border-radius:16px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
 }
 .card img{
   width:100%;
-  height:180px;
+  height:160px;
   object-fit:cover;
   border-radius:12px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 .card-title{
-  font-weight:900;
-  font-size:20px;
-  margin-bottom:8px;
+  font-size:19px;
+  font-weight:800;
+  color:#002c40;
+  margin-bottom:5px;
 }
-.card-txt{
+.card-text{
   font-size:15px;
-  color:#334;
+  line-height:1.5;
 }
 
-/* WhatsApp Floating */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:22px;
   bottom:22px;
-  background:#25d366;
   width:70px;
   height:70px;
   border-radius:50%;
+  background:#25D366;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 .whatsapp img{width:38px;}
@@ -110,7 +110,6 @@ h1{
 </head>
 
 <body>
-
 <div class="wrap">
 
 <!-- HEADER -->
@@ -118,94 +117,114 @@ h1{
   <a class="logo-box" href="index.html">
     <svg class="logo-svg" viewBox="0 0 72 72">
       <defs>
-        <linearGradient id="logoGrad2" x1="0" x2="1">
-          <stop offset="0" stop-color="#ffd6de"/>
-          <stop offset="1" stop-color="#d6efff"/>
+        <linearGradient id="grad2" x1="0" x2="1">
+          <stop offset="0" stop-color="#ffe1ea"/>
+          <stop offset="1" stop-color="#d9f1ff"/>
         </linearGradient>
       </defs>
-      <rect width="72" height="72" rx="16" fill="url(#logoGrad2)"/>
+      <rect width="72" height="72" rx="16" fill="url(#grad2)"/>
       <text x="50%" y="54%" text-anchor="middle"
-            font-family="Inter" font-size="26" font-weight="900" fill="#082032">KA</text>
+        font-family="Inter" font-size="27" font-weight="900" fill="#082032">KA</text>
     </svg>
-
     <div>
-      <div class="logo-text-big">Kumar Associates</div>
-      <div class="logo-text-small">Tax | Accounts | Consultancy</div>
+      <div class="logo-title">Kumar Associates</div>
+      <div class="logo-sub">Tax | Accounts | Consultancy</div>
     </div>
   </a>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a href="services.html" style="color:#007bff;">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<h1>Our Professional Services</h1>
-<div class="sub">Tax, GST, accounting, compliance and advisory solutions for individuals & businesses.</div>
+<h1>Our Services — Professional, Fast & Reliable</h1>
+<p>We offer end-to-end tax, compliance, financial and registration services for Individuals, Startups and Businesses.</p>
 
-<!-- SERVICE GRID -->
-<div class="services">
+<div class="grid">
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1581092334494-0407be9e44c1?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800">
     <div class="card-title">Income Tax Filing</div>
-    <div class="card-txt">ITR preparation, audit-ready filing & assessment support.</div>
+    <div class="card-text">ITR filing, audit support, tax planning & assessment guidance.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800">
     <div class="card-title">GST Registration & Filing</div>
-    <div class="card-txt">GST registration, GSTR-1, 3B, monthly/quarterly returns & reconciliation.</div>
+    <div class="card-text">GST registration, GSTR-1,3B filing, reconciliation & advisory.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b1248f6?q=80&w=900">
     <div class="card-title">Company / LLP Registration</div>
-    <div class="card-txt">Private Limited & LLP incorporation, MCA filings, DIN/DSC help.</div>
+    <div class="card-text">Private Limited, LLP & Proprietorship registration with MCA filings.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&q=60">
-    <div class="card-title">PAN Card — Apply / Update</div>
-    <div class="card-txt">New PAN application, correction & e-PAN support.</div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1581091012184-5c06f3d2ab65?q=80&w=900">
     <div class="card-title">Accounting & Bookkeeping</div>
-    <div class="card-txt">Monthly accounts, Tally/Excel reconciliation & MIS reports.</div>
+    <div class="card-text">Daily bookkeeping, Tally/Excel Maintenance & MIS reports.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=800&q=60">
-    <div class="card-title">Bank Loan Assistance</div>
-    <div class="card-txt">Loan documentation, projections & approval support.</div>
+    <img src="https://images.unsplash.com/photo-1599058917381-21a6aa24f5c6?q=80&w=900">
+    <div class="card-title">PAN Card — Apply / Update</div>
+    <div class="card-text">New PAN, correction, reissue & e-PAN services.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=800&q=60">
-    <div class="card-title">Project Report / CMA Data</div>
-    <div class="card-txt">CMA data, DPR, projections & bank-ready financial reports.</div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581090464777-6dfb6cd58c8b?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1532619187603-fb5e0f0c2be3?q=80&w=900">
     <div class="card-title">Digital Signature (DSC)</div>
-    <div class="card-txt">Class-2 / Class-3 DSC issuance, renewal & setup guidance.</div>
+    <div class="card-text">Class 2 / Class 3 DSC issuance, renewal & installation support.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1504270997636-07ddfbd48945?auto=format&fit=crop&w=800&q=60">
-    <div class="card-title">Mutual Fund / SIP Advisory</div>
-    <div class="card-txt">Investment planning, SIP setup & wealth management.</div>
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=900">
+    <div class="card-title">Bank Loan Assistance</div>
+    <div class="card-text">Loan documentation, file preparation & bank follow-up.</div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60">
+    <img src="https://images.unsplash.com/photo-1581092335289-62d8ac43f41b?q=80&w=900">
+    <div class="card-title">Project Report & CMA Data</div>
+    <div class="card-text">Bank-ready DPR, CMA Data for loan approvals.</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1522202222293-3f5c7f07f7d4?q=80&w=900">
+    <div class="card-title">Mutual Fund / SIP</div>
+    <div class="card-text">Investment planning, SIP advisory & portfolio guidance.</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521790797525-8a2f01c3c06c?q=80&w=900">
     <div class="card-title">Insurance Policies</div>
-    <div class="card-txt">Life, health & business insurance advisory.</div>
+    <div class="card-text">Life, Health & Business insurance advisory services.</div>
   </div>
 
-  <div cla
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246?q=80&w=900">
+    <div class="card-title">NGO / Trust Registration</div>
+    <div class="card-text">Trust, NGO, Society, 12A/80G & CSR Registration services.</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900">
+    <div class="card-title">Partnership Registration</div>
+    <div class="card-text">Partnership deed drafting, registration & compliance help.</div>
+  </div>
+
+</div>
+
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/9334965179" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+</body>
+</html>
