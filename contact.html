@@ -2,147 +2,137 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>Contact Us — Kumar Associates</title>
-<meta name="description" content="Contact Kumar Associates for Income Tax, GST, PAN, DSC, Accounting, Project Report, CMA Data, Loan Assistance & Compliance services. Bangalore | Ranchi | Jamui Bihar. Call: 9334965179">
+<meta name="description" content="Contact Kumar Associates for Income Tax filing, GST services, Company Registration, Accounting, PAN, DSC, CMA Data and financial advisory. Offices in Bangalore, Ranchi & Bihar.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 body{
-  margin:0;
-  font-family:Inter,Arial;
-  background:linear-gradient(135deg,#e7faff,#fde7ef);
+    margin:0;
+    font-family:Inter,Arial;
+    background:linear-gradient(135deg,#e8f3ff,#fde8f3);
 }
 .wrap{
-  max-width:1100px;
-  margin:30px auto;
-  padding:20px;
+    max-width:1200px;
+    margin:35px auto;
+    padding:20px;
 }
 
-/* Header */
+/* HEADER */
 header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:30px;
 }
 nav a{
-  margin-left:15px;
-  font-weight:700;
-  text-decoration:none;
-  color:#003c5a;
+    margin-left:15px;
+    font-weight:700;
+    text-decoration:none;
+    color:#00354d;
 }
 nav a:hover{
-  color:#0077ff;
+    color:#0077ff;
 }
 .logo-box{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
-  color:#001e2b;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#002b3c;
 }
-.logo-svg{
-  width:70px;
-  height:70px;
-}
-.logo-text-big{font-size:22px;font-weight:900;}
-.logo-text-small{font-size:13px;color:#0a6655;}
+.logo-svg{width:72px;height:72px;}
+.logo-title{font-size:22px;font-weight:900;}
+.logo-sub{font-size:13px;color:#2a7065;}
 
+/* Contact Section */
 h1{
-  font-size:34px;
-  font-weight:900;
-  color:#002b40;
-  margin-bottom:15px;
+    font-size:35px;
+    font-weight:900;
+    color:#002b3c;
+    margin-bottom:15px;
 }
-.section{
-  display:flex;
-  gap:25px;
-  flex-wrap:wrap;
+.contact-box{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+    margin-bottom:25px;
 }
-
-/* Contact Info */
-.info-box{
-  flex:1;
-  min-width:300px;
-  background:white;
-  padding:20px;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.09);
-}
-.info-title{
-  font-size:22px;
-  font-weight:900;
-  margin-bottom:12px;
-}
-.info-item{
-  margin-bottom:14px;
-  font-size:17px;
-  color:#003344;
-}
-.info-item span{
-  font-weight:700;
-  color:#002633;
+.contact-line{
+    font-size:18px;
+    margin-bottom:8px;
+    color:#00354d;
 }
 
-/* Form */
-.form-box{
-  flex:1;
-  min-width:300px;
-  background:white;
-  padding:20px;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.09);
-}
-label{
-  font-weight:700;
-  display:block;
-  margin-bottom:6px;
+/* FORM */
+form{
+    margin-top:20px;
 }
 input, textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  border-radius:10px;
-  border:1px solid #ccc;
-  font-size:15px;
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-bottom:12px;
+    font-family:Inter,Arial;
 }
 button{
-  background:#0077ff;
-  color:white;
-  padding:12px 22px;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-  font-weight:700;
-  cursor:pointer;
+    width:100%;
+    padding:14px;
+    background:#0077ff;
+    border:none;
+    color:white;
+    font-size:18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:700;
 }
 button:hover{
-  background:#005fcc;
+    background:#005fcc;
+}
+
+/* Branch Boxes */
+.branch-box{
+    background:white;
+    padding:18px;
+    border-radius:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+    margin-bottom:20px;
+}
+.branch-title{
+    font-size:20px;
+    font-weight:800;
+    color:#002b3c;
+}
+.branch-txt{
+    font-size:16px;
+    color:#444;
 }
 
 /* WhatsApp Floating */
 .whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  background:#25d366;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 .whatsapp img{width:38px;}
 </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
 <!-- HEADER -->
@@ -150,19 +140,19 @@ button:hover{
   <a class="logo-box" href="index.html">
     <svg class="logo-svg" viewBox="0 0 72 72">
       <defs>
-        <linearGradient id="lg4" x1="0" x2="1">
-          <stop offset="0" stop-color="#ffd6de"/>
-          <stop offset="1" stop-color="#d6efff"/>
+        <linearGradient id="grad4" x1="0" x2="1">
+          <stop offset="0" stop-color="#ffe1ea"/>
+          <stop offset="1" stop-color="#d9f1ff"/>
         </linearGradient>
       </defs>
-      <rect width="72" height="72" rx="16" fill="url(#lg4)"/>
+      <rect width="72" height="72" rx="16" fill="url(#grad4)"/>
       <text x="50%" y="54%" text-anchor="middle"
-            font-family="Inter" font-size="26" font-weight="900" fill="#082032">KA</text>
+        font-family="Inter" font-size="27" font-weight="900" fill="#082032">KA</text>
     </svg>
 
     <div>
-      <div class="logo-text-big">Kumar Associates</div>
-      <div class="logo-text-small">Tax | Accounts | Consultancy</div>
+      <div class="logo-title">Kumar Associates</div>
+      <div class="logo-sub">Tax | Accounts | Consultancy</div>
     </div>
   </a>
 
@@ -174,56 +164,10 @@ button:hover{
   </nav>
 </header>
 
+<!-- CONTACT INFORMATION -->
 <h1>Contact Us</h1>
 
-<div class="section">
-
-  <!-- CONTACT INFO -->
-  <div class="info-box">
-    <div class="info-title">Get In Touch</div>
-
-    <div class="info-item"><span>Phone:</span> 08069277227</div>
-    <div class="info-item"><span>Mobile / WhatsApp:</span> 9334965179</div>
-    <div class="info-item"><span>Email:</span> KA2023@KUMARASSOCIATE.IN</div>
-
-    <br>
-    <div class="info-title">Head Office — Bangalore</div>
-    <div class="info-item">Prabhavathi Comfort Apts,<br>Begur Road, Bangalore, Karnataka — 560068</div>
-
-    <div class="info-title">Branch — Ranchi</div>
-    <div class="info-item">Khelgaon Housing Complex,<br>Ranchi, Jharkhand — 835217</div>
-
-    <div class="info-title">Branch — Bihar</div>
-    <div class="info-item">Sikandra, Jamui, Bihar — 811301</div>
-  </div>
-
-  <!-- CONTACT FORM -->
-  <div class="form-box">
-    <div class="info-title">Send a Message</div>
-
-    <form action="https://formsubmit.co/KA2023@KUMARASSOCIATE.IN" method="POST">
-
-      <input type="hidden" name="_captcha" value="false">
-
-      <label>Your Name</label>
-      <input type="text" name="Name" required>
-
-      <label>Your Email</label>
-      <input type="email" name="Email" required>
-
-      <label>Your Message</label>
-      <textarea name="Message" rows="5" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-</div>
-
-<!-- WHATSAPP BUTTON -->
-<a class="whatsapp" href="https://wa.me/9334965179" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-</body>
-</html>
+<div class="contact-box">
+  <div class="contact-line"><b>Landline:</b> 08069277227</div>
+  <div class="contact-line"><b>Mobile / WhatsApp:</b> 9334965179</div>
+  <div class="contact-line"><b>Email
