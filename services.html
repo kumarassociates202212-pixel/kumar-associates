@@ -2,228 +2,242 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Our Services — Kumar Associates</title>
+<meta name="description" content="Tax filing, GST registration, accounting, PAN, DSC, project reports, CMA data, company registration & compliance services.">
 
-<title>Services — Kumar Associates</title>
-<meta name="description" content="Kumar Associates provides Income Tax, GST, Accounting, PAN, DSC, Project Report, CMA Data, Loan Assistance, Mutual Fund, Insurance and NGO/Trust Registration services.">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body{
-  margin:0;
-  font-family:Inter,Arial;
-  background:linear-gradient(135deg,#e8f3ff,#fde8f3);
+    margin:0;
+    font-family:Inter,Arial;
+    background:linear-gradient(135deg,#e3f2ff,#f4e0ff,#ffe8ef);
 }
+
 .wrap{
-  max-width:1200px;
-  margin:30px auto;
-  padding:20px;
+    max-width:1200px;
+    margin:30px auto;
+    padding:20px;
 }
 
-/* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:25px;
+/* nav */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5px;
 }
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+}
+
 nav a{
-  margin-left:15px;
-  font-weight:700;
-  text-decoration:none;
-  color:#00354d;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;
+    color:#083255;
 }
+
 nav a:hover{
-  color:#007bff;
+    color:#005ad6;
 }
-.logo-box{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  color:#002839;
-}
-.logo-svg{width:70px;height:70px;}
-.logo-title{font-size:22px;font-weight:900;}
-.logo-sub{font-size:13px;color:#2a6f66;}
 
-/* Heading */
+/* header */
 h1{
-  font-size:35px;
-  font-weight:900;
-  color:#002b40;
-  margin-bottom:10px;
-}
-p{
-  font-size:17px;
-  color:#333;
+    font-size:38px;
+    font-weight:800;
+    color:#083255;
 }
 
-/* SERVICES GRID */
+.top-text{
+    font-size:18px;
+    color:#062b48;
+    margin-top:-10px;
+}
+
+/* grid */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:22px;
-  margin-top:25px;
-}
-.card{
-  background:white;
-  padding:18px;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.08);
-}
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:10px;
-}
-.card-title{
-  font-size:19px;
-  font-weight:800;
-  color:#002c40;
-  margin-bottom:5px;
-}
-.card-text{
-  font-size:15px;
-  line-height:1.5;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:#25D366;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.2s;
 }
-.whatsapp img{width:38px;}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.card h3{
+    margin:12px 0 8px 0;
+    font-size:20px;
+    color:#083255;
+}
+
+.card p{
+    color:#062b48;
+    font-size:15px;
+    line-height:1.5;
+}
+
+/* whatsapp */
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.whatsapp img{
+    width:35px;
+}
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
-<!-- HEADER -->
-<header>
-  <a class="logo-box" href="index.html">
-    <svg class="logo-svg" viewBox="0 0 72 72">
-      <defs>
-        <linearGradient id="grad2" x1="0" x2="1">
-          <stop offset="0" stop-color="#ffe1ea"/>
-          <stop offset="1" stop-color="#d9f1ff"/>
-        </linearGradient>
-      </defs>
-      <rect width="72" height="72" rx="16" fill="url(#grad2)"/>
-      <text x="50%" y="54%" text-anchor="middle"
-        font-family="Inter" font-size="27" font-weight="900" fill="#082032">KA</text>
-    </svg>
-    <div>
-      <div class="logo-title">Kumar Associates</div>
-      <div class="logo-sub">Tax | Accounts | Consultancy</div>
-    </div>
-  </a>
+    <!-- NAV -->
+    <nav>
+        <div class="logo">
+            <img src="https://i.ibb.co/Y3f5TGh/ka-logo.png">
+            <div>
+                <strong style="font-size:20px;">Kumar Associates</strong><br>
+                <span style="font-size:13px;color:#005ad6;">Tax | Accounts | Consultancy</span>
+            </div>
+        </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html" style="color:#007bff;">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="services.html" style="color:#005ad6;">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-<h1>Our Services — Professional, Fast & Reliable</h1>
-<p>We offer end-to-end tax, compliance, financial and registration services for Individuals, Startups and Businesses.</p>
+    <!-- TITLE -->
+    <h1>Our Services — Professional, Fast & Reliable</h1>
+    <p class="top-text">We offer end-to-end tax, compliance, financial and registration services for Individuals, Startups and Businesses.</p>
 
-<div class="grid">
+    <!-- SERVICE GRID -->
+    <div class="grid">
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800">
-    <div class="card-title">Income Tax Filing</div>
-    <div class="card-text">ITR filing, audit support, tax planning & assessment guidance.</div>
-  </div>
+        <!-- INCOME TAX -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=60">
+            <h3>Income Tax Filing</h3>
+            <p>ITR filing, audit support, tax planning and assessment guidance.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800">
-    <div class="card-title">GST Registration & Filing</div>
-    <div class="card-text">GST registration, GSTR-1,3B filing, reconciliation & advisory.</div>
-  </div>
+        <!-- GST -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04e6ca1?auto=format&fit=crop&w=900&q=60">
+            <h3>GST Registration & Filing</h3>
+            <p>GST registration, GSTR-1 & 3B filing, reconciliation and advisory services.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b1248f6?q=80&w=900">
-    <div class="card-title">Company / LLP Registration</div>
-    <div class="card-text">Private Limited, LLP & Proprietorship registration with MCA filings.</div>
-  </div>
+        <!-- COMPANY -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=60">
+            <h3>Company / LLP Registration</h3>
+            <p>Private Limited, LLP, Proprietorship setup with DIN/DSC & MCA compliance.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581091012184-5c06f3d2ab65?q=80&w=900">
-    <div class="card-title">Accounting & Bookkeeping</div>
-    <div class="card-text">Daily bookkeeping, Tally/Excel Maintenance & MIS reports.</div>
-  </div>
+        <!-- ACCOUNTING -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092918033-ff20dd3d199b?auto=format&fit=crop&w=900&q=60">
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Daily accounting, Tally/Excel maintenance, MIS reports & monthly reconciliation.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1599058917381-21a6aa24f5c6?q=80&w=900">
-    <div class="card-title">PAN Card — Apply / Update</div>
-    <div class="card-text">New PAN, correction, reissue & e-PAN services.</div>
-  </div>
+        <!-- PAN CARD -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1607082349566-1875c8f5cbc0?auto=format&fit=crop&w=900&q=60">
+            <h3>PAN Card — Apply / Update</h3>
+            <p>PAN application, correction and delivery support assistance.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1532619187603-fb5e0f0c2be3?q=80&w=900">
-    <div class="card-title">Digital Signature (DSC)</div>
-    <div class="card-text">Class 2 / Class 3 DSC issuance, renewal & installation support.</div>
-  </div>
+        <!-- DIGITAL SIGNATURE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1607083207685-cc4a5b51dae7?auto=format&fit=crop&w=900&q=60">
+            <h3>Digital Signature (DSC)</h3>
+            <p>Class-2 / Class-3 DSC issuance, renewal and setup guidance.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=900">
-    <div class="card-title">Bank Loan Assistance</div>
-    <div class="card-text">Loan documentation, file preparation & bank follow-up.</div>
-  </div>
+        <!-- BANK LOAN -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581090700227-1e37b48a7e43?auto=format&fit=crop&w=900&q=60">
+            <h3>Bank Loan Assistance</h3>
+            <p>Loan documentation, bank shortlisting and application processing support.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581092335289-62d8ac43f41b?q=80&w=900">
-    <div class="card-title">Project Report & CMA Data</div>
-    <div class="card-text">Bank-ready DPR, CMA Data for loan approvals.</div>
-  </div>
+        <!-- PROJECT REPORT / CMA -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581091221828-b7a89f63f17d?auto=format&fit=crop&w=900&q=60">
+            <h3>Project Report & CMA Data</h3>
+            <p>Bank-ready DPR, projections and CMA data preparation for loan approvals.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1522202222293-3f5c7f07f7d4?q=80&w=900">
-    <div class="card-title">Mutual Fund / SIP</div>
-    <div class="card-text">Investment planning, SIP advisory & portfolio guidance.</div>
-  </div>
+        <!-- MUTUAL FUND -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=900&q=60">
+            <h3>Investment Advisory — MF / SIP</h3>
+            <p>Mutual fund & SIP planning with goal-based investment analysis.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1521790797525-8a2f01c3c06c?q=80&w=900">
-    <div class="card-title">Insurance Policies</div>
-    <div class="card-text">Life, Health & Business insurance advisory services.</div>
-  </div>
+        <!-- INSURANCE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581090314940-e31bcb3082f5?auto=format&fit=crop&w=900&q=60">
+            <h3>Insurance Policies</h3>
+            <p>Life, Health & Business insurance selection and guidance.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246?q=80&w=900">
-    <div class="card-title">NGO / Trust Registration</div>
-    <div class="card-text">Trust, NGO, Society, 12A/80G & CSR Registration services.</div>
-  </div>
+        <!-- NGO / TRUST -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581090230162-0d7b2e6147f5?auto=format&fit=crop&w=900&q=60">
+            <h3>NGO / Trust Registration</h3>
+            <p>Trust / Society / Section-8 Registration with 12A & 80G support.</p>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=900">
-    <div class="card-title">Partnership Registration</div>
-    <div class="card-text">Partnership deed drafting, registration & compliance help.</div>
-  </div>
+    </div><!-- grid end -->
 
-</div>
+</div><!-- wrap end -->
 
-</div>
-
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/9334965179" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/9334965179" class="whatsapp">
+    <img src="https://i.ibb.co/8z4vPbm/whatsapp.png">
 </a>
 
 </body>
