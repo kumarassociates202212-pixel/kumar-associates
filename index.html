@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kumar Associates – Tax, GST, Accounting & Compliance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kumar Associates provides Income Tax, GST, Accounting, Audit & Compliance services across India. Head Office Bangalore, branches in Kolkata, Ranchi & Bihar.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kumar Associates | Tax, Accounts & Consultancy</title>
+
+  <meta name="description" content="Kumar Associates provides Income Tax filing, GST registration, accounting, company registration and compliance services in India.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body{
       margin:0;
-      font-family:Inter,Arial,sans-serif;
-      background:linear-gradient(135deg,#eef4ff,#ffffff);
-      color:#0b2545;
+      font-family:Inter, Arial, sans-serif;
+      background:linear-gradient(135deg,#eaf2ff,#fbeaff,#eef7ff);
+      color:#0f2a44;
     }
-    .wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:24px;
-    }
+    a{ text-decoration:none; color:inherit; }
+
+    .wrap{ max-width:1200px; margin:auto; padding:20px; }
+
     header{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      flex-wrap:wrap;
-      gap:16px;
     }
     .logo{
       display:flex;
@@ -36,49 +34,63 @@
       height:60px;
       width:auto;
     }
+    .logo h1{
+      font-size:24px;
+      margin:0;
+    }
+    .logo p{
+      margin:0;
+      font-size:14px;
+      color:#1b63ff;
+    }
+
     nav a{
-      text-decoration:none;
-      color:#0b2545;
+      margin-left:20px;
       font-weight:600;
-      margin-left:18px;
     }
-    nav a:hover{
-      color:#1d4ed8;
-    }
+
     .hero{
       margin-top:40px;
-      background:white;
-      border-radius:16px;
-      padding:40px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      text-align:center;
     }
-    .hero h1{
-      margin-top:0;
-      font-size:32px;
+    .hero img{
+      max-width:260px;
+      margin-bottom:20px;
     }
+    .hero h2{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+    .hero p{
+      font-size:18px;
+      max-width:800px;
+      margin:auto;
+    }
+
     .services{
-      margin-top:40px;
+      margin-top:60px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
     }
     .card{
-      background:white;
+      background:#fff;
+      border-radius:16px;
       padding:20px;
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
     }
-    .branches{
-      margin-top:50px;
+    .card img{
+      width:100%;
+      border-radius:12px;
+      margin-bottom:15px;
     }
-    .branch-list{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
+    .card h3{
+      margin:0 0 10px;
     }
+
     footer{
-      margin-top:60px;
-      padding:20px;
+      margin-top:70px;
+      padding:30px 0;
       text-align:center;
       font-size:14px;
       color:#555;
@@ -87,82 +99,67 @@
 </head>
 
 <body>
-  <div class="wrap">
 
-    <!-- HEADER -->
-    <header>
-      <div class="logo">
-        <img src="images/logo.png" alt="Kumar Associates Logo">
-        <div>
-          <strong>Kumar Associates</strong><br>
-          <small>Tax | Accounts | Consultancy</small>
-        </div>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="/images/logo.png" alt="Kumar Associates Logo">
+      <div>
+        <h1>Kumar Associates</h1>
+        <p>Tax | Accounts | Consultancy</p>
       </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    </div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Professional Tax & Compliance Services</h1>
-      <p>
-        Kumar Associates is a trusted firm providing Income Tax, GST,
-        Accounting, Audit, Project Reports and Compliance services
-        to individuals and businesses across India.
-      </p>
-    </section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- SERVICES -->
-    <section class="services">
-      <div class="card">Income Tax Filing</div>
-      <div class="card">GST Registration & Returns</div>
-      <div class="card">Accounting & Bookkeeping</div>
-      <div class="card">Audit & Compliance</div>
-      <div class="card">Project Report & CMA</div>
-      <div class="card">PAN, DSC & ROC Services</div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="/images/logo.png" alt="Kumar Associates">
+    <h2>Professional Tax Consultancy — Fast, Transparent & Reliable</h2>
+    <p>
+      We provide expert services in Income Tax filing, GST registration, accounting,
+      company compliance, PAN, DSC, project reports & CMA data for Individuals,
+      Startups & Businesses across India.
+    </p>
+  </section>
 
-    <!-- BRANCHES -->
-    <section class="branches">
-      <h2>Our Offices</h2>
-      <div class="branch-list">
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c" alt="">
+      <h3>Income Tax Filing</h3>
+      <p>ITR filing, audit support, tax planning & assessment guidance.</p>
+    </div>
 
-        <div class="card">
-          <h3>Head Office – Bangalore</h3>
-          <p>Bangalore, Karnataka<br>India</p>
-        </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" alt="">
+      <h3>GST Registration & Filing</h3>
+      <p>GST registration, GSTR-1, 3B filing, reconciliation & advisory.</p>
+    </div>
 
-        <div class="card">
-          <h3>Branch – Kolkata</h3>
-          <p>
-            103 Chatta Wala Gali,<br>
-            Near Poddar Court,<br>
-            Kolkata – 700001
-          </p>
-        </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="">
+      <h3>Company / LLP Registration</h3>
+      <p>Private Limited, LLP & Proprietorship with MCA compliance.</p>
+    </div>
+  </section>
 
-        <div class="card">
-          <h3>Branch – Ranchi</h3>
-          <p>Ranchi,<br>Jharkhand, India</p>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <strong>Head Office:</strong> Bangalore, Karnataka <br>
+    <strong>Branch Office:</strong> 103 Chatta Wala Gali, Near Poddar Court, Kolkata – 700001 <br><br>
+    © 2025 Kumar Associates. All Rights Reserved.
+  </footer>
 
-        <div class="card">
-          <h3>Branch – Bihar</h3>
-          <p>Sikandra, Jamui,<br>Bihar – 811301</p>
-        </div>
+</div>
 
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      © 2025 Kumar Associates. All Rights Reserved.
-    </footer>
-
-  </div>
 </body>
 </html>
