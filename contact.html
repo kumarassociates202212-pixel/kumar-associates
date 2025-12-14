@@ -1,221 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us — Kumar Associates</title>
-<meta name="description" content="Contact Kumar Associates for Income Tax Filing, GST Services, Accounting, PAN, DSC, Project Reports & Compliance Support. Offices in Bengaluru, Ranchi & Bihar.">
+  <title>Contact Us – Kumar Associates</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Contact Kumar Associates for Income Tax, GST, Accounting and Compliance services. Offices in Bangalore, Kolkata, Ranchi and Bihar.">
 
-<style>
-body{
-    margin:0;
-    font-family:Inter,Arial;
-    background:linear-gradient(135deg,#e3f2ff,#f4e0ff,#ffe8ef);
-}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-.wrap{
-    max-width:1200px;
-    margin:30px auto;
-    padding:20px;
-}
+  <style>
+    body{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+      color:#0f172a;
+    }
 
-/* NAV */
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 5px;
-}
+    .wrap{
+      max-width:1200px;
+      margin:auto;
+      padding:24px;
+    }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:40px;
+    }
 
-.logo img{
-    width:50px;
-    height:50px;
-    border-radius:12px;
-}
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
-nav a{
-    text-decoration:none;
-    font-weight:600;
-    padding:8px 12px;
-    color:#083255;
-}
+    .logo img{
+      height:52px;
+    }
 
-nav a:hover{
-    color:#005ad6;
-}
+    .logo h1{
+      font-size:22px;
+      margin:0;
+    }
 
-h1{
-    font-size:38px;
-    font-weight:800;
-    color:#083255;
-}
+    .logo small{
+      color:#2563eb;
+      font-weight:500;
+    }
 
-.section{
-    background:#fff;
-    padding:25px;
-    border-radius:18px;
-    margin-top:25px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
-}
+    nav a{
+      margin-left:22px;
+      text-decoration:none;
+      color:#0f172a;
+      font-weight:600;
+    }
 
-/* Contact Box */
-.contact-line{
-    font-size:18px;
-    color:#062b48;
-    margin-bottom:8px;
-}
+    nav a:hover{
+      color:#2563eb;
+    }
 
-/* FORM */
-input, textarea{
-    width:100%;
-    padding:12px;
-    border-radius:10px;
-    border:1px solid #bbb;
-    margin-bottom:12px;
-    font-size:16px;
-    font-family:Inter;
-}
+    .box{
+      background:white;
+      border-radius:22px;
+      padding:36px;
+      box-shadow:0 12px 35px rgba(0,0,0,.08);
+    }
 
-button{
-    width:100%;
-    padding:14px;
-    background:#005ad6;
-    border:none;
-    color:#fff;
-    font-size:18px;
-    font-weight:600;
-    border-radius:12px;
-    cursor:pointer;
-    margin-top:10px;
-}
-button:hover{
-    background:#0047aa;
-}
+    h2{
+      font-size:36px;
+      margin-top:0;
+    }
 
-.branch-box{
-    margin-top:20px;
-    padding:18px;
-    background:#ffffffdd;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.06);
-}
+    p{
+      font-size:17px;
+      line-height:1.8;
+      color:#334155;
+    }
 
-.branch-title{
-    font-size:20px;
-    font-weight:700;
-    color:#083255;
-    margin-bottom:8px;
-}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+      margin-top:30px;
+    }
 
-/* WhatsApp Floating */
-.whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#25D366;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:pointer;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-}
-.whatsapp img{
-    width:35px;
-}
-</style>
+    .card{
+      background:#f8fafc;
+      border-radius:16px;
+      padding:22px;
+      border-left:6px solid #2563eb;
+    }
 
+    .card h3{
+      margin-top:0;
+      color:#1e3a8a;
+    }
+
+    .highlight{
+      background:#eff6ff;
+      border-radius:16px;
+      padding:24px;
+      margin-top:30px;
+    }
+
+    footer{
+      margin-top:60px;
+      text-align:center;
+      font-size:14px;
+      color:#64748b;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<div class="wrap">
-
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">
-            <img src="https://i.ibb.co/Y3f5TGh/ka-logo.png">
-            <div>
-                <strong style="font-size:20px;">Kumar Associates</strong><br>
-                <span style="font-size:13px;color:#005ad6;">Tax | Accounts | Consultancy</span>
-            </div>
-        </div>
-
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Kumar Associates Logo">
         <div>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" style="color:#005ad6;">Contact</a>
+          <h1>Kumar Associates</h1>
+          <small>Tax | Accounts | Consultancy</small>
         </div>
-    </nav>
+      </div>
 
-    <!-- CONTACT HEADING -->
-    <h1>Contact Us</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-    <!-- CONTACT INFO -->
-    <div class="section">
-        <div class="contact-line"><b>Landline:</b> 08069277227</div>
-        <div class="contact-line"><b>Mobile / WhatsApp:</b> 9334965179</div>
-        <div class="contact-line"><b>Email:</b> KA2023@KUMARASSOCIATE.IN</div>
+    <!-- CONTACT CONTENT -->
+    <div class="box">
+      <h2>Contact Kumar Associates</h2>
+
+      <p>
+        Get in touch with Kumar Associates for professional assistance in
+        Income Tax filing, GST compliance, accounting, company registration
+        and financial consultancy. Our team is always ready to support you.
+      </p>
+
+      <div class="highlight">
+        <p>
+          📞 <strong>Business Hours:</strong> Monday – Saturday (10:00 AM – 7:00 PM)<br>
+          📧 <strong>Email:</strong> info@kumarassociate.in<br>
+          📱 <strong>Phone / WhatsApp:</strong> +91-XXXXXXXXXX
+        </p>
+      </div>
+
+      <h3 style="margin-top:40px;">Our Office Locations</h3>
+
+      <div class="contact-grid">
+
+        <div class="card">
+          <h3>Head Office – Bangalore</h3>
+          <p>
+            Karnataka, India
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Kolkata Branch</h3>
+          <p>
+            103 Chatta Wala Gali,<br>
+            Near Poddar Court,<br>
+            Kolkata – 700001
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Ranchi Branch</h3>
+          <p>
+            Ranchi,<br>
+            Jharkhand, India
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Bihar Branch</h3>
+          <p>
+            Sikandra, Jamui,<br>
+            Bihar – 811301
+          </p>
+        </div>
+
+      </div>
     </div>
 
-    <!-- CONTACT FORM -->
-    <div class="section">
-        <h2 style="color:#083255;">Send Us a Message</h2>
+    <footer>
+      © 2025 Kumar Associates. All Rights Reserved.
+    </footer>
 
-        <form action="https://formsubmit.co/KA2023@KUMARASSOCIATE.IN" method="POST">
-
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="mobile" placeholder="Your Mobile Number" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-            <!-- FormSubmit Settings -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_next" value="https://kumarassociate.in/contact.html">
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <!-- OFFICES -->
-    <h2 style="margin-top:40px;color:#083255;font-size:30px;">Our Offices</h2>
-
-    <div class="branch-box">
-        <div class="branch-title">Head Office — Bengaluru</div>
-        Prabhavathi Comfort Apts, Begur Road,<br>
-        Bengaluru, Karnataka — 560068
-    </div>
-
-    <div class="branch-box">
-        <div class="branch-title">Branch Office — Ranchi</div>
-        Khelgaon Housing Complex,<br>
-        Ranchi, Jharkhand — 835217
-    </div>
-
-    <div class="branch-box">
-        <div class="branch-title">Branch Office — Bihar</div>
-        Sikandra, Jamui,<br>
-        Bihar — 811301
-    </div>
-
-</div><!-- wrap end -->
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/9334965179" class="whatsapp">
-    <img src="https://i.ibb.co/8z4vPbm/whatsapp.png">
-</a>
-
+  </div>
 </body>
 </html>
