@@ -1,207 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Kumar Associates</title>
 
-  <title>About Us – Kumar Associates</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-  <meta name="description" content="Kumar Associates is a professional tax, accounting and consultancy firm with 5+ years of experience serving clients across India.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+body{
+background:linear-gradient(135deg,#eef4ff,#fdf1ff);
+color:#1e293b;
+}
 
-  <style>
-    body{
-      margin:0;
-      font-family:Inter, Arial, sans-serif;
-      background:linear-gradient(135deg,#eef2ff,#fdf2f8);
-      color:#0f172a;
-    }
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+}
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+.logo img{height:50px;}
+.logo h1{font-size:22px;font-weight:700;}
+.logo span{font-size:14px;color:#2563eb;}
 
-    .wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:24px;
-    }
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+}
+nav a:hover{color:#2563eb}
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:40px;
-    }
+/* HERO */
+.hero{
+text-align:center;
+padding:70px 8% 50px;
+}
+.hero h2{
+font-size:38px;
+font-weight:700;
+margin-bottom:12px;
+}
+.hero p{
+max-width:900px;
+margin:auto;
+font-size:17px;
+color:#475569;
+line-height:1.7;
+}
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+/* CONTENT */
+.section{
+padding:40px 8%;
+}
+.box{
+background:white;
+padding:40px;
+border-radius:22px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+margin-bottom:40px;
+}
 
-    .logo img{
-      height:52px;
-    }
+.box h3{
+font-size:26px;
+margin-bottom:15px;
+color:#0f172a;
+}
 
-    .logo h1{
-      font-size:22px;
-      margin:0;
-    }
+.box p{
+font-size:16px;
+line-height:1.8;
+color:#475569;
+margin-bottom:15px;
+}
 
-    .logo small{
-      color:#2563eb;
-      font-weight:500;
-    }
+/* HIGHLIGHTS */
+.highlights{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:25px;
+}
 
-    nav a{
-      margin-left:22px;
-      text-decoration:none;
-      color:#0f172a;
-      font-weight:600;
-    }
+.highlight{
+background:#f8fbff;
+border-left:5px solid #2563eb;
+padding:22px;
+border-radius:14px;
+}
+.highlight h4{
+margin-bottom:6px;
+color:#0f172a;
+}
+.highlight p{
+font-size:14px;
+color:#475569;
+}
 
-    nav a:hover{
-      color:#2563eb;
-    }
+/* OFFICES */
+.offices{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:20px;
+}
+.office{
+background:#f8fbff;
+padding:25px;
+border-radius:18px;
+}
+.office h4{
+margin-bottom:10px;
+color:#2563eb;
+}
 
-    .box{
-      background:white;
-      border-radius:22px;
-      padding:36px;
-      box-shadow:0 12px 35px rgba(0,0,0,.08);
-    }
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+background:#0f172a;
+color:#cbd5f5;
+margin-top:60px;
+}
 
-    h2{
-      font-size:36px;
-      margin-top:0;
-    }
-
-    p{
-      font-size:17px;
-      line-height:1.8;
-      color:#334155;
-    }
-
-    .offices{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:22px;
-      margin-top:30px;
-    }
-
-    .office{
-      background:#f8fafc;
-      border-radius:16px;
-      padding:22px;
-      border-left:6px solid #2563eb;
-    }
-
-    .office h3{
-      margin-top:0;
-      color:#1e3a8a;
-    }
-
-    footer{
-      margin-top:60px;
-      text-align:center;
-      font-size:14px;
-      color:#64748b;
-    }
-  </style>
+@media(max-width:768px){
+.hero h2{font-size:30px}
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <!-- HEADER -->
-    <header>
-      <div class="logo">
-        <img src="images/logo.png" alt="Kumar Associates Logo">
-        <div>
-          <h1>Kumar Associates</h1>
-          <small>Tax | Accounts | Consultancy</small>
-        </div>
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Kumar Associates Logo">
+    <div>
+      <h1>Kumar Associates</h1>
+      <span>Tax | Accounts | Consultancy</span>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>About Kumar Associates</h2>
+  <p>
+    Kumar Associates is a trusted professional tax, accounting and consultancy firm
+    delivering reliable, transparent and result-oriented services across India.
+    With over <strong>5+ years of practical experience</strong>, we help Individuals,
+    Startups and Businesses stay compliant and financially strong.
+  </p>
+</section>
+
+<section class="section">
+
+  <div class="box">
+    <h3>Who We Are</h3>
+    <p>
+      We specialize in Income Tax, GST, Accounting, Company & LLP Compliance, PAN,
+      DSC, Project Reports and CMA Data preparation. Our approach is simple —
+      accuracy, confidentiality and long-term client relationships.
+    </p>
+    <p>
+      Our team continuously updates itself with the latest tax laws and government
+      regulations to ensure our clients always receive correct and timely guidance.
+    </p>
+
+    <div class="highlights">
+      <div class="highlight">
+        <h4>✔ 5+ Years Experience</h4>
+        <p>Handling tax, GST & compliance matters for diverse clients.</p>
       </div>
-
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <!-- ABOUT CONTENT -->
-    <div class="box">
-      <h2>About Kumar Associates</h2>
-
-      <p>
-        Kumar Associates is a professional tax, accounting and consultancy firm
-        with <strong>5+ years of practical experience</strong> in providing reliable,
-        transparent and result-oriented services to clients across India.
-      </p>
-
-      <p>
-        We specialize in <strong>Income Tax, GST, Accounting, Company & LLP Compliance,
-        PAN, DSC, Project Reports and CMA Data preparation</strong>.
-        Our firm caters to Individuals, Salaried Professionals,
-        Startups, Small & Medium Businesses.
-      </p>
-
-      <p>
-        Our core strength lies in deep regulatory knowledge, timely compliance,
-        ethical practices and personalized client support.
-        We focus on long-term relationships built on accuracy,
-        confidentiality and trust.
-      </p>
-
-      <p>
-        With a growing presence in multiple locations,
-        Kumar Associates ensures professional service delivery
-        with a local understanding of client needs.
-      </p>
-
-      <h3>Our Offices</h3>
-
-      <div class="offices">
-
-        <div class="office">
-          <h3>Head Office – Bangalore</h3>
-          <p>
-            Karnataka, India
-          </p>
-        </div>
-
-        <div class="office">
-          <h3>Kolkata Branch</h3>
-          <p>
-            103 Chatta Wala Gali,<br>
-            Near Poddar Court,<br>
-            Kolkata – 700001
-          </p>
-        </div>
-
-        <div class="office">
-          <h3>Ranchi Branch</h3>
-          <p>
-            Ranchi,<br>
-            Jharkhand, India
-          </p>
-        </div>
-
-        <div class="office">
-          <h3>Bihar Branch</h3>
-          <p>
-            Sikandra, Jamui,<br>
-            Bihar – 811301
-          </p>
-        </div>
-
+      <div class="highlight">
+        <h4>✔ Trusted Advisory</h4>
+        <p>Clear, transparent and practical financial solutions.</p>
+      </div>
+      <div class="highlight">
+        <h4>✔ Pan-India Support</h4>
+        <p>Serving clients across multiple states in India.</p>
+      </div>
+      <div class="highlight">
+        <h4>✔ Client-First Approach</h4>
+        <p>Personalized support and timely response.</p>
       </div>
     </div>
-
-    <footer>
-      © 2025 Kumar Associates. All Rights Reserved.
-    </footer>
-
   </div>
+
+  <div class="box">
+    <h3>Our Offices</h3>
+    <div class="offices">
+
+      <div class="office">
+        <h4>Head Office – Bangalore</h4>
+        <p>Karnataka, India</p>
+      </div>
+
+      <div class="office">
+        <h4>Ranchi Branch</h4>
+        <p>Ranchi, Jharkhand, India</p>
+      </div>
+
+      <div class="office">
+        <h4>Kolkata Branch</h4>
+        <p>103 Chatta Wala Gali,<br>
+           Near Poddar Court,<br>
+           Kolkata – 700001</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 Kumar Associates • Professional Tax & Consultancy Services
+</footer>
+
 </body>
 </html>
