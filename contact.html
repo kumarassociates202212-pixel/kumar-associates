@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Contact Kumar Associates</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contact Us – Kumar Associates</title>
-
-  <meta name="description" content="Contact Kumar Associates for Income Tax, GST, Accounting and Compliance services. Offices in Bangalore, Kolkata, Ranchi and Bihar.">
+  <meta name="description" content="Contact Kumar Associates for Income Tax, GST, Accounting, Company Registration and Compliance services across India.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -14,7 +13,7 @@
     body{
       margin:0;
       font-family:Inter, Arial, sans-serif;
-      background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+      background:linear-gradient(135deg,#e0e7ff,#fdf2f8,#ecfeff);
       color:#0f172a;
     }
 
@@ -28,7 +27,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      margin-bottom:40px;
+      margin-bottom:50px;
     }
 
     .logo{
@@ -42,8 +41,8 @@
     }
 
     .logo h1{
-      font-size:22px;
       margin:0;
+      font-size:22px;
     }
 
     .logo small{
@@ -62,48 +61,84 @@
       color:#2563eb;
     }
 
-    .box{
+    .title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .title h2{
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .title p{
+      font-size:18px;
+      color:#475569;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .contact-box{
       background:white;
-      border-radius:22px;
-      padding:36px;
-      box-shadow:0 12px 35px rgba(0,0,0,.08);
+      border-radius:26px;
+      padding:40px;
+      box-shadow:0 25px 70px rgba(0,0,0,.12);
     }
 
-    h2{
-      font-size:36px;
-      margin-top:0;
-    }
-
-    p{
-      font-size:17px;
-      line-height:1.8;
-      color:#334155;
-    }
-
-    .contact-grid{
+    .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:22px;
-      margin-top:30px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
     }
 
     .card{
-      background:#f8fafc;
-      border-radius:16px;
-      padding:22px;
-      border-left:6px solid #2563eb;
+      background:linear-gradient(135deg,#f8fafc,#eef2ff);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 18px 45px rgba(0,0,0,.08);
     }
 
     .card h3{
       margin-top:0;
       color:#1e3a8a;
+      font-size:22px;
+    }
+
+    .card p{
+      margin:10px 0;
+      font-size:16px;
+      line-height:1.6;
     }
 
     .highlight{
-      background:#eff6ff;
-      border-radius:16px;
-      padding:24px;
-      margin-top:30px;
+      font-weight:700;
+      color:#0f172a;
+    }
+
+    .cta{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:14px;
+      display:inline-block;
+    }
+
+    .call{
+      background:#2563eb;
+      color:white;
+    }
+
+    .whatsapp{
+      background:#22c55e;
+      color:white;
     }
 
     footer{
@@ -136,55 +171,56 @@
       </nav>
     </header>
 
-    <!-- CONTACT CONTENT -->
-    <div class="box">
+    <!-- TITLE -->
+    <div class="title">
       <h2>Contact Kumar Associates</h2>
-
       <p>
-        Get in touch with Kumar Associates for professional assistance in
-        Income Tax filing, GST compliance, accounting, company registration
-        and financial consultancy. Our team is always ready to support you.
+        Get in touch with Kumar Associates for professional assistance in Income Tax,
+        GST, Accounting, Company Registration and Compliance services.
+        Our team is always ready to support you.
       </p>
+    </div>
 
-      <div class="highlight">
-        <p>
-          📞 <strong>Business Hours:</strong> Monday – Saturday (10:00 AM – 7:00 PM)<br>
-          📧 <strong>Email:</strong> info@kumarassociate.in<br>
-          📱 <strong>Phone / WhatsApp:</strong> +91-XXXXXXXXXX
-        </p>
-      </div>
+    <!-- CONTACT -->
+    <div class="contact-box">
+      <div class="grid">
 
-      <h3 style="margin-top:40px;">Our Office Locations</h3>
-
-      <div class="contact-grid">
-
+        <!-- CONTACT DETAILS -->
         <div class="card">
-          <h3>Head Office – Bangalore</h3>
-          <p>
-            Karnataka, India
+          <h3>📞 Contact Details</h3>
+          <p><span class="highlight">Business Hours:</span><br>
+            Monday – Saturday (10:00 AM – 7:00 PM)
           </p>
+
+          <p><span class="highlight">Email:</span><br>
+            ka2023@kumarassociate.in
+          </p>
+
+          <p><span class="highlight">Phone / WhatsApp:</span><br>
+            +91-9334965179
+          </p>
+
+          <div class="cta">
+            <a href="tel:+919334965179" class="btn call">📞 Call Now</a>
+            <a href="https://wa.me/919334965179" class="btn whatsapp">💬 WhatsApp</a>
+          </div>
         </div>
 
+        <!-- OFFICE ADDRESS -->
         <div class="card">
-          <h3>Kolkata Branch</h3>
-          <p>
+          <h3>🏢 Our Offices</h3>
+
+          <p><span class="highlight">Head Office – Bangalore</span><br>
+            Karnataka, India
+          </p>
+
+          <p><span class="highlight">Kolkata Branch</span><br>
             103 Chatta Wala Gali,<br>
             Near Poddar Court,<br>
             Kolkata – 700001
           </p>
-        </div>
 
-        <div class="card">
-          <h3>Ranchi Branch</h3>
-          <p>
-            Ranchi,<br>
-            Jharkhand, India
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Bihar Branch</h3>
-          <p>
+          <p><span class="highlight">Bihar Branch</span><br>
             Sikandra, Jamui,<br>
             Bihar – 811301
           </p>
