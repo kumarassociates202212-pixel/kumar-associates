@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Our Services – Kumar Associates</title>
 
-  <meta name="description" content="Income Tax, GST, Accounting, Company Registration & Compliance Services by Kumar Associates across India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Income Tax, GST, Accounting, Company Registration, PAN, DSC and CMA services by Kumar Associates across India.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -24,12 +23,11 @@
       padding:24px;
     }
 
-    /* HEADER */
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      margin-bottom:40px;
+      margin-bottom:50px;
     }
 
     .logo{
@@ -43,8 +41,8 @@
     }
 
     .logo h1{
-      font-size:22px;
       margin:0;
+      font-size:22px;
     }
 
     .logo small{
@@ -63,51 +61,71 @@
       color:#2563eb;
     }
 
-    /* PAGE TITLE */
-    .page-title{
+    .title{
       text-align:center;
-      margin-bottom:40px;
+      margin-bottom:50px;
     }
 
-    .page-title h2{
-      font-size:40px;
+    .title h2{
+      font-size:42px;
       margin-bottom:10px;
     }
 
-    .page-title p{
-      color:#334155;
+    .title p{
       font-size:18px;
+      color:#475569;
     }
 
-    /* SERVICES GRID */
     .services{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
+      gap:28px;
     }
 
-    .service{
+    .card{
       background:white;
-      border-radius:18px;
-      padding:26px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-      border-top:6px solid #2563eb;
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 18px 45px rgba(0,0,0,.08);
+      transition:all .35s ease;
+      position:relative;
+      overflow:hidden;
     }
 
-    .service h3{
+    .card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:6px;
+      background:linear-gradient(90deg,#2563eb,#7c3aed);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 28px 65px rgba(0,0,0,.15);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:16px;
+    }
+
+    .card h3{
       margin-top:0;
       color:#1e3a8a;
       font-size:22px;
     }
 
-    .service p{
-      color:#334155;
-      line-height:1.6;
+    .card p{
       font-size:16px;
+      line-height:1.7;
+      color:#334155;
     }
 
     footer{
-      margin-top:60px;
+      margin-top:70px;
       text-align:center;
       font-size:14px;
       color:#64748b;
@@ -136,8 +154,8 @@
       </nav>
     </header>
 
-    <!-- PAGE TITLE -->
-    <div class="page-title">
+    <!-- TITLE -->
+    <div class="title">
       <h2>Our Professional Services</h2>
       <p>Fast, Transparent & Reliable Solutions for Individuals, Startups and Businesses</p>
     </div>
@@ -145,51 +163,57 @@
     <!-- SERVICES -->
     <div class="services">
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">📄</div>
         <h3>Income Tax Filing</h3>
         <p>
-          ITR filing for Individuals, HUF and Businesses, tax planning,
-          audit support and assessment assistance with complete accuracy.
+          ITR filing for Individuals, HUF and Businesses with expert tax planning,
+          audit support and accurate assessment handling.
         </p>
       </div>
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">🧾</div>
         <h3>GST Registration & Filing</h3>
         <p>
-          GST registration, GSTR-1, GSTR-3B filing, reconciliation,
-          notices reply and ongoing GST advisory services.
+          GST registration, GSTR-1 & GSTR-3B filing, reconciliation,
+          notice reply and continuous GST advisory services.
         </p>
       </div>
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">📊</div>
         <h3>Accounting & Bookkeeping</h3>
         <p>
           Day-to-day accounting, Tally / Excel bookkeeping,
-          MIS reports and financial statements maintenance.
+          MIS reports and financial statement preparation.
         </p>
       </div>
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">🏢</div>
         <h3>Company / LLP Registration</h3>
         <p>
-          Private Limited, LLP and Proprietorship registration
-          including DIN, DSC and MCA compliance support.
+          Private Limited, LLP and Proprietorship registration including
+          DIN, DSC and complete MCA compliance support.
         </p>
       </div>
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">🪪</div>
         <h3>PAN, DSC & Compliance</h3>
         <p>
-          PAN services, Digital Signature Certificates,
-          ROC filings and statutory compliance management.
+          PAN card services, Digital Signature Certificates (DSC),
+          and statutory compliance for individuals and businesses.
         </p>
       </div>
 
-      <div class="service">
+      <div class="card">
+        <div class="icon">📈</div>
         <h3>Project Report & CMA Data</h3>
         <p>
-          Professional project reports and CMA data preparation
-          for bank loans, funding and financial planning.
+          Bank-ready Project Reports, CMA data preparation,
+          loan documentation and financial projections.
         </p>
       </div>
 
