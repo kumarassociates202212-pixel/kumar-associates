@@ -13,7 +13,7 @@
 
 body{
 background:linear-gradient(135deg,#eef4ff,#fdf1ff);
-color:#1e293b;
+color:#0f172a;
 }
 
 /* HEADER */
@@ -22,7 +22,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:transparent;
 }
 .logo{
 display:flex;
@@ -36,76 +35,139 @@ gap:12px;
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#1e293b;
+color:#0f172a;
 font-weight:500;
 }
 nav a:hover{color:#2563eb}
 
-/* TITLE */
+/* HERO */
 .hero{
 text-align:center;
-padding:70px 8% 50px;
+padding:80px 8% 50px;
 }
 .hero h2{
-font-size:38px;
+font-size:42px;
 font-weight:700;
-margin-bottom:12px;
+margin-bottom:15px;
 }
 .hero p{
-font-size:17px;
+max-width:900px;
+margin:auto;
+font-size:18px;
 color:#475569;
+line-height:1.7;
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 .services{
-padding:40px 8% 80px;
+padding:60px 8%;
 }
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .card{
 background:white;
 padding:35px 30px;
-border-radius:22px;
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-transition:.3s;
+border-radius:26px;
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+transition:.35s;
+}
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(90deg,#2563eb,#7c3aed);
 }
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-10px);
+box-shadow:0 28px 65px rgba(0,0,0,.15);
 }
 
 .icon{
-font-size:38px;
-color:#2563eb;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#eef4ff;
+display:flex;
+align-items:center;
+justify-content:center;
 margin-bottom:18px;
+}
+.icon i{
+font-size:30px;
+color:#2563eb;
 }
 
 .card h3{
-margin-bottom:12px;
-font-size:20px;
-color:#0f172a;
+margin-bottom:10px;
+font-size:22px;
 }
-
 .card p{
 font-size:15px;
+line-height:1.7;
 color:#475569;
-line-height:1.6;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+padding:60px 8%;
+text-align:center;
+margin:80px 8%;
+border-radius:30px;
+}
+.cta h3{
+font-size:34px;
+margin-bottom:15px;
+}
+.cta a{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:white;
+color:#2563eb;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:25px;
 background:#0f172a;
 color:#cbd5f5;
+text-align:center;
+padding:25px;
 margin-top:60px;
 }
 
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+display:flex;
+gap:10px;
+align-items:center;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
 @media(max-width:768px){
-.hero h2{font-size:30px}
+.hero h2{font-size:32px}
 }
 </style>
 </head>
@@ -130,7 +192,10 @@ margin-top:60px;
 
 <section class="hero">
   <h2>Our Professional Services</h2>
-  <p>Fast, Transparent & Reliable Solutions for Individuals, Startups and Businesses</p>
+  <p>
+    End-to-end Tax, Accounting and Compliance solutions designed to keep
+    Individuals, Startups and Businesses fully compliant and financially strong.
+  </p>
 </section>
 
 <section class="services">
@@ -138,45 +203,55 @@ margin-top:60px;
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-      <h3>Income Tax Filing</h3>
-      <p>ITR filing for Individuals, HUF & Businesses, tax planning, audit support and assessment assistance with complete accuracy.</p>
+      <h3>Income Tax Services</h3>
+      <p>ITR filing, tax planning, audit support, notice reply and assessment handling.</p>
     </div>
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-receipt"></i></div>
-      <h3>GST Registration & Filing</h3>
-      <p>GST registration, GSTR-1, GSTR-3B filing, reconciliation, notices reply and ongoing GST advisory services.</p>
+      <h3>GST Services</h3>
+      <p>GST registration, GSTR-1 & 3B filing, reconciliation, advisory and notices.</p>
     </div>
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-calculator"></i></div>
       <h3>Accounting & Bookkeeping</h3>
-      <p>Day-to-day accounting, Tally / Excel bookkeeping, MIS reports and financial statements maintenance.</p>
+      <p>Professional accounting, Tally/Excel bookkeeping, MIS & financial statements.</p>
     </div>
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-building"></i></div>
       <h3>Company / LLP Registration</h3>
-      <p>Private Limited, LLP & Proprietorship registration including DIN, DSC and MCA compliance support.</p>
+      <p>Private Limited, LLP, Proprietorship registration with MCA compliance.</p>
     </div>
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-id-card"></i></div>
-      <h3>PAN, DSC & Compliance</h3>
-      <p>PAN services, Digital Signature (DSC), ROC filings and complete statutory compliance assistance.</p>
+      <h3>PAN, DSC & ROC Compliance</h3>
+      <p>PAN services, Digital Signature (DSC) and ROC filings.</p>
     </div>
 
     <div class="card">
       <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
       <h3>Project Report & CMA Data</h3>
-      <p>Bankable project reports, CMA data preparation and financial projections for loans and funding.</p>
+      <p>Bank-ready project reports and CMA data for loans & funding.</p>
     </div>
 
   </div>
 </section>
 
+<section class="cta">
+  <h3>Looking for Reliable Tax & Business Support?</h3>
+  <p>Talk to our experts and get professional guidance today.</p>
+  <a href="contact.html">Get Consultation</a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919334965179" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
 <footer>
-  © 2025 Kumar Associates • All Rights Reserved
+  © 2025 Kumar Associates • Trusted Tax & Consultancy Services
 </footer>
 
 </body>
