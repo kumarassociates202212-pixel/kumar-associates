@@ -5,94 +5,108 @@
 <title>Our Services | Kumar Associates</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial;}
+
 body{
-  margin:0;
-  font-family:Inter,Arial;
   background:linear-gradient(135deg,#eef5ff,#fdf1ff);
   color:#0f172a;
 }
-a{text-decoration:none;color:inherit}
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
-  background:#ffffffcc;
-  backdrop-filter:blur(10px);
-  padding:16px 40px;
+  background:white;
+  border-top:6px solid #2563eb;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  padding:18px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:3px solid #2563eb;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
 }
-.logo img{
-  width:48px;
-  height:auto;
-}
-.logo h1{
-  font-size:22px;
-  margin:0;
-}
-.logo small{
-  display:block;
-  color:#2563eb;
-  font-weight:500;
-}
+.logo img{width:52px}
+.logo h1{font-size:22px;margin:0}
+.logo small{color:#2563eb;font-weight:600}
+
 nav a{
   margin-left:26px;
   font-weight:600;
+  text-decoration:none;
+  color:#0f172a;
 }
 nav a:hover{color:#2563eb}
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:70px 20px;
+  padding:90px 20px 70px;
 }
 .hero h2{
-  font-size:44px;
-  margin-bottom:10px;
+  font-size:46px;
+  font-weight:800;
+  max-width:900px;
+  margin:auto;
 }
 .hero p{
-  max-width:780px;
-  margin:auto;
+  max-width:850px;
+  margin:16px auto;
   font-size:18px;
   color:#334155;
 }
+.hero .trust{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.badge{
+  background:white;
+  padding:12px 22px;
+  border-radius:999px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  font-weight:600;
+}
 
-/* SERVICES */
+/* ===== SERVICES ===== */
 .services{
   max-width:1200px;
   margin:auto;
   padding:30px 20px 80px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 .card{
   background:white;
-  border-radius:18px;
-  padding:26px;
+  border-radius:22px;
+  padding:30px;
   box-shadow:0 20px 40px rgba(0,0,0,.08);
-  transition:.3s;
   position:relative;
   overflow:hidden;
+  transition:.35s;
 }
 .card::before{
   content:"";
   position:absolute;
-  left:0;top:0;
-  width:6px;height:100%;
+  left:0;
+  top:0;
+  width:6px;
+  height:100%;
   background:linear-gradient(#2563eb,#7c3aed);
 }
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
+  box-shadow:0 30px 65px rgba(0,0,0,.15);
 }
 .icon{
   font-size:42px;
@@ -115,38 +129,45 @@ nav a:hover{color:#2563eb}
 }
 .btn{
   display:inline-block;
-  margin-top:12px;
+  margin-top:14px;
   padding:10px 18px;
   background:#2563eb;
   color:white;
-  border-radius:8px;
-  font-weight:600;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
 }
 .btn:hover{background:#1e40af}
 
-/* CTA */
+/* ===== CTA ===== */
 .cta{
   background:linear-gradient(135deg,#2563eb,#7c3aed);
   color:white;
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
-.cta h2{font-size:34px}
+.cta h2{font-size:36px}
 .cta p{max-width:700px;margin:10px auto 20px}
 .cta a{
   background:white;
   color:#2563eb;
-  padding:14px 26px;
-  border-radius:30px;
-  font-weight:700;
+  padding:16px 34px;
+  border-radius:40px;
+  font-weight:800;
+  text-decoration:none;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
   background:#0f172a;
   color:#cbd5f5;
   text-align:center;
-  padding:18px;
+  padding:20px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .hero h2{font-size:32px}
 }
 </style>
 </head>
@@ -170,8 +191,17 @@ footer{
 </header>
 
 <section class="hero">
-  <h2>Our Professional Services</h2>
-  <p>Fast, transparent & reliable tax and compliance solutions for Individuals, Startups and Businesses across India.</p>
+  <h2>Professional Tax & Compliance Services for Businesses & Individuals</h2>
+  <p>
+    End-to-end Income Tax, GST, Accounting and Business Compliance services
+    delivered with accuracy, transparency and expert guidance.
+  </p>
+
+  <div class="trust">
+    <div class="badge">⭐ 5+ Years Experience</div>
+    <div class="badge">👨‍💼 1000+ Clients Served</div>
+    <div class="badge">🇮🇳 PAN-India Service</div>
+  </div>
 </section>
 
 <section class="services">
@@ -185,16 +215,16 @@ footer{
       <li>Tax Planning & Advisory</li>
       <li>Notice & Assessment Support</li>
     </ul>
-    <a class="btn" href="contact.html">Consult Expert</a>
+    <a class="btn" href="contact.html">Talk to Expert</a>
   </div>
 
   <div class="card">
     <div class="icon">🧾</div>
     <h3>GST Registration & Filing</h3>
-    <p>End-to-end GST compliance support.</p>
+    <p>Complete GST compliance support.</p>
     <ul>
       <li>GST Registration</li>
-      <li>GSTR-1, 3B Filing</li>
+      <li>GSTR-1 & GSTR-3B</li>
       <li>Reconciliation & Notices</li>
     </ul>
     <a class="btn" href="contact.html">Get GST Help</a>
@@ -226,12 +256,12 @@ footer{
 
   <div class="card">
     <div class="icon">🆔</div>
-    <h3>PAN, DSC & Compliance</h3>
+    <h3>PAN, DSC & ROC Compliance</h3>
     <p>Identity & regulatory services.</p>
     <ul>
       <li>PAN / TAN Services</li>
       <li>Digital Signature (DSC)</li>
-      <li>ROC & Other Filings</li>
+      <li>ROC Filings</li>
     </ul>
     <a class="btn" href="contact.html">Apply Now</a>
   </div>
@@ -243,7 +273,7 @@ footer{
     <ul>
       <li>Project Reports</li>
       <li>CMA Data Preparation</li>
-      <li>Loan & Bank Support</li>
+      <li>Loan Support</li>
     </ul>
     <a class="btn" href="contact.html">Get Report</a>
   </div>
@@ -251,13 +281,13 @@ footer{
 </section>
 
 <section class="cta">
-  <h2>Need Expert Advice?</h2>
-  <p>Talk to Kumar Associates today for reliable and transparent professional services.</p>
+  <h2>Need Expert Tax or Business Guidance?</h2>
+  <p>Talk to Kumar Associates today and get professional support.</p>
   <a href="contact.html">📞 Contact Our Expert</a>
 </section>
 
 <footer>
-  © 2025 Kumar Associates | All Rights Reserved
+  © 2025 Kumar Associates | Trusted Tax & Consultancy Services
 </footer>
 
 </body>
