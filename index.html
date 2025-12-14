@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kumar Associates | Tax • Accounts • Consultancy</title>
+<title>Kumar Associates | Tax, GST & Consultancy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background:linear-gradient(135deg,#eaf2ff,#fdf1ff);
-color:#1e293b;
+background:linear-gradient(135deg,#e0f2ff,#fdf2ff);
+color:#0f172a;
 }
 
 /* HEADER */
@@ -22,62 +23,56 @@ justify-content:space-between;
 align-items:center;
 padding:20px 8%;
 }
-
 .logo{
 display:flex;
 align-items:center;
 gap:12px;
 }
-.logo img{
-height:55px;
-}
-.logo h1{
-font-size:22px;
-font-weight:700;
-}
-.logo span{
-font-size:14px;
-color:#2563eb;
-}
+.logo img{height:52px;}
+.logo h1{font-size:22px;font-weight:700;}
+.logo span{font-size:14px;color:#2563eb;}
 
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#1e293b;
+color:#0f172a;
 font-weight:500;
 }
 nav a:hover{color:#2563eb}
 
 /* HERO */
 .hero{
+padding:80px 8% 60px;
 text-align:center;
-padding:90px 8% 70px;
 }
 .hero h2{
 font-size:44px;
 font-weight:700;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 .hero p{
-font-size:18px;
 max-width:900px;
 margin:auto;
+font-size:18px;
 color:#475569;
+line-height:1.7;
 }
 
-.cta{
-margin-top:35px;
+.hero-buttons{
+margin-top:30px;
 }
-.cta a{
+.btn{
+display:inline-block;
 padding:14px 28px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
+border-radius:50px;
 font-weight:600;
+text-decoration:none;
+margin:10px;
 }
 .btn-primary{
 background:#2563eb;
 color:white;
+box-shadow:0 10px 25px rgba(37,99,235,.4);
 }
 .btn-outline{
 border:2px solid #2563eb;
@@ -89,73 +84,110 @@ color:#2563eb;
 display:flex;
 justify-content:center;
 gap:40px;
-padding:40px 8%;
 flex-wrap:wrap;
+margin-top:40px;
 }
 .trust div{
-background:white;
-padding:25px 30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
 text-align:center;
-min-width:220px;
 }
-.trust h3{font-size:26px;color:#2563eb}
+.trust i{
+font-size:36px;
+color:#2563eb;
+margin-bottom:10px;
+}
 
 /* SERVICES */
-.services{
-padding:80px 8%;
+.section{
+padding:60px 8%;
 }
-.services h2{
+.section h3{
 text-align:center;
 font-size:36px;
-margin-bottom:50px;
+margin-bottom:10px;
 }
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-.card h3{
-margin-bottom:12px;
-color:#2563eb;
+.section p{
+text-align:center;
+max-width:800px;
+margin:0 auto 40px;
+color:#475569;
 }
 
-/* BRANCHES */
-.branches{
-padding:80px 8%;
-background:linear-gradient(135deg,#ffffff,#eef4ff);
-}
-.branches h2{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-}
-.branch-grid{
+.services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
-.branch{
+.card{
 background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+padding:30px;
+border-radius:22px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+}
+.card i{
+font-size:34px;
+color:#2563eb;
+margin-bottom:15px;
+}
+.card h4{
+margin-bottom:10px;
+}
+.card p{
+font-size:15px;
+color:#475569;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+padding:60px 8%;
+text-align:center;
+border-radius:30px;
+margin:60px 8%;
+}
+.cta h3{
+font-size:34px;
+margin-bottom:15px;
+}
+.cta a{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:white;
+color:#2563eb;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:25px;
 background:#0f172a;
 color:#cbd5f5;
+text-align:center;
+padding:25px;
 margin-top:60px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+display:flex;
+gap:10px;
+align-items:center;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 @media(max-width:768px){
@@ -183,76 +215,89 @@ margin-top:60px;
 </header>
 
 <section class="hero">
-  <h2>Professional Tax Consultancy <br> Fast • Transparent • Reliable</h2>
+  <h2>Professional Tax Consultancy — Fast, Transparent & Reliable</h2>
   <p>
-    Kumar Associates provides expert services in Income Tax, GST Registration & Filing,
-    Accounting, Company Compliance, PAN, DSC, Project Reports & CMA Data
+    We provide expert services in Income Tax filing, GST registration,
+    accounting, company compliance, PAN, DSC, project reports & CMA data
     for Individuals, Startups and Businesses across India.
   </p>
 
-  <div class="cta">
-    <a href="contact.html" class="btn-primary">Contact Now</a>
-    <a href="services.html" class="btn-outline">View Services</a>
+  <div class="hero-buttons">
+    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+    <a href="services.html" class="btn btn-outline">View Our Services</a>
   </div>
-</section>
 
-<section class="trust">
-  <div>
-    <h3>5+</h3>
-    <p>Years Experience</p>
-  </div>
-  <div>
-    <h3>1000+</h3>
-    <p>Clients Served</p>
-  </div>
-  <div>
-    <h3>100%</h3>
-    <p>Compliance Focus</p>
-  </div>
-</section>
-
-<section class="services">
-  <h2>Our Core Services</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Income Tax Filing</h3>
-      <p>ITR filing, audit support, tax planning & assessment guidance.</p>
+  <div class="trust">
+    <div>
+      <i class="fa-solid fa-award"></i>
+      <strong>5+ Years Experience</strong>
     </div>
-    <div class="card">
-      <h3>GST Registration & Filing</h3>
-      <p>GST registration, GSTR-1, GSTR-3B filing & reconciliation.</p>
+    <div>
+      <i class="fa-solid fa-users"></i>
+      <strong>500+ Happy Clients</strong>
     </div>
-    <div class="card">
-      <h3>Accounting & Bookkeeping</h3>
-      <p>Tally / Excel accounting, MIS reports & financial statements.</p>
-    </div>
-    <div class="card">
-      <h3>Company / LLP Registration</h3>
-      <p>Private Limited, LLP & Proprietorship with MCA compliance.</p>
+    <div>
+      <i class="fa-solid fa-shield-halved"></i>
+      <strong>100% Confidential</strong>
     </div>
   </div>
 </section>
 
-<section class="branches">
-  <h2>Our Offices</h2>
-  <div class="branch-grid">
-    <div class="branch">
-      <h3>Head Office – Bangalore</h3>
-      <p>Karnataka, India</p>
+<section class="section">
+  <h3>Our Key Services</h3>
+  <p>Complete compliance and financial solutions under one roof</p>
+
+  <div class="services">
+    <div class="card">
+      <i class="fa-solid fa-file-invoice-dollar"></i>
+      <h4>Income Tax Filing</h4>
+      <p>ITR filing, tax planning, audit support & assessment handling.</p>
     </div>
-    <div class="branch">
-      <h3>Ranchi Branch</h3>
-      <p>Jharkhand, India</p>
+
+    <div class="card">
+      <i class="fa-solid fa-receipt"></i>
+      <h4>GST Registration & Filing</h4>
+      <p>GST registration, GSTR-1, 3B, notices & advisory services.</p>
     </div>
-    <div class="branch">
-      <h3>Kolkata Branch</h3>
-      <p>103 Chatta Wala Gali,<br>Near Poddar Court,<br>Kolkata – 700001</p>
+
+    <div class="card">
+      <i class="fa-solid fa-building"></i>
+      <h4>Company / LLP Registration</h4>
+      <p>Private Limited, LLP, Proprietorship with MCA compliance.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-book"></i>
+      <h4>Accounting & Bookkeeping</h4>
+      <p>Day-to-day accounting, Tally, MIS & financial reports.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-id-card"></i>
+      <h4>PAN, DSC & Compliance</h4>
+      <p>PAN services, DSC, ROC filings & statutory compliance.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h4>Project Report & CMA Data</h4>
+      <p>Bank-ready project reports & CMA data for loans.</p>
     </div>
   </div>
 </section>
+
+<section class="cta">
+  <h3>Need Expert Tax & Business Guidance?</h3>
+  <p>Talk to Kumar Associates today and grow with confidence.</p>
+  <a href="contact.html">Contact Now</a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919334965179" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
 
 <footer>
-  © 2025 Kumar Associates • All Rights Reserved
+  © 2025 Kumar Associates • Trusted Tax, Accounts & Consultancy Services
 </footer>
 
 </body>
