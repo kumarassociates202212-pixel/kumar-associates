@@ -26,7 +26,6 @@
 
     a{text-decoration:none;}
 
-    /* TOP BAR */
     .topbar{
       background:#071a35;
       color:#fff;
@@ -40,7 +39,6 @@
 
     .topbar a{color:#ffd166;}
 
-    /* NAVIGATION */
     header{
       background:#fff;
       position:sticky;
@@ -103,7 +101,6 @@
       border-radius:8px;
     }
 
-    /* HERO */
     .hero{
       min-height:620px;
       display:flex;
@@ -117,17 +114,6 @@
       color:white;
     }
 
-    .hero:after{
-      content:"";
-      position:absolute;
-      width:400px;
-      height:400px;
-      border:70px solid rgba(255,255,255,.035);
-      border-radius:50%;
-      right:-110px;
-      bottom:-180px;
-    }
-
     .hero-inner{
       max-width:1250px;
       margin:auto;
@@ -137,8 +123,6 @@
       grid-template-columns:1.2fr .8fr;
       gap:60px;
       align-items:center;
-      position:relative;
-      z-index:2;
     }
 
     .tag{
@@ -155,7 +139,6 @@
       font-size:54px;
       line-height:1.08;
       margin-bottom:20px;
-      max-width:760px;
     }
 
     .hero h1 span{color:#ffd166;}
@@ -163,7 +146,6 @@
     .hero p{
       color:#dbeafe;
       font-size:18px;
-      max-width:700px;
       margin-bottom:28px;
     }
 
@@ -191,9 +173,8 @@
       background:rgba(255,255,255,.08);
     }
 
-    /* HERO CARD */
     .hero-card{
-      background:rgba(255,255,255,.97);
+      background:#fff;
       color:#172554;
       border-radius:22px;
       padding:30px;
@@ -221,7 +202,6 @@
       border-left:4px solid #0a73d9;
     }
 
-    /* STATS */
     .stats-wrap{
       max-width:1100px;
       margin:-48px auto 0;
@@ -245,8 +225,6 @@
       border-right:1px solid #e7edf5;
     }
 
-    .stat:last-child{border-right:0;}
-
     .stat strong{
       display:block;
       color:#0866c6;
@@ -258,7 +236,6 @@
       color:#64748b;
     }
 
-    /* GENERAL */
     section{padding:85px 20px;}
 
     .container{
@@ -287,8 +264,31 @@
 
     .section-head p{color:#64748b;}
 
-    /* SERVICES */
-    .services{background:#f7f9fc;}
+    /* PREMIUM SERVICES BACKGROUND */
+    .services{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 10% 15%,rgba(0,153,255,.18),transparent 25%),
+        radial-gradient(circle at 90% 80%,rgba(0,210,200,.18),transparent 25%),
+        linear-gradient(135deg,#eef7ff,#f4fbff 45%,#e8f7fb);
+    }
+
+    .services:before{
+      content:"";
+      position:absolute;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      background:rgba(0,119,255,.06);
+      top:-120px;
+      right:-80px;
+    }
+
+    .services .container{
+      position:relative;
+      z-index:2;
+    }
 
     .service-grid{
       display:grid;
@@ -297,34 +297,37 @@
     }
 
     .service-card{
-      background:#fff;
+      background:rgba(255,255,255,.93);
       padding:28px;
-      border-radius:15px;
-      box-shadow:0 7px 25px rgba(26,57,96,.07);
-      border:1px solid #edf2f7;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(26,57,96,.10);
+      border:1px solid rgba(255,255,255,.9);
       transition:.3s;
+      backdrop-filter:blur(6px);
     }
 
     .service-card:hover{
-      transform:translateY(-7px);
-      box-shadow:0 18px 40px rgba(18,66,120,.14);
+      transform:translateY(-8px);
+      box-shadow:0 20px 45px rgba(18,66,120,.18);
     }
 
     .icon{
-      width:52px;
-      height:52px;
+      width:56px;
+      height:56px;
       display:flex;
       align-items:center;
       justify-content:center;
-      border-radius:12px;
-      background:linear-gradient(135deg,#e7f2ff,#d9f7ff);
+      border-radius:15px;
+      background:linear-gradient(135deg,#dff1ff,#c8f7f4);
       font-size:25px;
       margin-bottom:17px;
+      box-shadow:0 6px 15px rgba(0,100,190,.10);
     }
 
     .service-card h3{
       color:#0a3262;
       margin-bottom:8px;
+      font-size:22px;
     }
 
     .service-card p{
@@ -340,7 +343,6 @@
       font-size:14px;
     }
 
-    /* WHY US */
     .why{
       background:#fff;
     }
@@ -403,9 +405,10 @@
       font-size:14px;
     }
 
-    /* LOCATIONS */
     .locations{
-      background:linear-gradient(180deg,#f5f9ff,#eef6ff);
+      background:
+        radial-gradient(circle at 20% 20%,rgba(0,153,255,.12),transparent 25%),
+        linear-gradient(180deg,#f5f9ff,#eaf5ff);
     }
 
     .location-grid{
@@ -416,15 +419,22 @@
 
     .location{
       background:#fff;
-      padding:25px;
-      border-radius:14px;
+      padding:28px 20px;
+      border-radius:16px;
       text-align:center;
-      box-shadow:0 8px 24px rgba(16,63,110,.08);
+      box-shadow:0 10px 30px rgba(16,63,110,.10);
+      border-top:4px solid #0a79d8;
+      transition:.3s;
+    }
+
+    .location:hover{
+      transform:translateY(-5px);
     }
 
     .location h3{
       color:#0b3a70;
-      margin:8px 0;
+      margin:10px 0 5px;
+      font-size:21px;
     }
 
     .location p{
@@ -432,7 +442,6 @@
       font-size:14px;
     }
 
-    /* CTA */
     .cta-section{
       padding:70px 20px;
       background:#fff;
@@ -460,7 +469,6 @@
 
     .cta p{color:#dbeafe;}
 
-    /* FOOTER */
     footer{
       background:#06182e;
       color:#cbd5e1;
@@ -487,8 +495,6 @@
       font-size:14px;
     }
 
-    footer a:hover{color:#ffd166;}
-
     .copyright{
       max-width:1200px;
       margin:35px auto 0;
@@ -498,7 +504,6 @@
       font-size:13px;
     }
 
-    /* WHATSAPP */
     .whatsapp{
       position:fixed;
       right:22px;
@@ -517,7 +522,6 @@
       z-index:999;
     }
 
-    /* MOBILE */
     @media(max-width:900px){
       .menu{
         gap:13px;
@@ -532,8 +536,6 @@
 
       .hero h1{font-size:43px;}
 
-      .hero-card{max-width:600px;}
-
       .service-grid{grid-template-columns:repeat(2,1fr);}
 
       .location-grid{grid-template-columns:repeat(2,1fr);}
@@ -542,7 +544,10 @@
     }
 
     @media(max-width:650px){
-      .topbar{justify-content:center;text-align:center;}
+      .topbar{
+        justify-content:center;
+        text-align:center;
+      }
 
       nav{
         flex-direction:column;
@@ -560,8 +565,6 @@
 
       .nav-btn{padding:8px 11px;}
 
-      .hero{min-height:auto;}
-
       .hero-inner{padding:60px 20px 90px;}
 
       .hero h1{font-size:37px;}
@@ -569,8 +572,6 @@
       .hero p{font-size:16px;}
 
       .stats{grid-template-columns:1fr 1fr;}
-
-      .stat:nth-child(2){border-right:0;}
 
       .service-grid,
       .location-grid,
@@ -628,7 +629,6 @@
 
     <section class="hero">
       <div class="hero-inner">
-
         <div>
           <div class="tag">✓ Professional Consultancy • Serving Across India</div>
 
@@ -640,16 +640,13 @@
           <p>
             From Income Tax and GST to Accounting, Company Registration,
             Project Reports and CMA Data — Kumar Associates provides
-            reliable, transparent and professional compliance solutions
-            for individuals and businesses.
+            reliable and professional compliance solutions.
           </p>
 
           <div class="buttons">
             <a class="btn primary" href="contact.html">Get Free Consultation →</a>
-
-            <a class="btn secondary"
-               href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates%2C%20I%20need%20consultation.">
-               WhatsApp Us
+            <a class="btn secondary" href="https://wa.me/919334965179">
+              WhatsApp Us
             </a>
           </div>
         </div>
@@ -664,7 +661,6 @@
           <div class="hero-service">✓ Company / LLP Registration</div>
           <div class="hero-service">✓ Project Report & CMA Data</div>
         </div>
-
       </div>
     </section>
 
@@ -716,35 +712,35 @@
           <div class="service-card">
             <div class="icon">GST</div>
             <h3>GST Services</h3>
-            <p>GST registration, return filing and ongoing compliance assistance for your business.</p>
+            <p>GST registration, return filing and ongoing compliance assistance.</p>
             <a href="services.html">Learn More →</a>
           </div>
 
           <div class="service-card">
             <div class="icon">📊</div>
             <h3>Accounting</h3>
-            <p>Organised bookkeeping and accounting support to keep your financial records accurate.</p>
+            <p>Bookkeeping and accounting support to keep your financial records accurate.</p>
             <a href="services.html">Learn More →</a>
           </div>
 
           <div class="service-card">
             <div class="icon">🏢</div>
             <h3>Business Registration</h3>
-            <p>Professional support for Company, LLP and other business registration requirements.</p>
+            <p>Company, LLP and business registration support.</p>
             <a href="services.html">Learn More →</a>
           </div>
 
           <div class="service-card">
             <div class="icon">📑</div>
             <h3>CMA & Project Report</h3>
-            <p>Bank-finance-ready CMA data and project reports prepared according to your requirements.</p>
+            <p>Bank-finance-ready CMA data and project reports.</p>
             <a href="services.html">Learn More →</a>
           </div>
 
           <div class="service-card">
             <div class="icon">✓</div>
             <h3>PAN & DSC</h3>
-            <p>PAN and Digital Signature Certificate assistance for individuals and businesses.</p>
+            <p>PAN and Digital Signature Certificate assistance.</p>
             <a href="services.html">Learn More →</a>
           </div>
 
@@ -757,7 +753,6 @@
 
         <div class="why-box">
           <h2>Why Choose Kumar Associates?</h2>
-
           <p>
             We focus on accuracy, transparency and timely compliance while
             providing practical solutions tailored to each client.
@@ -774,7 +769,6 @@
         </div>
 
         <div class="features">
-
           <div class="feature">
             <strong>Professional & Reliable</strong>
             <span>Careful attention to your tax, accounts and compliance requirements.</span>
@@ -782,19 +776,18 @@
 
           <div class="feature">
             <strong>Personalised Assistance</strong>
-            <span>Solutions based on the actual requirements of individuals and businesses.</span>
+            <span>Solutions based on your actual business requirements.</span>
           </div>
 
           <div class="feature">
             <strong>End-to-End Support</strong>
-            <span>From registration and filing to accounting, CMA data and business documentation.</span>
+            <span>Registration, filing, accounting, CMA data and documentation.</span>
           </div>
 
           <div class="feature">
             <strong>Easy Online Consultation</strong>
-            <span>Connect by phone, email or WhatsApp for convenient assistance.</span>
+            <span>Connect by phone, email or WhatsApp.</span>
           </div>
-
         </div>
       </div>
     </section>
@@ -803,9 +796,9 @@
       <div class="container">
 
         <div class="section-head">
-          <small>Our Presence</small>
-          <h2>Serving Clients Across India</h2>
-          <p>Professional assistance through our office network and online support.</p>
+          <small>Our Offices</small>
+          <h2>Our Presence Across India</h2>
+          <p>Professional support through our office network and online consultation.</p>
         </div>
 
         <div class="location-grid">
@@ -819,19 +812,22 @@
           <div class="location">
             <div class="icon" style="margin:auto;">📍</div>
             <h3>Ranchi</h3>
-            <p>Jharkhand</p>
+            <p>Jharkhand Branch</p>
           </div>
 
           <div class="location">
             <div class="icon" style="margin:auto;">📍</div>
             <h3>Kolkata</h3>
-            <p>West Bengal</p>
+            <p>103 Chatta Wala Gali,<br>Near Poddar Court,<br>Kolkata – 700001</p>
           </div>
 
           <div class="location">
             <div class="icon" style="margin:auto;">📍</div>
-            <h3>Sikandra</h3>
-            <p>Jamui, Bihar</p>
+            <h3>Bihar Branch</h3>
+            <p>
+              Sikandra, Jamui<br>
+              Bihar – 811301
+            </p>
           </div>
 
         </div>
@@ -840,23 +836,20 @@
 
     <section class="cta-section">
       <div class="cta">
-
         <div>
           <h2>Need Professional Assistance?</h2>
           <p>Talk to Kumar Associates about your tax, GST, accounting or business compliance requirements.</p>
         </div>
 
         <div class="buttons">
-          <a class="btn primary"
-             href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates%2C%20I%20need%20assistance.">
-             Chat on WhatsApp
+          <a class="btn primary" href="https://wa.me/919334965179">
+            Chat on WhatsApp
           </a>
 
           <a class="btn secondary" href="tel:+919334965179">
             Call Now
           </a>
         </div>
-
       </div>
     </section>
 
@@ -869,7 +862,7 @@
         <h3>Kumar Associates</h3>
         <p>
           Professional Tax, Accounting & Business Consultancy services
-          for individuals, startups and businesses across India.
+          for individuals and businesses across India.
         </p>
       </div>
 
@@ -902,7 +895,7 @@
   </footer>
 
   <a class="whatsapp"
-     href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates"
+     href="https://wa.me/919334965179"
      aria-label="Chat with Kumar Associates on WhatsApp">W</a>
 
 </body>
