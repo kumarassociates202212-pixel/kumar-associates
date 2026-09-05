@@ -1,331 +1,838 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Our Services | Kumar Associates</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>Services | Kumar Associates</title>
+  <meta name="description" content="Kumar Associates provides Income Tax, GST, Accounting, Company Registration, PAN, DSC, CMA Data, Project Report and business compliance services across India.">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial;}
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
-body{
-  background:linear-gradient(135deg,#eef5ff,#fdf1ff);
-  color:#0f172a;
-}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:#14213d;
+      background:#f6f8fb;
+      line-height:1.7;
+    }
 
-/* ===== HEADER ===== */
-header{
-  background:white;
-  border-top:6px solid #2563eb;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-  padding:18px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:999;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-.logo img{width:52px}
-.logo h1{font-size:22px;margin:0}
-.logo small{color:#2563eb;font-weight:600}
+    a{text-decoration:none}
 
-nav a{
-  margin-left:26px;
-  font-weight:600;
-  text-decoration:none;
-  color:#0f172a;
-}
-nav a:hover{color:#2563eb}
+    .topbar{
+      background:#06182e;
+      color:#fff;
+      padding:8px 6%;
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      flex-wrap:wrap;
+    }
 
-/* ===== HERO ===== */
-.hero{
-  text-align:center;
-  padding:90px 20px 70px;
-}
-.hero h2{
-  font-size:46px;
-  font-weight:800;
-  max-width:900px;
-  margin:auto;
-}
-.hero p{
-  max-width:850px;
-  margin:16px auto;
-  font-size:18px;
-  color:#334155;
-}
-.hero .trust{
-  margin-top:28px;
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  flex-wrap:wrap;
-}
-.badge{
-  background:white;
-  padding:12px 22px;
-  border-radius:999px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
-  font-weight:600;
-}
+    .topbar a{color:#ffd166}
 
-/* ===== SERVICES ===== */
-.services{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 20px 80px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-.card{
-  background:white;
-  border-radius:22px;
-  padding:30px;
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-  position:relative;
-  overflow:hidden;
-  transition:.35s;
-}
-.card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  width:6px;
-  height:100%;
-  background:linear-gradient(#2563eb,#7c3aed);
-}
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 30px 65px rgba(0,0,0,.15);
-}
-.icon{
-  font-size:42px;
-}
-.card h3{
-  margin:14px 0 10px;
-  font-size:22px;
-}
-.card p{
-  font-size:15px;
-  color:#475569;
-}
-.card ul{
-  padding-left:18px;
-  margin:10px 0;
-}
-.card li{
-  font-size:14px;
-  margin-bottom:6px;
-}
-.btn{
-  display:inline-block;
-  margin-top:14px;
-  padding:10px 18px;
-  background:#2563eb;
-  color:white;
-  border-radius:10px;
-  font-weight:700;
-  text-decoration:none;
-}
-.btn:hover{background:#1e40af}
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,.08);
+    }
 
-/* ===== CTA ===== */
-.cta{
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-  color:white;
-  padding:70px 20px;
-  text-align:center;
-}
-.cta h2{font-size:36px}
-.cta p{max-width:700px;margin:10px auto 20px}
-.cta a{
-  background:white;
-  color:#2563eb;
-  padding:16px 34px;
-  border-radius:40px;
-  font-weight:800;
-  text-decoration:none;
-}
+    nav{
+      max-width:1250px;
+      margin:auto;
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:8px 22px;
+    }
 
-/* ===== FOOTER ===== */
-footer{
-  background:#0f172a;
-  color:#cbd5f5;
-  text-align:center;
-  padding:20px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+    }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .hero h2{font-size:32px}
-}
-</style>
+    .brand img{
+      height:58px;
+      width:auto;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:21px;
+      color:#0a2d59;
+    }
+
+    .brand-text span{
+      display:block;
+      font-size:11px;
+      color:#64748b;
+      letter-spacing:1.1px;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:27px;
+    }
+
+    .menu a{
+      color:#1e293b;
+      font-weight:600;
+      font-size:15px;
+    }
+
+    .menu a:hover,
+    .menu .active{
+      color:#0873d1;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#0866d8,#00a7e1);
+      color:#fff!important;
+      padding:11px 18px;
+      border-radius:9px;
+    }
+
+    .hero{
+      color:#fff;
+      padding:95px 20px 115px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 85% 18%,rgba(0,190,255,.24),transparent 28%),
+        radial-gradient(circle at 8% 90%,rgba(255,193,80,.16),transparent 24%),
+        linear-gradient(120deg,#061a35,#073b73 58%,#0a78b8);
+    }
+
+    .hero-inner{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:55px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.24);
+      padding:8px 15px;
+      border-radius:30px;
+      font-size:13px;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-size:54px;
+      line-height:1.08;
+      margin-bottom:20px;
+    }
+
+    .hero h1 span{color:#ffd166}
+
+    .hero p{
+      color:#dbeafe;
+      font-size:18px;
+      margin-bottom:28px;
+    }
+
+    .btns{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 22px;
+      border-radius:9px;
+      font-weight:bold;
+    }
+
+    .btn-primary{
+      background:#ffd166;
+      color:#08294e;
+    }
+
+    .btn-outline{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.08);
+    }
+
+    .hero-card{
+      background:#fff;
+      color:#0b294e;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 30px 70px rgba(0,0,0,.28);
+    }
+
+    .hero-card h3{
+      font-size:24px;
+      margin-bottom:15px;
+    }
+
+    .hero-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .hero-list div{
+      background:#f3f7fc;
+      padding:13px 15px;
+      border-radius:10px;
+      border-left:4px solid #0875d1;
+      font-weight:600;
+    }
+
+    section{padding:90px 20px}
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-head{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 45px;
+    }
+
+    .section-head small{
+      color:#0876d1;
+      font-weight:bold;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    .section-head h2{
+      font-size:38px;
+      color:#0b294e;
+      margin:8px 0 12px;
+    }
+
+    .section-head p{color:#64748b}
+
+    .services{
+      background:#f4f7fb;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .service-card{
+      background:#fff;
+      border:1px solid #e7edf4;
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(26,57,96,.07);
+      transition:.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-7px);
+      box-shadow:0 20px 45px rgba(18,66,120,.14);
+    }
+
+    .icon{
+      width:58px;
+      height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#dff2ff;
+      border-radius:15px;
+      font-size:24px;
+      margin-bottom:18px;
+    }
+
+    .service-card h3{
+      color:#0a3262;
+      margin-bottom:8px;
+      font-size:21px;
+    }
+
+    .service-card p{
+      color:#64748b;
+      font-size:14px;
+      margin-bottom:12px;
+    }
+
+    .service-card ul{
+      padding-left:18px;
+      color:#516174;
+      font-size:14px;
+    }
+
+    .service-card li{margin:5px 0}
+
+    .audience{
+      background:#fff;
+    }
+
+    .audience-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .audience-card{
+      border-radius:18px;
+      padding:30px;
+      border:1px solid #e7edf4;
+      background:#f8fbfd;
+    }
+
+    .audience-card:nth-child(2){background:#eef7ff}
+    .audience-card:nth-child(3){background:#f4f8ff}
+
+    .audience-card h3{
+      color:#0a3768;
+      margin-bottom:10px;
+    }
+
+    .audience-card p{
+      color:#64748b;
+      font-size:14px;
+    }
+
+    .process{
+      background:#eef5fb;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:#fff;
+      border-radius:16px;
+      padding:26px 20px;
+      text-align:center;
+      box-shadow:0 8px 24px rgba(16,63,110,.07);
+      border-top:4px solid #0875d1;
+    }
+
+    .step-number{
+      width:48px;
+      height:48px;
+      margin:0 auto 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#dff2ff;
+      color:#0875d1;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .step h3{
+      color:#0b3a70;
+      margin-bottom:7px;
+    }
+
+    .step p{
+      color:#64748b;
+      font-size:14px;
+    }
+
+    .cta-section{
+      padding:70px 20px;
+      background:#fff;
+    }
+
+    .cta{
+      max-width:1150px;
+      margin:auto;
+      padding:55px;
+      border-radius:24px;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      background:
+        radial-gradient(circle at right,rgba(255,255,255,.14),transparent 30%),
+        linear-gradient(120deg,#06264b,#0874c9);
+    }
+
+    .cta h2{
+      font-size:35px;
+      margin-bottom:7px;
+    }
+
+    .cta p{
+      color:#dbeafe;
+      max-width:650px;
+    }
+
+    footer{
+      background:#06182e;
+      color:#cbd5e1;
+      padding:55px 20px 20px;
+    }
+
+    .footer-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1.5fr;
+      gap:35px;
+    }
+
+    footer h3{
+      color:#fff;
+      margin-bottom:14px;
+    }
+
+    footer p{font-size:14px}
+
+    footer a{
+      display:block;
+      color:#cbd5e1;
+      margin:7px 0;
+      font-size:14px;
+    }
+
+    .copyright{
+      max-width:1200px;
+      margin:35px auto 0;
+      padding-top:20px;
+      border-top:1px solid #1c3551;
+      text-align:center;
+      font-size:13px;
+    }
+
+    .whatsapp,
+    .call-float{
+      position:fixed;
+      right:22px;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:bold;
+      box-shadow:0 8px 25px rgba(0,0,0,.24);
+      z-index:999;
+    }
+
+    .whatsapp{
+      bottom:90px;
+      background:#25D366;
+    }
+
+    .call-float{
+      bottom:22px;
+      background:#0875d1;
+      font-size:23px;
+    }
+
+    @media(max-width:950px){
+      .hero-inner{grid-template-columns:1fr}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .audience-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .hero h1{font-size:44px}
+    }
+
+    @media(max-width:650px){
+      .topbar{justify-content:center;text-align:center}
+
+      nav{
+        flex-direction:column;
+        padding:11px 15px;
+      }
+
+      .brand{margin-bottom:10px}
+
+      .menu{
+        justify-content:center;
+        gap:12px;
+        flex-wrap:wrap;
+      }
+
+      .menu a{font-size:13px}
+      .nav-btn{padding:8px 11px}
+
+      .hero{padding:70px 20px 95px}
+      .hero h1{font-size:36px}
+      .hero p{font-size:16px}
+
+      .service-grid,
+      .process-grid,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-head h2{font-size:30px}
+
+      .cta{
+        padding:35px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .cta h2{font-size:29px}
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="images/logo.png" alt="Kumar Associates Logo">
+  <div class="topbar">
+    <div>Professional Tax, Accounting & Business Consultancy</div>
+
     <div>
-      <h1>Kumar Associates</h1>
-      <small>Tax | Accounts | Consultancy</small>
+      Call:
+      <a href="tel:+919334965179">+91 93349 65179</a>
+      &nbsp; | &nbsp;
+      <a href="mailto:kumar.associates202212@gmail.com">
+        kumar.associates202212@gmail.com
+      </a>
     </div>
   </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-<section class="hero">
-  <h2>Professional Tax & Compliance Services for Businesses & Individuals</h2>
-  <p>
-    End-to-end Income Tax, GST, Accounting and Business Compliance services
-    delivered with accuracy, transparency and expert guidance.
-  </p>
+  <header>
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Kumar Associates Logo">
 
-  <div class="trust">
-    <div class="badge">⭐ 5+ Years Experience</div>
-    <div class="badge">👨‍💼 1000+ Clients Served</div>
-    <div class="badge">🇮🇳 PAN-India Service</div>
-  </div>
-</section>
+        <div class="brand-text">
+          <strong>Kumar Associates</strong>
+          <span>TAX • ACCOUNTS • CONSULTANCY</span>
+        </div>
+      </a>
 
-<section class="services">
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-btn">Free Consultation</a>
+      </div>
+    </nav>
+  </header>
 
-  <div class="card">
-    <div class="icon">📑</div>
-    <h3>Income Tax Filing</h3>
-    <p>Accurate and timely income tax services.</p>
-    <ul>
-      <li>ITR for Individuals & Businesses</li>
-      <li>Tax Planning & Advisory</li>
-      <li>Notice & Assessment Support</li>
-    </ul>
-    <a class="btn" href="contact.html">Talk to Expert</a>
-  </div>
+  <main>
 
-  <div class="card">
-    <div class="icon">🧾</div>
-    <h3>GST Registration & Filing</h3>
-    <p>Complete GST compliance support.</p>
-    <ul>
-      <li>GST Registration</li>
-      <li>GSTR-1 & GSTR-3B</li>
-      <li>Reconciliation & Notices</li>
-    </ul>
-    <a class="btn" href="contact.html">Get GST Help</a>
-  </div>
+    <section class="hero">
+      <div class="hero-inner">
 
-  <div class="card">
-    <div class="icon">📊</div>
-    <h3>Accounting & Bookkeeping</h3>
-    <p>Professional accounting solutions.</p>
-    <ul>
-      <li>Tally / Excel Accounting</li>
-      <li>MIS & Financial Reports</li>
-      <li>Monthly Compliance</li>
-    </ul>
-    <a class="btn" href="contact.html">Start Accounting</a>
-  </div>
+        <div>
+          <div class="eyebrow">OUR PROFESSIONAL SERVICES</div>
 
-  <div class="card">
-    <div class="icon">🏢</div>
-    <h3>Company / LLP Registration</h3>
-    <p>Quick & compliant business setup.</p>
-    <ul>
-      <li>Private Ltd / LLP</li>
-      <li>DIN, DSC & MCA</li>
-      <li>Ongoing Compliance</li>
-    </ul>
-    <a class="btn" href="contact.html">Register Now</a>
-  </div>
+          <h1>
+            Complete Tax, Accounting &
+            <span>Business Compliance Solutions.</span>
+          </h1>
 
-  <div class="card">
-    <div class="icon">🆔</div>
-    <h3>PAN, DSC & ROC Compliance</h3>
-    <p>Identity & regulatory services.</p>
-    <ul>
-      <li>PAN / TAN Services</li>
-      <li>Digital Signature (DSC)</li>
-      <li>ROC Filings</li>
-    </ul>
-    <a class="btn" href="contact.html">Apply Now</a>
-  </div>
+          <p>
+            Kumar Associates provides professional support for tax filing,
+            GST, accounting, business registration, financial documentation
+            and related compliance requirements for individuals and businesses.
+          </p>
 
-  <div class="card">
-    <div class="icon">📈</div>
-    <h3>Project Report & CMA Data</h3>
-    <p>Bank-ready financial documentation.</p>
-    <ul>
-      <li>Project Reports</li>
-      <li>CMA Data Preparation</li>
-      <li>Loan Support</li>
-    </ul>
-    <a class="btn" href="contact.html">Get Report</a>
-  </div>
+          <div class="btns">
+            <a href="contact.html" class="btn btn-primary">
+              Get Consultation →
+            </a>
 
-</section>
+            <a href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates%2C%20I%20need%20service%20assistance."
+               class="btn btn-outline">
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
 
-<section class="cta">
-  <h2>Need Expert Tax or Business Guidance?</h2>
-  <p>Talk to Kumar Associates today and get professional support.</p>
-  <a href="contact.html">📞 Contact Our Expert</a>
-</section>
+        <div class="hero-card">
+          <h3>Services at a Glance</h3>
 
-<footer>
-  © 2025 Kumar Associates | Trusted Tax & Consultancy Services
-</footer>
-<!-- WhatsApp & Call Floating Buttons -->
-<style>
-.floating-btns{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:9999;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.floating-btns a{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:26px;
-  text-decoration:none;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-}
-.whatsapp-btn{background:#25D366;}
-.call-btn{background:#0A66C2;}
-</style>
+          <div class="hero-list">
+            <div>✓ Income Tax & ITR Filing</div>
+            <div>✓ GST Registration & Returns</div>
+            <div>✓ Accounting & Bookkeeping</div>
+            <div>✓ Company / LLP Registration</div>
+            <div>✓ CMA Data & Project Reports</div>
+            <div>✓ PAN & DSC Assistance</div>
+          </div>
+        </div>
 
-<div class="floating-btns">
-  <a href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates,%20I%20need%20tax%20consultancy" 
-     class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-    🟢
-  </a>
+      </div>
+    </section>
 
-  <a href="tel:+919334965179" class="call-btn" title="Call Now">
-    📞
-  </a>
-</div>
+    <section class="services">
+      <div class="container">
+
+        <div class="section-head">
+          <small>OUR EXPERTISE</small>
+
+          <h2>Professional Services Under One Roof</h2>
+
+          <p>
+            Practical and reliable support for your tax,
+            accounting and business compliance requirements.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <div class="service-card">
+            <div class="icon">₹</div>
+            <h3>Income Tax Services</h3>
+            <p>Professional assistance for income tax compliance.</p>
+            <ul>
+              <li>Income Tax Return Filing</li>
+              <li>Individual & Business ITR Support</li>
+              <li>Tax Computation Assistance</li>
+              <li>Income Tax Compliance Support</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">GST</div>
+            <h3>GST Services</h3>
+            <p>End-to-end GST registration and return support.</p>
+            <ul>
+              <li>GST Registration</li>
+              <li>GSTR-1 Filing</li>
+              <li>GSTR-3B Filing</li>
+              <li>GST Compliance Assistance</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">📊</div>
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Structured accounting support for better financial records.</p>
+            <ul>
+              <li>Bookkeeping</li>
+              <li>Profit & Loss Preparation</li>
+              <li>Balance Sheet Preparation</li>
+              <li>Financial Record Support</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">🏢</div>
+            <h3>Business Registration</h3>
+            <p>Professional support for setting up business entities.</p>
+            <ul>
+              <li>Company Registration</li>
+              <li>LLP Registration</li>
+              <li>Partnership Support</li>
+              <li>Startup Compliance Assistance</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">📑</div>
+            <h3>CMA Data & Project Reports</h3>
+            <p>Financial documentation for bank and business requirements.</p>
+            <ul>
+              <li>CMA Data Preparation</li>
+              <li>Project Report Preparation</li>
+              <li>Financial Projections</li>
+              <li>Bank Finance Documentation</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">✓</div>
+            <h3>PAN & DSC Services</h3>
+            <p>Assistance for essential identity and digital compliance needs.</p>
+            <ul>
+              <li>PAN Assistance</li>
+              <li>Digital Signature Certificate</li>
+              <li>DSC Renewal Assistance</li>
+              <li>Business Documentation Support</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="audience">
+      <div class="container">
+
+        <div class="section-head">
+          <small>WHO WE SUPPORT</small>
+          <h2>Solutions for Different Client Needs</h2>
+          <p>Professional support tailored to different types of clients.</p>
+        </div>
+
+        <div class="audience-grid">
+
+          <div class="audience-card">
+            <h3>Individuals & Professionals</h3>
+            <p>
+              Income Tax filing, PAN, DSC and related compliance
+              assistance with clear and practical guidance.
+            </p>
+          </div>
+
+          <div class="audience-card">
+            <h3>Startups & New Businesses</h3>
+            <p>
+              Registration, GST, accounting and compliance support
+              to help new businesses establish the right foundation.
+            </p>
+          </div>
+
+          <div class="audience-card">
+            <h3>Small & Medium Businesses</h3>
+            <p>
+              Ongoing tax, GST, accounting, CMA Data, project reports
+              and business documentation support.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+
+        <div class="section-head">
+          <small>HOW WE WORK</small>
+          <h2>Simple & Professional Process</h2>
+          <p>Clear steps from consultation to completion.</p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Consultation</h3>
+            <p>Tell us your requirement and current situation.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Document Review</h3>
+            <p>We review the information and documents required.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Preparation</h3>
+            <p>Our team prepares the filing, report or documentation.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Completion & Support</h3>
+            <p>Final work is completed with further guidance where required.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta">
+
+        <div>
+          <h2>Need Help Choosing the Right Service?</h2>
+
+          <p>
+            Contact Kumar Associates and tell us your requirement.
+            We will guide you to the appropriate tax, accounting
+            or compliance service.
+          </p>
+        </div>
+
+        <div class="btns">
+          <a href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates%2C%20I%20need%20service%20assistance."
+             class="btn btn-primary">
+            Chat on WhatsApp
+          </a>
+
+          <a href="tel:+919334965179" class="btn btn-outline">
+            Call Now
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+
+      <div>
+        <h3>Kumar Associates</h3>
+        <p>
+          Professional Tax, Accounting & Business Consultancy
+          services for individuals and businesses across India.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Legal</h3>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+
+        <a href="tel:+919334965179">
+          +91 93349 65179
+        </a>
+
+        <a href="mailto:kumar.associates202212@gmail.com">
+          kumar.associates202212@gmail.com
+        </a>
+
+        <p>Professional assistance across India</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Kumar Associates. All Rights Reserved.
+    </div>
+  </footer>
+
+  <a class="whatsapp"
+     href="https://wa.me/919334965179?text=Hello%20Kumar%20Associates"
+     aria-label="WhatsApp">W</a>
+
+  <a class="call-float"
+     href="tel:+919334965179"
+     aria-label="Call Kumar Associates">☎</a>
 
 </body>
 </html>
